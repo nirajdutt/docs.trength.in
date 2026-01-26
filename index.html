@@ -394,34 +394,34 @@
                                         <!--begin::Breadcrumb-->
                                         <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-6 my-1">
                                             <!--begin::Item-->
-                                            <li class="breadcrumb-item text-gray-600">@ViewBag.BreadcrumMenu</li>
+                                            @*<li class="breadcrumb-item text-gray-600">@ViewBag.BreadcrumMenu</li>*@
                                             <!--end::Item-->
-                                            @{
+                                            <!--@{
                                                 if (!String.IsNullOrEmpty(ViewBag.BreadcrumPage))
                                                 {
                                                     <li class="breadcrumb-item">
                                                         <span class="bullet w-5px h-2px"></span>
                                                     </li>
-                                                    <li class="breadcrumb-item text-gray-600">@ViewBag.BreadcrumSubMenu</li>
+                                                    <li class="breadcrumb-item text-gray-600">@ViewBag.BreadcrumSubMenu</li>-->
 
                                                     <!--begin::Item-->
-                                                    <li class="breadcrumb-item">
+                                                    <!--<li class="breadcrumb-item">
                                                         <span class="bullet w-5px h-2px"></span>
-                                                    </li>
+                                                    </li>-->
                                                     <!--end::Item-->
-                                                    <li class="breadcrumb-item text-dark">@ViewBag.BreadcrumPage</li>
+                                                    <!--<li class="breadcrumb-item text-dark">@ViewBag.BreadcrumPage</li>
                                                 }
                                                 else
-                                                {
+                                                {-->
                                                     <!--begin::Item-->
-                                                    <li class="breadcrumb-item">
+                                                    <!--<li class="breadcrumb-item">
                                                         <span class="bullet w-5px h-2px"></span>
-                                                    </li>
+                                                    </li>-->
                                                     <!--end::Item-->
                                                     <!--begin::Item-->
-                                                    <li class="breadcrumb-item text-dark">@ViewBag.BreadcrumSubMenu</li>
+                                                    <!--<li class="breadcrumb-item text-dark">@ViewBag.BreadcrumSubMenu</li>
                                                 }
-                                            }
+                                            }-->
                                             <!--end::Item-->
                                         </ul>
                                         <!--end::Breadcrumb-->
