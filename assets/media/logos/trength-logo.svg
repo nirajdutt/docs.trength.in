@@ -1,0 +1,60 @@
+<svg width="269" height="56" viewBox="0 0 269 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="tr_facet_top_left" x1="4" y1="8" x2="30" y2="24" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#00D2FF"/>
+            <stop offset="100%" stop-color="#009EF7"/>
+        </linearGradient>
+        <linearGradient id="tr_facet_top_right" x1="30" y1="8" x2="56" y2="24" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#009EF7"/>
+            <stop offset="100%" stop-color="#0066FF"/>
+        </linearGradient>
+        <linearGradient id="tr_facet_stem_left" x1="20" y1="20" x2="30" y2="52" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#009EF7"/>
+            <stop offset="100%" stop-color="#0072E6"/>
+        </linearGradient>
+        <linearGradient id="tr_facet_stem_right" x1="30" y1="20" x2="42" y2="52" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0066FF"/>
+            <stop offset="100%" stop-color="#0047BA"/>
+        </linearGradient>
+        <linearGradient id="tr_facet_wing_left" x1="6" y1="22" x2="22" y2="38" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#00E5FF"/>
+            <stop offset="100%" stop-color="#009EF7"/>
+        </linearGradient>
+        <linearGradient id="tr_facet_wing_right" x1="56" y1="22" x2="38" y2="38" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#0072E6"/>
+            <stop offset="100%" stop-color="#00359E"/>
+        </linearGradient>
+        <linearGradient id="tr_accent_glow" x1="71" y1="46" x2="160" y2="46" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#009EF7"/>
+            <stop offset="70%" stop-color="#00E5FF"/>
+            <stop offset="100%" stop-color="#50CD89"/>
+        </linearGradient>
+    </defs>
+
+    <g id="trength-icon">
+        <path d="M7 21L21 37L21 23L12 16L7 21Z" fill="url(#tr_facet_wing_left)" opacity="0.95"/>
+        <path d="M53 21L39 37L39 23L48 16L53 21Z" fill="url(#tr_facet_wing_right)" opacity="0.95"/>
+        <path d="M5 14L30 5V19.5L13 21L5 14Z" fill="url(#tr_facet_top_left)"/>
+        <path d="M55 14L30 5V19.5L47 21L55 14Z" fill="url(#tr_facet_top_right)"/>
+        <path d="M30 19.5L21.5 21.5L24 42.5L30 51V19.5Z" fill="url(#tr_facet_stem_left)"/>
+        <path d="M30 19.5L38.5 21.5L36 42.5L30 51V19.5Z" fill="url(#tr_facet_stem_right)"/>
+        <circle cx="30" cy="19.5" r="2.2" fill="#FFFFFF" opacity="0.95"/>
+    </g>
+
+    <g id="trength-wordmark" fill="#181C32">
+        <path d="M71 12H98C98.5 12 99 12.5 99 13V16.8C99 17.3 98.5 17.8 98 17.8H87.3V41.2C87.3 41.6 86.9 42 86.5 42H82.5C82.1 42 81.7 41.6 81.7 41.2V17.8H71C70.5 17.8 70 17.3 70 16.8V13C70 12.5 70.5 12 71 12Z"/>
+        <path d="M103.8 21.8C103.8 21.4 104.2 21 104.6 21H108.6C109 21 109.4 21.4 109.4 21.8V25.2C110.8 22.4 113.8 21 117.4 21C119.2 21 120.6 21.4 121.5 21.9C121.8 22.1 122 22.5 122 22.9V26.5C122 26.9 121.6 27.2 121.2 27.1C120.1 26.7 118.7 26.3 117.1 26.3C113.4 26.3 109.4 28.5 109.4 33.6V41.2C109.4 41.6 109 42 108.6 42H104.6C104.2 42 103.8 41.6 103.8 41.2V21.8Z"/>
+        <path d="M136 21C142.6 21 147.2 25.5 147.2 31.8C147.2 32.4 146.7 32.8 146.1 32.8H129.8C130.2 36.6 132.8 38.8 136.4 38.8C139.2 38.8 141.5 37.8 143.7 36.2C144 36 144.5 36.1 144.8 36.4L146.5 38.4C146.7 38.7 146.7 39.1 146.4 39.4C143.8 41.3 140.4 42.4 136.3 42.4C129.2 42.4 124.5 37.5 124.5 31.6C124.5 25.5 129.1 21 136 21ZM129.8 29.5H142.1C141.7 26.2 139.3 24.3 135.9 24.3C132.5 24.3 130.3 26.2 129.8 29.5Z"/>
+        <path d="M152 21.8C152 21.4 152.4 21 152.8 21H156.8C157.2 21 157.6 21.4 157.6 21.8V24.8C159.2 22.3 162.4 21 166.5 21C172 21 175.4 24.5 175.4 30.2V41.2C175.4 41.6 175 42 174.6 42H170.6C170.2 42 169.8 41.6 169.8 41.2V30.8C169.8 27 167.9 24.9 164.4 24.9C160.3 24.9 157.6 27.8 157.6 32.8V41.2C157.6 41.6 157.2 42 156.8 42H152.8C152.4 42 152 41.6 152 41.2V21.8Z"/>
+        <path d="M189 21C194.4 21 198 23.8 199.3 27.2V21.8C199.3 21.4 199.7 21 200.1 21H203.9C204.3 21 204.7 21.4 204.7 21.8V45.2C204.7 50.1 200.7 52.4 195.2 52.4C190.7 52.4 187.2 51.1 184.4 49C184.1 48.7 184.1 48.3 184.3 48L186.2 45.8C186.4 45.5 186.8 45.5 187.2 45.7C189.4 47.1 192.2 48.2 195.1 48.2C198.7 48.2 200 46.6 200 43.8V40.2C198.4 42.6 194.8 43.8 190.9 43.8C183.6 43.8 178.2 38.8 178.2 32.4C178.2 25.9 183.6 21 189 21ZM191 25.2C185.8 25.2 182.8 28.8 182.8 32.5C182.8 36.3 185.8 39.8 191 39.8C196.2 39.8 199.6 36.2 199.6 32.5C199.6 28.7 196.2 25.2 191 25.2Z"/>
+        <path d="M211.5 15.8C211.5 15.4 211.9 15 212.3 15H215.7C216.1 15 216.5 15.4 216.5 15.8V21H221.2C221.6 21 222 21.4 222 21.8V24.2C222 24.6 221.6 25 221.2 25H216.5V36.2C216.5 38.2 217.3 39 219.1 39C219.8 39 220.4 38.8 220.9 38.6C221.2 38.5 221.6 38.6 221.8 38.9L222.6 40.3C222.8 40.7 222.7 41.1 222.3 41.4C221.4 42.1 220.1 42.5 218.4 42.5C214.6 42.5 211.5 40.2 211.5 35.8V25H207.8C207.4 25 207 24.6 207 24.2V21.8C207 21.4 207.4 21 207.8 21H211.5V15.8Z"/>
+        <path d="M226.5 12.8C226.5 12.4 226.9 12 227.3 12H231.3C231.7 12 232.1 12.4 232.1 12.8V24.8C233.7 22.3 236.9 21 241 21C246.5 21 249.9 24.5 249.9 30.2V41.2C249.9 41.6 249.5 42 249.1 42H245.1C244.7 42 244.3 41.6 244.3 41.2V30.8C244.3 27 242.4 24.9 238.9 24.9C234.8 24.9 232.1 27.8 232.1 32.8V41.2C232.1 41.6 231.7 42 231.3 42H227.3C226.9 42 226.5 41.6 226.5 41.2V12.8Z"/>
+    </g>
+
+    <g id="trength-tm" fill="#009EF7">
+        <path d="M253.5 13H258.5V14.4H256.7V19H255.3V14.4H253.5V13Z"/>
+        <path d="M259.5 13H261.1L262.5 16.5L263.9 13H265.5V19H264.2V15.2L262.9 18.2H262.1L260.8 15.2V19H259.5V13Z"/>
+    </g>
+
+    <rect x="71" y="46" width="48" height="3" rx="1.5" fill="url(#tr_accent_glow)"/>
+</svg>
