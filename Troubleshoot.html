@@ -252,8 +252,22 @@
                                 </div>
                                 <!--end::Header title-->
                                 <!--begin::Toolbar-->
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-primary btn-flex h-40px border-0 fw-bolder px-4 px-lg-6" href="#" target="_blank">Purchase</a>
+                                <div class="d-flex align-items-center gap-3">
+                                    <!--begin::Language Switcher-->
+                                    <div class="btn-group shadow-sm" role="group" aria-label="Language Switcher">
+                                        <button type="button" class="btn btn-sm btn-primary fw-bolder px-3 py-2 active" id="btn-lang-en" onclick="setLanguage('en')">
+                                            <span class="me-1">🇬🇧</span> English
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-light-warning fw-bolder px-3 py-2" id="btn-lang-hi" onclick="setLanguage('hi')">
+                                            <span class="me-1">🇮🇳</span> हिन्दी
+                                        </button>
+                                    </div>
+                                    <!--end::Language Switcher-->
+                                    <!--begin::Official Portal link-->
+                                    <a class="btn btn-primary btn-flex h-40px border-0 fw-bolder px-4 px-lg-6" href="https://trength.in" target="_blank">
+                                        <i class="bi bi-box-arrow-up-right me-2"></i>trength.in
+                                    </a>
+                                    <!--end::Official Portal link-->
                                 </div>
                                 <!--end::Toolbar-->
                             </div>
@@ -635,6 +649,7 @@
     <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
     <script src="assets/js/custom/documentation/documentation.js"></script>
+    <script src="assets/js/i18n.js"></script>
     <!--end::Javascript-->
 </body>
 </html>
