@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Trength Suite Documentation - Custom Typography & Mobile Enhancements
+   ========================================================================== */
+
+/* Crisp font smoothing */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Enhanced contrast for body text and descriptions */
+.text-gray-600 {
+    color: #4B5675 !important;
+}
+
+.text-gray-700 {
+    color: #252F4A !important;
+}
+
+.text-muted {
+    color: #5E6278 !important;
+}
+
+/* Ensure strong heading contrast */
+h1, h2, h3, h4, h5, h6,
+.text-gray-800, .text-gray-900 {
+    color: #181C32 !important;
+}
+
+/* Mobile Aside Toggle (Hamburger Menu) High Visibility */
+#kt_docs_aside_toggle {
+    color: #181C32 !important;
+    background-color: #F5F8FA;
+    border: 1px solid #E4E6EF;
+    border-radius: 0.475rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+#kt_docs_aside_toggle .svg-icon {
+    color: #181C32 !important;
+}
+
+#kt_docs_aside_toggle .svg-icon svg path {
+    fill: #181C32 !important;
+    opacity: 1 !important;
+}
+
+/* Aside menu section headings */
+.menu-content.text-muted {
+    color: #5E6278 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+}
+
+/* Menu links high contrast */
+.menu-state-title-primary .menu-item .menu-link .menu-title {
+    color: #252F4A;
+    font-weight: 500;
+}
+
+.menu-state-title-primary .menu-item .menu-link.active .menu-title {
+    color: #009EF7 !important;
+    font-weight: 600;
+}
+
+/* Improved contrast for badges */
+.badge.badge-light-primary {
+    color: #0077B6 !important;
+    background-color: #EBF8FF !important;
+    font-weight: 700 !important;
+}
+
+.badge.badge-light-success {
+    color: #1B8A5A !important;
+    background-color: #E8F8F0 !important;
+    font-weight: 700 !important;
+}
+
+.badge.badge-light-warning {
+    color: #C05621 !important;
+    background-color: #FEF7ED !important;
+    font-weight: 700 !important;
+}
+
+.badge.badge-light-danger {
+    color: #C53030 !important;
+    background-color: #FFF5F5 !important;
+    font-weight: 700 !important;
+}
+
+.badge.badge-light-info {
+    color: #007E8A !important;
+    background-color: #E6F7FA !important;
+    font-weight: 700 !important;
+}
+
+.badge.badge-light-dark {
+    color: #181C32 !important;
+    background-color: #F1F1F4 !important;
+    font-weight: 700 !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991.98px) {
+    .docs-aside {
+        background-color: #FFFFFF !important;
+        box-shadow: 0 0 50px 0 rgba(24, 28, 50, 0.15);
+    }
+    
+    .card .card-body {
+        padding: 1.25rem;
+    }
+}
