@@ -116,3 +116,18 @@ h1, h2, h3, h4, h5, h6,
         padding: 1.25rem;
     }
 }
+
+/* Icon Fix: bi-wrench-adjustable fallback to bi-wrench */
+.bi-wrench-adjustable::before {
+    content: "\f621" !important;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
