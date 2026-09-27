@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Trength Suite Documentation - Multilingual Support (English & Hindi)
  * Instant client-side switching with localStorage persistence
  */
@@ -464,7 +464,8 @@ const TrengthI18n = {
             inst_step5_title: "विंडोज यूजर अकाउंट कंट्रोल (UAC) परमिशन दें",
             inst_step5_desc: "जब विंडोज स्क्रीन पर <strong>User Account Control</strong> प्रॉम्प्ट दिखाई दे (*\"Do you want to allow this app to make changes...\"*), तो <strong>Yes</strong> बटन दबाकर इंस्टॉलेशन की अनुमति दें।",
             inst_step5_callout: "<strong>Yes</strong> पर क्लिक करने से सिस्टम सर्विस को कंप्यूटर चालू होने पर स्वचालित रूप से शुरू होने की प्रशासनिक अनुमति मिल जाती है।"
-
+        }
+    },
 
     setLanguage: function(lang) {
         if (!this.translations[lang]) lang = 'en';
@@ -520,6 +521,45 @@ const TrengthI18n = {
 function setLanguage(lang) {
     TrengthI18n.setLanguage(lang);
 }
+
+// Global helper for image zoom modals
+window.openCinematicModal = function(imgSrc, titleText) {
+    let modalEl = document.getElementById('cinematicModal');
+    if (!modalEl) {
+        modalEl = document.createElement('div');
+        modalEl.id = 'cinematicModal';
+        modalEl.className = 'modal fade';
+        modalEl.setAttribute('tabindex', '-1');
+        modalEl.setAttribute('aria-hidden', 'true');
+        modalEl.innerHTML = `
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content shadow-lg border-0">
+                    <div class="modal-header py-3 px-5 border-bottom bg-light">
+                        <h5 class="modal-title fw-bolder text-dark" id="cinematicModalLabel">Preview</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center p-4 bg-light">
+                        <img id="cinematicModalImg" src="" class="img-fluid rounded border shadow-sm" style="max-height: 80vh; object-fit: contain; background: #fff;" alt="Full Resolution Preview" />
+                    </div>
+                    <div class="modal-footer border-top py-2 px-5 text-center justify-content-center">
+                        <span class="text-muted fs-8"><i class="bi bi-info-circle me-1"></i>Trength™ Retail Suite</span>
+                    </div>
+                </div>
+            </div>`;
+        document.body.appendChild(modalEl);
+    }
+    const modalImg = document.getElementById('cinematicModalImg');
+    const modalTitle = document.getElementById('cinematicModalLabel');
+    if (modalImg) modalImg.src = imgSrc;
+    if (modalTitle && titleText) modalTitle.innerText = titleText;
+
+    if (window.bootstrap && window.bootstrap.Modal) {
+        const bsModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+        bsModal.show();
+    } else if (window.$ && $(modalEl).modal) {
+        $(modalEl).modal('show');
+    }
+};
 
 // Auto initialize on DOM ready
 if (document.readyState === 'loading') {
