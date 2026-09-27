@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Trength Suite Documentation - Multilingual Support (English & Hindi)
  * Instant client-side switching with localStorage persistence
  */
@@ -386,10 +386,85 @@ const TrengthI18n = {
             doc4_btn: "वीडियो देखें",
 
             // Support Notice & Footer
-            support_title: "एंटरप्राइज़ सहायता और ऑनबोर्डिंग सपोर्ट:",
-            support_desc: "दुकान का नेटवर्क सेटअप करने, वजन कांटा जोड़ने, या टैबलेट बिलिंग शुरू करने में सहायता चाहिए? हमारी तकनीकी टीम से <a href=\"mailto:support@trength.in\" class=\"fw-bold\">support@trength.in</a> पर संपर्क करें या हमारे आधिकारिक पोर्टल <a href=\"https://trength.in\" target=\"_blank\" class=\"fw-bold\">https://trength.in</a> पर जाएं।"
-        }
-    },
+            support_title: "Enterprise Onboarding & Technical Assistance:",
+            support_desc: "Need assistance setting up your store Wi-Fi network or pairing mobile POS terminals? Contact our engineering team at <a href=\"mailto:support@trength.in\" class=\"fw-bold\">support@trength.in</a> or visit <a href=\"https://trength.in\" target=\"_blank\" class=\"fw-bold\">https://trength.in</a>.",
+
+            // Visual Installation Guide Steps
+            inst_heading: "Step-by-Step Visual Installation Guide",
+            inst_subheading: "Follow these 5 visual setup screens to install Trength Server POS & API Host on your billing PC.",
+            
+            inst_step1_badge: "STEP 1: WELCOME WIZARD",
+            inst_step1_title: "Launch Trength™ Suite Setup Wizard",
+            inst_step1_desc: "Run the downloaded <code>TrengthSuite-Setup.msi</code> installer on your Windows billing PC. When the <strong>Welcome to the Trength™ Suite Setup Wizard</strong> screen appears, click <strong>Next &gt;</strong> to begin installation.",
+            inst_step1_callout: "<strong>Pro Tip:</strong> Ensure you are logged into a Windows Local Administrator account before running the installer.",
+
+            inst_step2_badge: "STEP 2: FOLDER & ACCESS",
+            inst_step2_title: "Select Installation Directory & User Access",
+            inst_step2_desc: "Specify the installation path (Default: <code>C:\\Program Files (x86)\\Trength Suite\\</code>). Select your preferred user access mode (<strong>Just me</strong> or <strong>Everyone</strong>), then click <strong>Next &gt;</strong>.",
+            inst_step2_callout: "Selecting <strong>Everyone</strong> allows all operator accounts on this PC to run Trength POS services without requiring separate installs.",
+
+            inst_step3_badge: "STEP 3: NETWORK TYPE",
+            inst_step3_title: "Choose Connection Type (Wi-Fi or Ethernet)",
+            inst_step3_desc: "Select how your Trength Server PC connects to your showroom network: choose <strong>WIFI</strong> if using a wireless router, or <strong>ETHERNET</strong> if connected via wired LAN cable. Click <strong>Next &gt;</strong>.",
+            inst_step3_callout: "<strong>Offline Store Network:</strong> Both Wi-Fi and Ethernet work 100% offline without needing active internet or SIM recharges.",
+
+            inst_step4_badge: "STEP 4: CONFIRMATION",
+            inst_step4_title: "Confirm & Start System Installation",
+            inst_step4_desc: "Verify your settings. The setup wizard is ready to copy application binaries, initialize the database engine, and register the background service daemon. Click <strong>Next &gt;</strong>.",
+            inst_step4_callout: "The installer automatically sets up local database tables and configures local network binding.",
+
+            inst_step5_badge: "STEP 5: UAC PERMISSION",
+            inst_step5_title: "Windows User Account Control (UAC) Grant",
+            inst_step5_desc: "When Windows displays the <strong>User Account Control</strong> prompt asking <em>\"Do you want to allow this app to make changes to your device?\"</em>, click <strong>Yes</strong> to grant installation privileges.",
+            inst_step5_callout: "Clicking <strong>Yes</strong> grants administrative privileges required to register the Trength background service daemon on boot."
+        },
+        hi: {
+            // Header & Navigation
+            doc_title: "स्ट्रेंथ™ सूट | रिटेल ईआरपी एवं पीओएस डॉक्यूमेंटेशन",
+            nav_getting_started: "शुरुआत करें",
+            nav_overview: "ओवरव्यू",
+            nav_installation: "इंस्टॉलेशन गाइड",
+            nav_command_centre: "कमांड सेंटर",
+            nav_configurations: "कॉन्फ़िगरेशन",
+            nav_troubleshoot: "समस्या निवारण",
+            nav_video_tutorials: "वीडियो ट्यूटोरियल",
+            nav_jewellery_app: "ज्वेलरी एप्लीकेशन",
+            nav_management: "प्रबंधन",
+            nav_users: "यूजर्स",
+            nav_roles: "रोल्स",
+            nav_masters: "मास्टर्स",
+            nav_shop: "दुकान",
+            nav_products: "उत्पाद",
+
+            // Visual Installation Guide Steps (Hindi)
+            inst_heading: "चरण-दर-चरण विजुअल इंस्टॉलेशन गाइड",
+            inst_subheading: "अपने बिलिंग पीसी पर Trength Server POS और API Host इंस्टॉल करने के लिए इन 5 आसान स्क्रीनशॉट चरणों का पालन करें।",
+            
+            inst_step1_badge: "चरण 1: विजार्ड प्रारंभ",
+            inst_step1_title: "Trength™ Suite विजार्ड शुरू करें",
+            inst_step1_desc: "अपने विंडोज बिलिंग पीसी पर डाउनलोड की गई <code>TrengthSuite-Setup.msi</code> फाइल चलाएं। <strong>Welcome to the Trength™ Suite Setup Wizard</strong> स्क्रीन आने पर आगे बढ़ने के लिए <strong>Next &gt;</strong> बटन पर क्लिक करें।",
+            inst_step1_callout: "<strong>सुझाव:</strong> इंस्टॉलर चलाने से पहले सुनिश्चित करें कि आप विंडोज एडमिनिस्ट्रेटर अकाउंट से लॉग इन हैं।",
+
+            inst_step2_badge: "चरण 2: फोल्डर और एक्सेस",
+            inst_step2_title: "इंस्टॉलेशन फोल्डर और यूजर एक्सेस चुनें",
+            inst_step2_desc: "अपनी पसंद का इंस्टॉलेशन पाथ चुनें (डिफ़ॉल्ट: <code>C:\\Program Files (x86)\\Trength Suite\\</code>)। अपनी आवश्यकतानुसार यूजर एक्सेस मोड (<strong>Just me</strong> या <strong>Everyone</strong>) चुनें और <strong>Next &gt;</strong> पर क्लिक करें।",
+            inst_step2_callout: "<strong>Everyone</strong> चुनने पर इस पीसी के सभी ऑपरेटर अकाउंट बिना दोबारा इंस्टॉल किए Trength POS का उपयोग कर सकेंगे।",
+
+            inst_step3_badge: "चरण 3: नेटवर्क प्रकार",
+            inst_step3_title: "कनेक्शन प्रकार चुनें (वाई-फाई या ईथरनेट)",
+            inst_step3_desc: "चुनें कि आपका स्ट्रेंथ सर्वर पीसी स्टोर नेटवर्क से कैसे जुड़ेगा: यदि वायरलेस राउटर का उपयोग कर रहे हैं तो <strong>WIFI</strong> चुनें, या केबल कनेक्शन के लिए <strong>ETHERNET</strong> चुनें। फिर <strong>Next &gt;</strong> दबाएं।",
+            inst_step3_callout: "<strong>100% ऑफलाइन लोकल नेटवर्क:</strong> वाई-फाई और ईथरनेट दोनों मोड बिना इंटरनेट या रिचार्ज के 100% ऑफलाइन काम करते हैं।",
+
+            inst_step4_badge: "चरण 4: पुष्टि करें",
+            inst_step4_title: "पुष्टि करें और इंस्टॉलेशन शुरू करें",
+            inst_step4_desc: "अपनी चुनी हुई सेटिंग्स की जांच करें। विजार्ड सिस्टम फाइलें कॉपी करने और बैकग्राउंड सर्विस रजिस्टर करने के लिए तैयार है। इंस्टॉलेशन शुरू करने के लिए <strong>Next &gt;</strong> दबाएं।",
+            inst_step4_callout: "इंस्टॉलर स्वतः ही लोकल डेटाबेस टेबल और नेटवर्क पोर्ट बाइंडिंग कॉन्फ़िगर कर देता है।",
+
+            inst_step5_badge: "चरण 5: UAC सिक्योरिटी परमिशन",
+            inst_step5_title: "विंडोज यूजर अकाउंट कंट्रोल (UAC) परमिशन दें",
+            inst_step5_desc: "जब विंडोज स्क्रीन पर <strong>User Account Control</strong> प्रॉम्प्ट दिखाई दे (*\"Do you want to allow this app to make changes...\"*), तो <strong>Yes</strong> बटन दबाकर इंस्टॉलेशन की अनुमति दें।",
+            inst_step5_callout: "<strong>Yes</strong> पर क्लिक करने से सिस्टम सर्विस को कंप्यूटर चालू होने पर स्वचालित रूप से शुरू होने की प्रशासनिक अनुमति मिल जाती है।"
+
 
     setLanguage: function(lang) {
         if (!this.translations[lang]) lang = 'en';

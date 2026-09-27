@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -484,52 +484,166 @@
                                 </div>
                                 <!--end::Section: Title & Summary-->
 
-                                <!--==================== PHASE 1: REGISTRATION & SETUP ====================-->
-                                <div class="mb-14" id="phase-1">
+                                <!--==================== VISUAL INSTALLATION WALKTHROUGH ====================-->
+                                <div class="mb-14" id="visual-installation">
                                     <div class="d-flex align-items-center mb-6">
                                         <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">1</span>
-                                        <h2 class="fw-bolder mb-0 text-dark">Phase 1: Registration & Software Download</h2>
+                                        <div>
+                                            <h2 class="fw-bolder mb-0 text-dark" data-i18n="inst_heading">Step-by-Step Visual Installation Guide</h2>
+                                            <div class="text-muted fs-6" data-i18n="inst_subheading">Follow these 5 visual setup screens to install Trength Server POS & API Host on your billing PC.</div>
+                                        </div>
                                     </div>
 
-                                    <!-- Step 1 -->
-                                    <div class="card card-bordered mb-8 shadow-sm">
-                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3">
-                                            <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0">Step 1: Obtain Your Unique Installation Code</h4>
+                                    <!-- Visual Step 1 -->
+                                    <div class="card card-bordered mb-8 shadow-sm overflow-hidden">
+                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="badge badge-primary fw-bolder fs-8 px-3 py-1 me-2" data-i18n="inst_step1_badge">STEP 1: WELCOME WIZARD</span>
+                                                <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0 d-inline" data-i18n="inst_step1_title">Launch Trength Suite Setup Wizard</h4>
+                                            </div>
                                         </div>
                                         <div class="card-body">
-                                            <p class="fs-6 text-gray-700 mb-4">
-                                                Prior to downloading the software, register your store license on the Trength partner portal. Upon successful verification of your company details (GSTIN, store location, and administrator identity), a 16-character alphanumeric <strong>Installation Code</strong> is generated and sent to your registered email address.
-                                            </p>
-                                            <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-5 mb-4">
-                                                <i class="bi bi-shield-lock-fill text-warning fs-2 me-4"></i>
-                                                <div>
-                                                    <strong class="d-block mb-1 text-gray-900">Security & Licensing:</strong>
-                                                    The installation code securely binds your local retail database with your cloud backups, customized billing templates, and user permission matrices. Keep this code confidential and readily available.
+                                            <div class="row align-items-center g-6">
+                                                <div class="col-lg-6">
+                                                    <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step1_desc">
+                                                        Run the downloaded <code>TrengthSuite-Setup.msi</code> installer on your Windows billing PC. When the <strong>Welcome to the Trength Suite Setup Wizard</strong> screen appears, click <strong>Next &gt;</strong> to begin installation.
+                                                    </p>
+                                                    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed p-4">
+                                                        <i class="bi bi-lightbulb-fill text-primary fs-3 me-3"></i>
+                                                        <div class="text-gray-700 fs-6" data-i18n="inst_step1_callout">
+                                                            <strong>Pro Tip:</strong> Ensure you are logged into a Windows Local Administrator account before running the installer.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 text-center">
+                                                    <div class="cinematic-img-frame zoom-cursor shadow-sm rounded border" onclick="openCinematicModal('assets/media/installation/step1-welcome.png', 'Step 1: Trength Suite Welcome Screen')">
+                                                        <img src="assets/media/installation/step1-welcome.png" alt="Trength Suite Welcome Wizard Screen" class="img-fluid rounded" style="max-height: 280px;" />
+                                                    </div>
+                                                    <div class="text-muted fs-8 mt-2"><i class="bi bi-zoom-in me-1"></i>Click image to expand</div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Step 2 -->
-                                    <div class="card card-bordered mb-8 shadow-sm">
-                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3">
-                                            <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0">Step 2: Run the Trength Setup Installer</h4>
+                                    <!-- Visual Step 2 -->
+                                    <div class="card card-bordered mb-8 shadow-sm overflow-hidden">
+                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="badge badge-primary fw-bolder fs-8 px-3 py-1 me-2" data-i18n="inst_step2_badge">STEP 2: FOLDER & ACCESS</span>
+                                                <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0 d-inline" data-i18n="inst_step2_title">Select Installation Directory & User Access</h4>
+                                            </div>
                                         </div>
                                         <div class="card-body">
-                                            <p class="fs-6 text-gray-700 mb-4">
-                                                Download the setup bundle provided in your onboarding email (e.g. <code>Trength-Setup-v1.0.exe</code>).
-                                            </p>
-                                            <ol class="fs-6 text-gray-700 mb-5 ps-5">
-                                                <li class="mb-2">Locate the downloaded setup file in your <strong>Downloads</strong> folder.</li>
-                                                <li class="mb-2">Right-click the executable and select <strong>Run as Administrator</strong>.</li>
-                                                <li class="mb-2">If prompted by Windows Defender SmartScreen (<em>"Windows protected your PC"</em>), click <strong>More info</strong> and then choose <strong>Run anyway</strong>.</li>
-                                                <li class="mb-2">When the license activation prompt appears, paste your unique <strong>Installation Code</strong> and click <strong>Verify</strong>.</li>
-                                                <li>Select the destination directory (Default: <code>C:\Program Files\Trength\</code>) and complete the installation wizard.</li>
-                                            </ol>
-                                            <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed p-4">
-                                                <i class="bi bi-info-circle-fill text-primary fs-3 me-3"></i>
-                                                <div class="text-gray-700 fs-6">
-                                                    The installer automatically deploys the core desktop application, local SQLite/SQL database engine, barcode label drivers, and the <strong>Trength Background Windows Service</strong>.
+                                            <div class="row align-items-center g-6">
+                                                <div class="col-lg-6">
+                                                    <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step2_desc">
+                                                        Specify the installation path (Default: <code>C:\Program Files (x86)\Trength Suite\</code>). Select your preferred user access mode (<strong>Just me</strong> or <strong>Everyone</strong>), then click <strong>Next &gt;</strong>.
+                                                    </p>
+                                                    <div class="notice d-flex bg-light-success rounded border-success border border-dashed p-4">
+                                                        <i class="bi bi-shield-check text-success fs-3 me-3"></i>
+                                                        <div class="text-gray-700 fs-6" data-i18n="inst_step2_callout">
+                                                            Selecting <strong>Everyone</strong> allows all operator accounts on this PC to run Trength POS services without requiring separate installs.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 text-center">
+                                                    <div class="cinematic-img-frame zoom-cursor shadow-sm rounded border" onclick="openCinematicModal('assets/media/installation/step2-folder.png', 'Step 2: Select Installation Folder')">
+                                                        <img src="assets/media/installation/step2-folder.png" alt="Select Installation Directory Screen" class="img-fluid rounded" style="max-height: 280px;" />
+                                                    </div>
+                                                    <div class="text-muted fs-8 mt-2"><i class="bi bi-zoom-in me-1"></i>Click image to expand</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Visual Step 3 -->
+                                    <div class="card card-bordered mb-8 shadow-sm overflow-hidden">
+                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="badge badge-primary fw-bolder fs-8 px-3 py-1 me-2" data-i18n="inst_step3_badge">STEP 3: NETWORK TYPE</span>
+                                                <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0 d-inline" data-i18n="inst_step3_title">Choose Connection Type (Wi-Fi or Ethernet)</h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row align-items-center g-6">
+                                                <div class="col-lg-6">
+                                                    <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step3_desc">
+                                                        Select how your Trength Server PC connects to your showroom network: choose <strong>WIFI</strong> if using a wireless router, or <strong>ETHERNET</strong> if connected via wired LAN cable. Click <strong>Next &gt;</strong>.
+                                                    </p>
+                                                    <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-4">
+                                                        <i class="bi bi-wifi text-warning fs-3 me-3"></i>
+                                                        <div class="text-gray-700 fs-6" data-i18n="inst_step3_callout">
+                                                            <strong>Offline Store Network:</strong> Both Wi-Fi and Ethernet work 100% offline without needing active internet or SIM recharges.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 text-center">
+                                                    <div class="cinematic-img-frame zoom-cursor shadow-sm rounded border" onclick="openCinematicModal('assets/media/installation/step3-connection.png', 'Step 3: Choose Connection Type')">
+                                                        <img src="assets/media/installation/step3-connection.png" alt="Choose Connection Type WIFI or ETHERNET" class="img-fluid rounded" style="max-height: 280px;" />
+                                                    </div>
+                                                    <div class="text-muted fs-8 mt-2"><i class="bi bi-zoom-in me-1"></i>Click image to expand</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Visual Step 4 -->
+                                    <div class="card card-bordered mb-8 shadow-sm overflow-hidden">
+                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="badge badge-primary fw-bolder fs-8 px-3 py-1 me-2" data-i18n="inst_step4_badge">STEP 4: CONFIRMATION</span>
+                                                <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0 d-inline" data-i18n="inst_step4_title">Confirm & Start System Installation</h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row align-items-center g-6">
+                                                <div class="col-lg-6">
+                                                    <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step4_desc">
+                                                        Verify your settings. The setup wizard is ready to copy application binaries, initialize the database engine, and register the background service daemon. Click <strong>Next &gt;</strong>.
+                                                    </p>
+                                                    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed p-4">
+                                                        <i class="bi bi-gear-wide-connected text-primary fs-3 me-3"></i>
+                                                        <div class="text-gray-700 fs-6" data-i18n="inst_step4_callout">
+                                                            The installer automatically sets up local database tables and configures local network binding.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 text-center">
+                                                    <div class="cinematic-img-frame zoom-cursor shadow-sm rounded border" onclick="openCinematicModal('assets/media/installation/step4-confirm.png', 'Step 4: Confirm Installation')">
+                                                        <img src="assets/media/installation/step4-confirm.png" alt="Confirm Installation Screen" class="img-fluid rounded" style="max-height: 280px;" />
+                                                    </div>
+                                                    <div class="text-muted fs-8 mt-2"><i class="bi bi-zoom-in me-1"></i>Click image to expand</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Visual Step 5 -->
+                                    <div class="card card-bordered mb-8 shadow-sm overflow-hidden">
+                                        <div class="card-header bg-light-primary border-0 pt-4 pb-3 d-flex align-items-center justify-content-between">
+                                            <div>
+                                                <span class="badge badge-danger fw-bolder fs-8 px-3 py-1 me-2" data-i18n="inst_step5_badge">STEP 5: UAC PERMISSION</span>
+                                                <h4 class="card-title fw-bolder text-gray-800 fs-5 mb-0 d-inline" data-i18n="inst_step5_title">Windows User Account Control (UAC) Grant</h4>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row align-items-center g-6">
+                                                <div class="col-lg-6">
+                                                    <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step5_desc">
+                                                        When Windows displays the <strong>User Account Control</strong> prompt asking <em>"Do you want to allow this app to make changes to your device?"</em>, click <strong>Yes</strong> to grant installation privileges.
+                                                    </p>
+                                                    <div class="notice d-flex bg-light-danger rounded border-danger border border-dashed p-4">
+                                                        <i class="bi bi-exclamation-triangle-fill text-danger fs-3 me-3"></i>
+                                                        <div class="text-gray-700 fs-6" data-i18n="inst_step5_callout">
+                                                            Clicking <strong>Yes</strong> grants administrative privileges required to register the Trength background service daemon on boot.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 text-center">
+                                                    <div class="cinematic-img-frame zoom-cursor shadow-sm rounded border" onclick="openCinematicModal('assets/media/installation/step5-uac.jpg', 'Step 5: Windows User Account Control (UAC)')">
+                                                        <img src="assets/media/installation/step5-uac.jpg" alt="Windows User Account Control Security Prompt" class="img-fluid rounded" style="max-height: 280px;" />
+                                                    </div>
+                                                    <div class="text-muted fs-8 mt-2"><i class="bi bi-zoom-in me-1"></i>Click image to expand</div>
                                                 </div>
                                             </div>
                                         </div>
