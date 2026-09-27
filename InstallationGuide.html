@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
     <!--end::Fonts-->
     <!--begin::Page Vendor Stylesheets(used by this page)-->
     <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
@@ -413,12 +413,12 @@
                                 <!--begin::Toolbar-->
                                 <div class="d-flex align-items-center gap-3">
                                     <!--begin::Language Switcher-->
-                                    <div class="btn-group shadow-sm" role="group" aria-label="Language Switcher">
-                                        <button type="button" class="btn btn-sm btn-primary fw-bolder px-3 py-2 active" id="btn-lang-en" onclick="setLanguage('en')">
-                                            <span class="me-1">🇬🇧</span> English
+                                    <div class="lang-switcher-group shadow-sm" role="group" aria-label="Language Switcher">
+                                        <button type="button" class="lang-switcher-btn active" id="btn-lang-en" onclick="setLanguage('en')">
+                                            <span class="lang-badge">EN</span> English
                                         </button>
-                                        <button type="button" class="btn btn-sm btn-light-warning fw-bolder px-3 py-2" id="btn-lang-hi" onclick="setLanguage('hi')">
-                                            <span class="me-1">🇮🇳</span> हिन्दी
+                                        <button type="button" class="lang-switcher-btn" id="btn-lang-hi" onclick="setLanguage('hi')">
+                                            <span class="lang-badge">HI</span> हिन्दी
                                         </button>
                                     </div>
                                     <!--end::Language Switcher-->
@@ -697,7 +697,7 @@
                                                         <i class="bi bi-gear-fill me-1"></i>Configure Command Centre
                                                     </a>
                                                     <a href="Troubleshoot.html" class="btn btn-sm btn-light-success fw-bold">
-                                                        <i class="bi bi-wrench-adjustable me-1"></i>System Troubleshooting
+                                                        <i class="bi bi-wrench me-1"></i>System Troubleshooting
                                                     </a>
                                                     <a href="VideoTutorials.html" class="btn btn-sm btn-light-danger fw-bold">
                                                         <i class="bi bi-play-circle-fill me-1"></i>Watch Video Tutorials
@@ -710,7 +710,7 @@
 
                                 <!--==================== TROUBLESHOOTING ====================-->
                                 <div class="mb-10" id="troubleshooting">
-                                    <h3 class="fw-bolder text-dark mb-5"><i class="bi bi-wrench-adjustable text-danger me-2"></i>Troubleshooting & FAQs</h3>
+                                    <h3 class="fw-bolder text-dark mb-5"><i class="bi bi-wrench text-danger me-2"></i>Troubleshooting & FAQs</h3>
 
                                     <div class="accordion accordion-flush" id="kt_troubleshooting_accordion">
                                         <!-- Issue 1 -->

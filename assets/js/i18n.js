@@ -31,9 +31,9 @@ const TrengthI18n = {
             hero_subtitle: "A high-speed, enterprise-grade retail POS and inventory management platform engineered for modern commercial operations. Trength provides specialized, domain-tailored software applications for <strong>Jewellery Showrooms</strong>, <strong>Mobile & Telecom Outlets</strong>, <strong>Clothing & Fashion Chains</strong>, and <strong>Consumer Electronics Retailers</strong>.",
             hero_btn_install: "<i class=\"bi bi-box-arrow-in-down me-1\"></i>Quick Installation Guide",
             hero_btn_command: "<i class=\"bi bi-sliders me-1\"></i>Command Centre Setup",
-            hero_btn_diagnostics: "<i class=\"bi bi-wrench-adjustable me-1\"></i>System Diagnostics",
-            hero_arch_title: "100% On-Premises Local Network Hub",
-            hero_arch_desc: "Zero cloud dependency. Instant Wi-Fi synchronization across tablets, cashier counters, weighing balances & smartphone scanners.",
+            hero_btn_diagnostics: "<i class=\"bi bi-wrench me-1\"></i>System Diagnostics",
+            hero_arch_title: "100% Offline Local Store Network",
+            hero_arch_desc: "Zero internet required. Single host PC connected to an offline Wi-Fi router; mobile sales reps scan QR tags and sync instantly with attached receipt & QR label printers.",
             hero_badge_airgap: "AIR-GAPPED READY",
 
             // Section 1: Why Choose Trength Suite
@@ -223,7 +223,7 @@ const TrengthI18n = {
             hero_subtitle: "एक हाई-स्पीड, एंटरप्राइज़-ग्रेड रिटेल पीओएस और इन्वेंट्री मैनेजमेंट प्लेटफ़ॉर्म। Trength विशेष रूप से <strong>ज्वैलरी शोरूम</strong>, <strong>मोबाइल और टेलीकॉम स्टोर्स</strong>, <strong>कपड़ा और गारमेंट चेन्स</strong>, और <strong>कंज्यूमर इलेक्ट्रॉनिक्स रिटेलर्स</strong> के लिए तैयार किए गए सॉफ्टवेयर समाधान प्रदान करता है।",
             hero_btn_install: "<i class=\"bi bi-box-arrow-in-down me-1\"></i>त्वरित इंस्टॉलेशन गाइड",
             hero_btn_command: "<i class=\"bi bi-sliders me-1\"></i>कमांड सेंटर सेटअप",
-            hero_btn_diagnostics: "<i class=\"bi bi-wrench-adjustable me-1\"></i>सिस्टम डायग्नोस्टिक्स",
+            hero_btn_diagnostics: "<i class=\"bi bi-wrench me-1\"></i>सिस्टम डायग्नोस्टिक्स",
             hero_arch_title: "100% ऑन-प्रिमाइसेस लोकल नेटवर्क हब",
             hero_arch_desc: "क्लाउड पर शून्य निर्भरता। टैबलेट, कैशियर काउंटर, वजन कांटे और स्मार्टफोन स्कैनर के बीच त्वरित वाई-फाई सिंक।",
             hero_badge_airgap: "एयर-गैप्ड सुरक्षित",
@@ -413,15 +413,13 @@ const TrengthI18n = {
         const btnHi = document.getElementById('btn-lang-hi');
         if (btnEn && btnHi) {
             if (lang === 'hi') {
-                btnEn.classList.remove('btn-primary', 'active');
-                btnEn.classList.add('btn-light-primary');
-                btnHi.classList.remove('btn-light-warning');
-                btnHi.classList.add('btn-warning', 'active');
+                btnEn.classList.remove('active', 'btn-primary');
+                btnHi.classList.add('active');
+                btnHi.classList.remove('btn-warning', 'btn-light-warning');
             } else {
-                btnHi.classList.remove('btn-warning', 'active');
-                btnHi.classList.add('btn-light-warning');
+                btnHi.classList.remove('active', 'btn-warning');
+                btnEn.classList.add('active');
                 btnEn.classList.remove('btn-light-primary');
-                btnEn.classList.add('btn-primary', 'active');
             }
         }
 

@@ -1,0 +1,587 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="50%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+
+    <linearGradient id="serverPillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="50%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="cardShadow" x="-8%" y="-8%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.07"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="laserGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+
+  <!-- Store Floor Horizon & Perspective Lines -->
+  <g opacity="0.4" stroke="#CBD5E1" stroke-width="1.5">
+    <line x1="0" y1="910" x2="1920" y2="910" stroke="#94A3B8" stroke-width="2.5"/>
+    <line x1="90" y1="910" x2="0" y2="1080" stroke-dasharray="6 6"/>
+    <line x1="450" y1="910" x2="300" y2="1080" stroke-dasharray="6 6"/>
+    <line x1="960" y1="910" x2="960" y2="1080" stroke-dasharray="6 6"/>
+    <line x1="1470" y1="910" x2="1620" y2="1080" stroke-dasharray="6 6"/>
+    <line x1="1830" y1="910" x2="1920" y2="1080" stroke-dasharray="6 6"/>
+
+    <!-- Boutique Shelves Outline on Far Left -->
+    <rect x="40" y="270" width="120" height="480" rx="8" fill="#E2E8F0" fill-opacity="0.25" stroke="#CBD5E1" stroke-dasharray="4 4"/>
+    <line x1="40" y1="390" x2="160" y2="390" stroke-dasharray="4 4"/>
+    <line x1="40" y1="510" x2="160" y2="510" stroke-dasharray="4 4"/>
+    <line x1="40" y1="630" x2="160" y2="630" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- HEADER BAR -->
+  <g transform="translate(960, 40)" text-anchor="middle">
+    <!-- Top Pill Badge -->
+    <rect x="-260" y="0" width="520" height="34" rx="17" fill="#DBEAFE"/>
+    <text x="0" y="23" fill="#1D4ED8" font-size="13.5" font-weight="800" letter-spacing="1.2">RETAIL STORE SETUP • 100% OFFLINE LOCAL NETWORK</text>
+
+    <!-- Main Title -->
+    <text x="0" y="78" fill="#0F172A" font-size="38" font-weight="900" letter-spacing="-0.5">How Trength™ Works in Your Store</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="112" fill="#475569" font-size="17" font-weight="500">
+      Zero internet required. Sales reps scan QR tags with mobile phones and sync instantly to your Trength Server PC.
+    </text>
+  </g>
+
+  <!-- LEFT AREA: 2 SALES REPS ZONE CARD -->
+  <rect x="55" y="155" width="675" height="725" rx="24" fill="#FFFFFF" fill-opacity="0.94" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+  
+  <!-- Zone Header -->
+  <g transform="translate(85, 195)">
+    <rect x="0" y="0" width="38" height="38" rx="10" fill="#EFF6FF"/>
+    <path d="M 13 8 L 25 8 C 26.5 8 27 9 27 10.5 L 27 27.5 C 27 29 26.5 30 25 30 L 13 30 C 11.5 30 11 29 11 27.5 L 11 10.5 C 11 9 11.5 8 13 8 Z M 17 27 L 21 27" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="50" y="24" font-size="19" font-weight="900" fill="#0F172A">SHOWROOM FLOOR — 2 SALES ASSOCIATES</text>
+    <text x="50" y="44" font-size="13" font-weight="600" fill="#64748B">Equipped with everyday mobile smartphones. Zero barcode guns needed.</text>
+  </g>
+
+  <!-- SALES REP 1: Scanning QR Code -->
+  <g transform="translate(85, 270)">
+    <rect x="0" y="0" width="300" height="580" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Top Status Badge -->
+    <rect x="16" y="16" width="145" height="26" rx="6" fill="#DCFCE7"/>
+    <text x="88" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#15803D">SALES REP 1 • QR SCAN</text>
+
+    <!-- Friendly Illustrated Female Sales Rep (Vector) -->
+    <g transform="translate(105, 140)">
+      <!-- Soft Shadow -->
+      <ellipse cx="10" cy="140" rx="65" ry="12" fill="#E2E8F0"/>
+      
+      <!-- Body & Uniform -->
+      <path d="M -22 135 C -26 95, -18 65, -8 56 L 24 56 C 34 65, 42 95, 38 135 Z" fill="#0F172A"/>
+      <!-- Store Uniform Apron / Vest (Vibrant Royal Blue) -->
+      <path d="M -8 58 L 24 58 L 30 135 L -14 135 Z" fill="#2563EB"/>
+      <!-- White Collar -->
+      <polygon points="8,58 0,72 16,72" fill="#FFFFFF"/>
+      <!-- Store ID Badge -->
+      <rect x="-10" y="78" width="14" height="18" rx="2" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="-8" y="82" width="10" height="3" fill="#2563EB"/>
+
+      <!-- Neck -->
+      <rect x="2" y="40" width="12" height="18" fill="#FED7AA"/>
+      <!-- Head & Face -->
+      <circle cx="8" cy="26" r="22" fill="#FED7AA"/>
+      <!-- Hair (Brunette Bob Cut) -->
+      <path d="M -14 22 C -14 6, -6 -2, 8 -2 C 22 -2, 30 6, 30 22 C 30 32, 28 42, 24 46 C 18 40, -2 40, -8 46 C -12 42, -14 32, -14 22 Z" fill="#451A03"/>
+      <!-- Eyes & Warm Smile -->
+      <circle cx="2" cy="25" r="2.5" fill="#451A03"/>
+      <circle cx="15" cy="25" r="2.5" fill="#451A03"/>
+      <path d="M 3 33 Q 8 38 14 33" fill="none" stroke="#B45309" stroke-width="2.2" stroke-linecap="round"/>
+
+      <!-- Right Arm stretching forward holding phone -->
+      <path d="M 26 66 C 45 70, 68 76, 92 84" fill="none" stroke="#FED7AA" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 26 66 C 40 69, 58 73, 74 78" fill="none" stroke="#0F172A" stroke-width="16" stroke-linecap="round"/>
+      <circle cx="95" cy="86" r="9" fill="#FED7AA"/>
+
+      <!-- SMARTPHONE DEVICE -->
+      <g transform="translate(90, 36)">
+        <rect x="0" y="0" width="58" height="102" rx="10" fill="url(#phoneGrad)" stroke="#3B82F6" stroke-width="2.5" filter="url(#softGlow)"/>
+        <rect x="4" y="6" width="50" height="90" rx="7" fill="#0F172A"/>
+        
+        <!-- Camera Viewfinder UI -->
+        <rect x="7" y="14" width="44" height="44" rx="4" fill="#1E293B"/>
+        <rect x="11" y="18" width="36" height="36" rx="3" fill="none" stroke="#22C55E" stroke-width="2" stroke-dasharray="4 3"/>
+        <line x1="9" y1="36" x2="49" y2="36" stroke="#EF4444" stroke-width="2"/>
+
+        <!-- Scan Status Overlay -->
+        <rect x="7" y="64" width="44" height="16" rx="3" fill="#059669"/>
+        <text x="29" y="75" text-anchor="middle" font-size="7" font-weight="800" fill="#FFFFFF">QR SCANNED ✓</text>
+        <text x="29" y="88" text-anchor="middle" font-size="6.5" font-weight="700" fill="#93C5FD">Item #10842</text>
+      </g>
+
+      <!-- Laser Scan Beam & Product Display Stand -->
+      <g transform="translate(148, 56)">
+        <polygon points="0,25 40,10 40,48" fill="#22C55E" fill-opacity="0.25"/>
+        <line x1="0" y1="29" x2="40" y2="29" stroke="#22C55E" stroke-width="2.5" stroke-dasharray="4 2" filter="url(#laserGlow)"/>
+
+        <!-- Display Pedestal -->
+        <rect x="38" y="10" width="30" height="45" rx="5" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#cardShadow)"/>
+        
+        <!-- Jewelry Item (Gold Ring in Velvet Box) -->
+        <rect x="42" y="16" width="22" height="18" rx="3" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1"/>
+        <circle cx="53" cy="25" r="5" fill="none" stroke="#D97706" stroke-width="2.5"/>
+        
+        <!-- Hanging QR Code Tag -->
+        <rect x="44" y="36" width="18" height="14" rx="2" fill="#0F172A"/>
+        <rect x="46" y="38" width="4" height="4" fill="#FFFFFF"/>
+        <rect x="54" y="38" width="4" height="4" fill="#FFFFFF"/>
+        <rect x="46" y="44" width="4" height="4" fill="#FFFFFF"/>
+        <text x="53" y="52" text-anchor="middle" font-size="3.5" font-weight="700" fill="#64748B">QR TAG</text>
+      </g>
+    </g>
+
+    <!-- Text Information Card -->
+    <g transform="translate(16, 350)">
+      <rect x="0" y="0" width="268" height="210" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="16" y="28" font-size="16" font-weight="800" fill="#0F172A">Smartphone Camera</text>
+      <text x="16" y="48" font-size="12" font-weight="700" fill="#2563EB">Live QR Code Scanner</text>
+
+      <line x1="16" y1="62" x2="252" y2="62" stroke="#F1F5F9" stroke-width="1.5"/>
+
+      <circle cx="24" cy="82" r="4.5" fill="#22C55E"/>
+      <text x="36" y="86" font-size="12" font-weight="600" fill="#334155">Scans item QR tags instantly</text>
+
+      <circle cx="24" cy="112" r="4.5" fill="#22C55E"/>
+      <text x="36" y="116" font-size="12" font-weight="600" fill="#334155">Zero barcode gun needed</text>
+
+      <circle cx="24" cy="142" r="4.5" fill="#22C55E"/>
+      <text x="36" y="146" font-size="12" font-weight="600" fill="#334155">Syncs live to Trength Server PC</text>
+
+      <!-- Highlight Banner -->
+      <rect x="14" y="165" width="240" height="32" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+      <text x="134" y="186" text-anchor="middle" font-size="11.5" font-weight="800" fill="#15803D">✓ Instant Item Lookup</text>
+    </g>
+  </g>
+
+  <!-- SALES REP 2: Mobile Billing / Order Entry -->
+  <g transform="translate(405, 270)">
+    <rect x="0" y="0" width="300" height="580" rx="18" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+    
+    <!-- Top Status Badge -->
+    <rect x="16" y="16" width="150" height="26" rx="6" fill="#DBEAFE"/>
+    <text x="91" y="34" text-anchor="middle" font-size="11" font-weight="800" fill="#1D4ED8">SALES REP 2 • ORDER</text>
+
+    <!-- Friendly Illustrated Male Sales Rep (Vector) -->
+    <g transform="translate(150, 140)">
+      <!-- Soft Shadow -->
+      <ellipse cx="0" cy="140" rx="60" ry="12" fill="#E2E8F0"/>
+      
+      <!-- Body & Uniform -->
+      <path d="M -30 135 C -34 95, -26 65, -14 56 L 14 56 C 26 65, 34 95, 30 135 Z" fill="#0F172A"/>
+      <!-- Polo Shirt (Teal / Sky Blue) -->
+      <path d="M -14 58 L 14 58 L 20 135 L -20 135 Z" fill="#0284C7"/>
+      <polygon points="0,58 -7,72 7,72" fill="#FFFFFF"/>
+      <line x1="0" y1="72" x2="0" y2="100" stroke="#0369A1" stroke-width="1.5"/>
+
+      <!-- Neck -->
+      <rect x="-6" y="40" width="12" height="18" fill="#FED7AA"/>
+      <!-- Head & Face -->
+      <circle cx="0" cy="26" r="22" fill="#FED7AA"/>
+      <!-- Hair (Short Modern Style) -->
+      <path d="M -22 24 C -22 8, -14 -2, 0 -2 C 14 -2, 22 8, 22 24 C 20 14, 10 10, 0 10 C -10 10, -18 14, -22 24 Z" fill="#1E293B"/>
+      <!-- Eyes & Smile -->
+      <circle cx="-6" cy="25" r="2.5" fill="#1E293B"/>
+      <circle cx="6" cy="25" r="2.5" fill="#1E293B"/>
+      <path d="M -5 33 Q 0 38 5 33" fill="none" stroke="#B45309" stroke-width="2.2" stroke-linecap="round"/>
+
+      <!-- Arms holding tablet device in front -->
+      <path d="M -24 70 C -16 92, -6 98, 0 100" fill="none" stroke="#0F172A" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 24 70 C 16 92, 6 98, 0 100" fill="none" stroke="#0F172A" stroke-width="14" stroke-linecap="round"/>
+
+      <!-- TABLET DEVICE HELD BY REP 2 -->
+      <g transform="translate(-42, 68)">
+        <rect x="0" y="0" width="84" height="62" rx="8" fill="#1E293B" stroke="#0284C7" stroke-width="2.5" filter="url(#softGlow)"/>
+        <rect x="4" y="4" width="76" height="54" rx="5" fill="#FFFFFF"/>
+        
+        <!-- Live Cart UI on Tablet -->
+        <rect x="7" y="8" width="36" height="7" rx="2" fill="#0284C7"/>
+        <text x="25" y="13.5" text-anchor="middle" font-size="5" font-weight="800" fill="#FFFFFF">ACTIVE CART</text>
+
+        <line x1="7" y1="19" x2="71" y2="19" stroke="#E2E8F0" stroke-width="1.5"/>
+        <rect x="7" y="24" width="42" height="3" rx="1" fill="#94A3B8"/>
+        <text x="68" y="27" text-anchor="end" font-size="4.5" font-weight="700" fill="#0F172A">₹8,400</text>
+        <rect x="7" y="30" width="34" height="3" rx="1" fill="#94A3B8"/>
+        <text x="68" y="33" text-anchor="end" font-size="4.5" font-weight="700" fill="#0F172A">₹6,490</text>
+        
+        <!-- Green Total Pill -->
+        <rect x="7" y="38" width="70" height="15" rx="3" fill="#DCFCE7"/>
+        <text x="42" y="49" text-anchor="middle" font-size="7" font-weight="900" fill="#15803D">TOTAL: ₹ 14,890</text>
+      </g>
+      
+      <!-- Hands holding tablet edges -->
+      <circle cx="-40" cy="100" r="7" fill="#FED7AA"/>
+      <circle cx="40" cy="100" r="7" fill="#FED7AA"/>
+    </g>
+
+    <!-- Text Information Card -->
+    <g transform="translate(16, 350)">
+      <rect x="0" y="0" width="268" height="210" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="16" y="28" font-size="16" font-weight="800" fill="#0F172A">Tablet or Second Phone</text>
+      <text x="16" y="48" font-size="12" font-weight="700" fill="#0284C7">Showroom Floor Order Entry</text>
+
+      <line x1="16" y1="62" x2="252" y2="62" stroke="#F1F5F9" stroke-width="1.5"/>
+
+      <circle cx="24" cy="82" r="4.5" fill="#0284C7"/>
+      <text x="36" y="86" font-size="12" font-weight="600" fill="#334155">Creates customer cart on floor</text>
+
+      <circle cx="24" cy="112" r="4.5" fill="#0284C7"/>
+      <text x="36" y="116" font-size="12" font-weight="600" fill="#334155">Zero customer waiting lines</text>
+
+      <circle cx="24" cy="142" r="4.5" fill="#0284C7"/>
+      <text x="36" y="146" font-size="12" font-weight="600" fill="#334155">Sends bill instantly to Server PC</text>
+
+      <!-- Highlight Banner -->
+      <rect x="14" y="165" width="240" height="32" rx="6" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+      <text x="134" y="186" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0369A1">✓ Syncs in &lt; 0.1 Seconds</text>
+    </g>
+  </g>
+
+  <!--  CENTER: STORE WI-FI ROUTER CARD  -->
+  <g transform="translate(755, 220)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="300" height="550" rx="22" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2.5" filter="url(#cardShadow)"/>
+    
+    <!-- Red Alert Header: 100% Offline / Zero Internet -->
+    <rect x="0" y="0" width="300" height="52" rx="22" fill="url(#dangerGrad)"/>
+    <rect x="0" y="26" width="300" height="26" fill="url(#dangerGrad)"/>
+    <g transform="translate(150, 32)" text-anchor="middle">
+      <text x="0" y="0" font-size="13" font-weight="900" fill="#FFFFFF" letter-spacing="1">⚡ NO INTERNET REQUIRED</text>
+    </g>
+
+    <!-- Wi-Fi Pulsing Signal Waves (Radiating from router) -->
+    <g transform="translate(150, 135)">
+      <path d="M -58 -12 A 68 68 0 0 1 58 -12" fill="none" stroke="#DBEAFE" stroke-width="6" stroke-linecap="round"/>
+      <path d="M -40 6 A 48 48 0 0 1 40 6" fill="none" stroke="#93C5FD" stroke-width="5" stroke-linecap="round"/>
+      <path d="M -22 24 A 28 28 0 0 1 22 24" fill="none" stroke="#2563EB" stroke-width="4.5" stroke-linecap="round"/>
+      <circle cx="0" cy="40" r="6.5" fill="#1D4ED8"/>
+    </g>
+
+    <!-- Detailed Desktop Wi-Fi Router Graphic -->
+    <g transform="translate(150, 275)">
+      <!-- Router Shadow -->
+      <ellipse cx="0" cy="42" rx="98" ry="14" fill="#CBD5E1"/>
+
+      <!-- Dual Antennas -->
+      <line x1="-62" y1="18" x2="-88" y2="-58" stroke="#0F172A" stroke-width="7" stroke-linecap="round"/>
+      <line x1="62" y1="18" x2="88" y2="-58" stroke="#0F172A" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="-88" cy="-58" r="5.5" fill="#3B82F6"/>
+      <circle cx="88" cy="-58" r="5.5" fill="#3B82F6"/>
+
+      <!-- Router Enclosure -->
+      <rect x="-98" y="6" width="196" height="40" rx="9" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+      <rect x="-92" y="10" width="184" height="10" rx="3" fill="#0F172A"/>
+
+      <!-- Status Indicator LEDs -->
+      <circle cx="-72" cy="28" r="3.5" fill="#22C55E"/>
+      <circle cx="-54" cy="28" r="3.5" fill="#22C55E"/>
+      <circle cx="-36" cy="28" r="3.5" fill="#22C55E"/>
+      <circle cx="-18" cy="28" r="3.5" fill="#3B82F6"/>
+      <text x="42" y="32" font-size="10.5" font-weight="800" fill="#94A3B8">SHOP WI-FI</text>
+    </g>
+
+    <!-- Description Block -->
+    <g transform="translate(20, 345)">
+      <rect x="0" y="0" width="260" height="185" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      
+      <text x="130" y="28" text-anchor="middle" font-size="16.5" font-weight="900" fill="#0F172A">Standard Wi-Fi Router</text>
+      <text x="130" y="48" text-anchor="middle" font-size="12.5" font-weight="800" fill="#DC2626">100% Offline Local Network</text>
+
+      <line x1="16" y1="60" x2="244" y2="60" stroke="#E2E8F0" stroke-width="1"/>
+
+      <text x="18" y="84" font-size="12" font-weight="600" fill="#334155">• Just plug into power socket</text>
+      <text x="18" y="108" font-size="12" font-weight="600" fill="#334155">• No broadband or fiber required</text>
+      <text x="18" y="132" font-size="12" font-weight="600" fill="#334155">• Zero SIM recharge or data fees</text>
+      <text x="18" y="156" font-size="12" font-weight="600" fill="#334155">• Acts as wireless bridge to PC</text>
+
+      <rect x="18" y="166" width="224" height="2" fill="#3B82F6" opacity="0.3"/>
+    </g>
+  </g>
+
+  <!-- RIGHT AREA: SINGLE PC (TAGGED AS TRENGTH SERVER) & 2 PRINTERS -->
+  <rect x="1075" y="155" width="790" height="725" rx="24" fill="#FFFFFF" fill-opacity="0.94" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+  
+  <!-- Zone Header -->
+  <g transform="translate(1105, 195)">
+    <rect x="0" y="0" width="38" height="38" rx="10" fill="#EFF6FF"/>
+    <path d="M 10 11 L 28 11 C 29 11 30 12 30 13 L 30 23 C 30 24 29 25 28 25 L 10 25 C 9 25 8 24 8 23 L 8 13 C 8 12 9 11 10 11 Z M 16 25 L 16 29 L 22 29 L 22 25 M 14 29 L 24 29" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="50" y="24" font-size="19" font-weight="900" fill="#0F172A">CHECKOUT COUNTER — SINGLE BILLING PC</text>
+    <text x="50" y="44" font-size="13" font-weight="600" fill="#64748B">Your standard desktop PC acts as the entire Trength Server. No server rack needed.</text>
+  </g>
+
+  <!-- Counter Desk Surface Illustration -->
+  <g transform="translate(1105, 595)">
+    <path d="M 0 30 L 730 30 L 710 85 L 20 85 Z" fill="url(#deskGrad)" opacity="0.9"/>
+    <line x1="0" y1="30" x2="730" y2="30" stroke="#CBD5E1" stroke-width="3"/>
+  </g>
+
+  <!-- THE SINGLE PC: TAGGED AS TRENGTH SERVER (NO BIG SERVER TOWER) -->
+  <g transform="translate(1470, 425)">
+    <!-- Base Shadow -->
+    <ellipse cx="0" cy="185" rx="165" ry="18" fill="#CBD5E1" opacity="0.6"/>
+
+    <!-- PC Monitor Stand -->
+    <rect x="-20" y="130" width="40" height="48" fill="#94A3B8"/>
+    <ellipse cx="0" cy="178" rx="58" ry="11" fill="#64748B"/>
+
+    <!-- Monitor Outer Bezel (Modern All-In-One Desktop) -->
+    <rect x="-155" y="-85" width="310" height="220" rx="14" fill="#0F172A" stroke="#334155" stroke-width="3" filter="url(#cardShadow)"/>
+    
+    <!-- Monitor Display Screen -->
+    <rect x="-147" y="-77" width="294" height="204" rx="8" fill="#FFFFFF"/>
+    
+    <!-- Trength POS Billing Interface -->
+    <!-- Header Bar -->
+    <rect x="-147" y="-77" width="294" height="30" rx="8" fill="#1E293B"/>
+    <rect x="-147" y="-53" width="294" height="6" fill="#1E293B"/>
+    <circle cx="-128" cy="-62" r="6.5" fill="#2563EB"/>
+    <text x="-114" y="-58" font-size="11" font-weight="900" fill="#FFFFFF">Trength™ Server POS</text>
+    <rect x="68" y="-70" width="68" height="16" rx="4" fill="#059669"/>
+    <text x="102" y="-59" text-anchor="middle" font-size="8.5" font-weight="800" fill="#FFFFFF">● SERVER HOST</text>
+
+    <!-- POS Table / Invoice Content -->
+    <g transform="translate(-137, -38)">
+      <!-- Incoming Rep Notification Banner -->
+      <rect x="0" y="0" width="274" height="26" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+      <circle cx="12" cy="13" r="4" fill="#22C55E"/>
+      <text x="22" y="17" font-size="9.5" font-weight="800" fill="#1D4ED8">Live Order Received: Sales Rep 1 scanned Item #10842</text>
+      
+      <!-- Table Headers -->
+      <text x="5" y="42" font-size="8.5" font-weight="800" fill="#64748B">ITEM DESCRIPTION</text>
+      <text x="180" y="42" font-size="8.5" font-weight="800" fill="#64748B">QTY</text>
+      <text x="228" y="42" font-size="8.5" font-weight="800" fill="#64748B">AMOUNT</text>
+      <line x1="0" y1="48" x2="274" y2="48" stroke="#E2E8F0" stroke-width="1.5"/>
+
+      <!-- Table Row 1 -->
+      <text x="5" y="64" font-size="9" font-weight="700" fill="#1E293B">Gold Ring 22K (Tag #10842)</text>
+      <text x="185" y="64" font-size="9" font-weight="700" fill="#1E293B">1</text>
+      <text x="224" y="64" font-size="9" font-weight="800" fill="#1E293B">₹ 8,400</text>
+
+      <!-- Table Row 2 -->
+      <text x="5" y="82" font-size="9" font-weight="700" fill="#1E293B">Silver Coin 50g (Tag #9021)</text>
+      <text x="185" y="82" font-size="9" font-weight="700" fill="#1E293B">1</text>
+      <text x="224" y="82" font-size="9" font-weight="800" fill="#1E293B">₹ 6,490</text>
+
+      <!-- Total & Action Button -->
+      <line x1="0" y1="92" x2="274" y2="92" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect x="0" y="98" width="274" height="34" rx="6" fill="#F8FAFC"/>
+      <text x="8" y="113" font-size="8.5" font-weight="700" fill="#64748B">NET INVOICE TOTAL</text>
+      <text x="8" y="126" font-size="13" font-weight="900" fill="#0F172A">₹ 14,890.00</text>
+
+      <rect x="165" y="102" width="102" height="26" rx="5" fill="#2563EB"/>
+      <text x="216" y="119" text-anchor="middle" font-size="10" font-weight="900" fill="#FFFFFF">🖨 PRINT BILL</text>
+    </g>
+
+    <!-- Sleek Keyboard & Mouse on Desk -->
+    <g transform="translate(0, 180)">
+      <rect x="-90" y="0" width="138" height="28" rx="4" fill="#CBD5E1" stroke="#94A3B8" stroke-width="1"/>
+      <rect x="-85" y="4" width="128" height="20" rx="2" fill="#E2E8F0"/>
+      <rect x="70" y="2" width="18" height="26" rx="9" fill="#94A3B8"/>
+    </g>
+
+    <!-- PROMINENT CALLOUT BADGE: TAGGED AS TRENGTH SERVER (NO BIG SERVER TOWER) -->
+    <g transform="translate(0, -118)" text-anchor="middle">
+      <rect x="-165" y="0" width="330" height="46" rx="23" fill="url(#serverPillGrad)" filter="url(#cardShadow)"/>
+      <text x="0" y="24" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">🖥 TRENGTH SERVER (SINGLE PC)</text>
+      <text x="0" y="38" font-size="9.5" font-weight="700" fill="#E0F2FE">Runs Database + Tray App + CommandCenter Locally</text>
+    </g>
+  </g>
+
+  <!-- PRINTER 1: THERMAL RECEIPT PRINTER (ATTACHED VIA USB TO PC) -->
+  <g transform="translate(1210, 690)">
+    <rect x="-95" y="-20" width="190" height="175" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <ellipse cx="0" cy="90" rx="48" ry="10" fill="#CBD5E1"/>
+
+    <!-- Printer Body -->
+    <rect x="-44" y="25" width="88" height="65" rx="8" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+    <rect x="-38" y="30" width="76" height="14" rx="3" fill="#0F172A"/>
+    <rect x="-30" y="35" width="60" height="4" rx="2" fill="#475569"/>
+
+    <!-- Paper Receipt Rolling Out -->
+    <g transform="translate(0, -22)">
+      <path d="M -26 56 L -26 0 L 26 0 L 26 56 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+      <polygon points="-26,56 -20,52 -13,56 -6,52 0,56 6,52 13,56 20,52 26,56 26,53 -26,53" fill="#CBD5E1"/>
+      <text x="0" y="12" text-anchor="middle" font-size="6" font-weight="900" fill="#0F172A">TAX INVOICE</text>
+      <line x1="-20" y1="17" x2="20" y2="17" stroke="#E2E8F0" stroke-width="1"/>
+      <line x1="-20" y1="23" x2="12" y2="23" stroke="#64748B" stroke-width="1.5"/>
+      <line x1="-20" y1="29" x2="20" y2="29" stroke="#64748B" stroke-width="1.5"/>
+      <text x="0" y="42" text-anchor="middle" font-size="7" font-weight="900" fill="#059669">PAID ₹14,890</text>
+    </g>
+
+    <!-- LEDs -->
+    <circle cx="26" cy="74" r="2.5" fill="#22C55E"/>
+    <circle cx="33" cy="74" r="2.5" fill="#3B82F6"/>
+
+    <!-- Label Under Printer -->
+    <text x="0" y="120" text-anchor="middle" font-size="14.5" font-weight="900" fill="#0F172A">Receipt Printer</text>
+    <text x="0" y="137" text-anchor="middle" font-size="11" font-weight="600" fill="#64748B">Instant Customer Invoices</text>
+  </g>
+
+  <!-- PRINTER 2: QR CODE LABEL PRINTER (ATTACHED VIA USB TO PC) -->
+  <g transform="translate(1730, 690)">
+    <rect x="-95" y="-20" width="190" height="175" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <ellipse cx="0" cy="90" rx="48" ry="10" fill="#CBD5E1"/>
+
+    <!-- Label Printer Body -->
+    <rect x="-46" y="20" width="92" height="70" rx="8" fill="#334155" stroke="#475569" stroke-width="2"/>
+    <path d="M -38 20 C -38 6, 38 6, 38 20 Z" fill="#1E293B"/>
+    <rect x="-24" y="12" width="48" height="10" rx="4" fill="#0284C7" fill-opacity="0.5"/>
+
+    <!-- Sticker Tag Strip Dispensing from Front -->
+    <g transform="translate(0, 44)">
+      <rect x="-30" y="0" width="60" height="4" fill="#0F172A"/>
+      
+      <!-- Hanging QR Product Tag -->
+      <rect x="-24" y="4" width="48" height="48" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" filter="url(#cardShadow)"/>
+      <rect x="-18" y="8" width="20" height="20" fill="#0F172A"/>
+      <rect x="-16" y="10" width="5.5" height="5.5" fill="#FFFFFF"/>
+      <rect x="-7" y="10" width="5.5" height="5.5" fill="#FFFFFF"/>
+      <rect x="-16" y="19" width="5.5" height="5.5" fill="#FFFFFF"/>
+      <text x="9" y="15" font-size="6" font-weight="800" fill="#0F172A">TAG</text>
+      <text x="9" y="25" font-size="5" font-weight="700" fill="#64748B">#10842</text>
+      <text x="0" y="42" text-anchor="middle" font-size="7" font-weight="900" fill="#2563EB">22K GOLD</text>
+    </g>
+
+    <!-- Label Under Printer -->
+    <text x="0" y="120" text-anchor="middle" font-size="14.5" font-weight="900" fill="#0F172A">QR Label Printer</text>
+    <text x="0" y="137" text-anchor="middle" font-size="11" font-weight="600" fill="#64748B">Prints QR Item Tags</text>
+  </g>
+
+  <!-- FOREGROUND CONNECTION ARCS & CABLES (PERFECTLY POSITIONED) -->
+  <g>
+    <!-- Wi-Fi Concentric Radiating Signal Waves from Router into Showroom Floor -->
+    <!-- Radiating Wave 1 -->
+    <path d="M 750 310 C 710 330, 685 365, 685 410 C 685 455, 710 490, 750 510" fill="none" stroke="#3B82F6" stroke-width="4.5" stroke-dasharray="8 6" stroke-linecap="round" opacity="0.85"/>
+    <!-- Radiating Wave 2 -->
+    <path d="M 730 260 C 670 290, 630 345, 630 410 C 630 475, 670 530, 730 560" fill="none" stroke="#2563EB" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round" opacity="0.9"/>
+    <!-- Radiating Wave 3 reaching Rep 2 Tablet -->
+    <path d="M 710 210 C 630 250, 575 320, 575 410 C 575 480, 610 540, 660 580" fill="none" stroke="#2563EB" stroke-width="4" stroke-dasharray="8 6" stroke-linecap="round" opacity="0.75"/>
+    
+    <!-- Direct Wi-Fi Signal Flow Arc from Router to Rep 1 Phone -->
+    <path d="M 630 350 C 510 320, 360 320, 245 375" fill="none" stroke="#2563EB" stroke-width="4" stroke-dasharray="8 6" stroke-linecap="round" opacity="0.85"/>
+    <path d="M 630 350 C 510 320, 360 320, 245 375" fill="none" stroke="#93C5FD" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Direct Wi-Fi Signal Flow Arc from Router to Rep 2 Tablet -->
+    <path d="M 630 410 L 525 410" fill="none" stroke="#2563EB" stroke-width="4" stroke-dasharray="8 6" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- Wi-Fi Floating Pill Label (In Clean Clear Space) -->
+    <g transform="translate(685, 300)" text-anchor="middle">
+      <rect x="-75" y="-13" width="150" height="26" rx="13" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <text x="0" y="5" font-size="11" font-weight="800" fill="#1D4ED8">📡 LOCAL WI-FI</text>
+    </g>
+
+    <!-- Local LAN Network Cable: From Router (X: 1055, Y: 460) to Trength Server PC (X: 1315, Y: 490) -->
+    <path d="M 1055 460 C 1140 480, 1220 490, 1315 490" fill="none" stroke="#2563EB" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 1055 460 C 1140 480, 1220 490, 1315 490" fill="none" stroke="#93C5FD" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+    
+    <!-- Ethernet Cable Pill Label -->
+    <g transform="translate(1185, 490)" text-anchor="middle">
+      <rect x="-70" y="-13" width="140" height="26" rx="13" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5" filter="url(#cardShadow)"/>
+      <text x="0" y="4" font-size="11" font-weight="800" fill="#1D4ED8">LAN CABLE / WI-FI</text>
+    </g>
+
+    <!-- USB Cable from Trength Server PC to Receipt Printer (Left of PC) -->
+    <path d="M 1340 560 C 1290 620, 1240 650, 1210 690" fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(1265, 625)" text-anchor="middle">
+      <rect x="-45" y="-11" width="90" height="22" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="10" font-weight="800" fill="#1E293B">USB TO PC</text>
+    </g>
+
+    <!-- USB Cable from Trength Server PC to QR Label Printer (Right of PC) -->
+    <path d="M 1600 560 C 1650 620, 1690 650, 1730 690" fill="none" stroke="#334155" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(1675, 625)" text-anchor="middle">
+      <rect x="-45" y="-11" width="90" height="22" rx="6" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+      <text x="0" y="4" font-size="10" font-weight="800" fill="#1E293B">USB TO PC</text>
+    </g>
+  </g>
+
+  <!--  BOTTOM STEP-BY-STEP WORKFLOW BAR  -->
+  <g transform="translate(120, 915)">
+    <!-- Container bar -->
+    <rect x="0" y="0" width="1680" height="128" rx="22" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+    <!-- STEP 1 -->
+    <g transform="translate(35, 24)">
+      <circle cx="28" cy="38" r="26" fill="#EFF6FF"/>
+      <text x="28" y="47" text-anchor="middle" font-size="20" font-weight="900" fill="#2563EB">1</text>
+      
+      <text x="70" y="26" font-size="16.5" font-weight="900" fill="#0F172A">Scan QR With Smartphone</text>
+      <text x="70" y="48" font-size="12.5" font-weight="600" fill="#64748B">Sales reps scan item QR tags anywhere on floor</text>
+      <text x="70" y="68" font-size="12.5" font-weight="600" fill="#64748B">using phone camera. No barcode gun needed.</text>
+    </g>
+
+    <!-- Arrow 1 to 2 -->
+    <path d="M 505 64 L 535 64" fill="none" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="535,58 547,64 535,70" fill="#94A3B8"/>
+
+    <!-- STEP 2 -->
+    <g transform="translate(570, 24)">
+      <circle cx="28" cy="38" r="26" fill="#FEF2F2"/>
+      <text x="28" y="47" text-anchor="middle" font-size="20" font-weight="900" fill="#EF4444">2</text>
+      
+      <text x="70" y="26" font-size="16.5" font-weight="900" fill="#0F172A">Offline Wi-Fi Sync (Zero Internet)</text>
+      <text x="70" y="48" font-size="12.5" font-weight="600" fill="#64748B">Data transfers locally over store Wi-Fi router.</text>
+      <text x="70" y="68" font-size="12.5" font-weight="600" fill="#64748B">100% offline. Zero internet or recharge needed.</text>
+    </g>
+
+    <!-- Arrow 2 to 3 -->
+    <path d="M 1045 64 L 1075 64" fill="none" stroke="#CBD5E1" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="1075,58 1087,64 1075,70" fill="#94A3B8"/>
+
+    <!-- STEP 3 -->
+    <g transform="translate(1110, 24)">
+      <circle cx="28" cy="38" r="26" fill="#ECFDF5"/>
+      <text x="28" y="47" text-anchor="middle" font-size="20" font-weight="900" fill="#059669">3</text>
+      
+      <text x="70" y="26" font-size="16.5" font-weight="900" fill="#0F172A">Trength Server PC Bills &amp; Prints</text>
+      <text x="70" y="48" font-size="12.5" font-weight="600" fill="#64748B">Counter PC displays cart, prints customer receipt</text>
+      <text x="70" y="68" font-size="12.5" font-weight="600" fill="#64748B">and QR item tags instantly via USB cables.</text>
+    </g>
+  </g>
+
+</svg>
+

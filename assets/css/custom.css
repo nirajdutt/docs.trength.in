@@ -131,3 +131,299 @@ h1, h2, h3, h4, h5, h6,
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ==========================================================================
+   Cinematic 2D Visuals & Low-Scroll Interactive Tab System
+   ========================================================================== */
+
+/* Cinematic Image Containers (Clean Light Theme) */
+.cinematic-img-frame {
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #E4E6EF;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cinematic-img-frame:hover {
+    transform: translateY(-3px);
+    border-color: #009EF7;
+    box-shadow: 0 16px 36px -10px rgba(0, 158, 247, 0.18), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.cinematic-img-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #FFFFFF;
+    transition: transform 0.4s ease;
+}
+
+.cinematic-img-frame:hover img {
+    transform: scale(1.012);
+}
+
+.cinematic-badge-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+    border: 1px solid #E2E8F0;
+    color: #181C32;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+    pointer-events: none;
+}
+
+/* Interactive Product Tab Switcher */
+.suite-nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.35rem;
+    background: #F1F4F9;
+    border-radius: 0.75rem;
+    border: 1px solid #E2E8F0;
+}
+
+.suite-tab-btn {
+    flex: 1 1 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 1.25rem;
+    border-radius: 0.6rem;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #4B5675;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.suite-tab-btn:hover {
+    color: #181C32;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.suite-tab-btn.active {
+    background: #FFFFFF;
+    color: #009EF7;
+    border-color: rgba(0, 158, 247, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.suite-tab-btn.active.tab-jewellery {
+    color: #D97706;
+    border-color: rgba(217, 119, 6, 0.2);
+}
+
+.suite-tab-btn.active.tab-mobile {
+    color: #0284C7;
+    border-color: rgba(2, 132, 199, 0.2);
+}
+
+.suite-tab-btn.active.tab-apparel {
+    color: #059669;
+    border-color: rgba(5, 150, 105, 0.2);
+}
+
+.suite-tab-btn.active.tab-electronics {
+    color: #7C3AED;
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+/* Tab Panels */
+.suite-tab-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.suite-tab-panel.active {
+    display: block;
+    opacity: 1;
+    animation: fadeInSuite 0.3s ease-out;
+}
+
+@keyframes fadeInSuite {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Compact Feature Chip Grid */
+.feature-chip-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.65rem 0.85rem;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.feature-chip-item:hover {
+    background: #FFFFFF;
+    border-color: #CBD5E1;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Advantage Card Compact */
+.adv-card-compact {
+    border-radius: 0.65rem;
+    padding: 0.9rem 1.1rem;
+    background: #FFFFFF;
+    border: 1px solid #E4E6EF;
+    transition: all 0.2s ease;
+}
+
+.adv-card-compact:hover {
+    border-color: #009EF7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 158, 247, 0.08);
+}
+
+/* Interactive Image Zoom Trigger */
+.zoom-cursor {
+    cursor: zoom-in;
+}
+
+/* ==========================================================================
+   Language Switcher & Multilingual Typography (English / Hindi)
+   ========================================================================== */
+
+/* Enhanced Indic/Hindi Font Support & Line-height */
+:lang(hi), [lang="hi"] {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Nirmala UI', 'Segoe UI', -apple-system, sans-serif !important;
+}
+
+[lang="hi"] h1, [lang="hi"] h2, [lang="hi"] h3, [lang="hi"] h4, [lang="hi"] h5, [lang="hi"] h6, 
+[lang="hi"] p, [lang="hi"] span, [lang="hi"] a {
+    line-height: 1.6;
+}
+
+/* Premium High-Contrast Language Switcher */
+.lang-switcher-group {
+    display: inline-flex;
+    align-items: center;
+    background: #F1F5F9;
+    padding: 3px;
+    border-radius: 8px;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.lang-switcher-btn {
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    color: #334155 !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.2;
+    text-decoration: none !important;
+}
+
+.lang-switcher-btn:hover {
+    color: #0F172A !important;
+    background: #E2E8F0 !important;
+}
+
+.lang-switcher-btn.active {
+    background: #0066FF !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 2px 5px rgba(0, 102, 255, 0.25) !important;
+}
+
+.lang-switcher-btn.active span,
+.lang-switcher-btn.active strong {
+    color: #FFFFFF !important;
+}
+
+.lang-badge {
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: rgba(15, 23, 42, 0.08);
+    color: #475569;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.lang-switcher-btn.active .lang-badge {
+    background: rgba(255, 255, 255, 0.25);
+    color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Mobile Responsiveness Enhancements (< 768px & < 576px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Hide floating badge overlay on mobile so it doesn't obstruct diagram titles */
+    .cinematic-badge-tag {
+        display: none !important;
+    }
+
+    /* Diagram frame smooth rounded corners */
+    .cinematic-img-frame {
+        border-radius: 0.75rem 0.75rem 0 0 !important;
+    }
+
+    /* Comfortable heading scale on mobile */
+    .fs-2tx {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Language Switcher compact sizing for narrow viewports */
+    .lang-switcher-group {
+        padding: 2px !important;
+        border-radius: 6px !important;
+    }
+
+    .lang-switcher-btn {
+        padding: 5px 8px !important;
+        font-size: 11.5px !important;
+        gap: 4px !important;
+    }
+
+    .lang-badge {
+        font-size: 9.5px !important;
+        padding: 1px 4px !important;
+    }
+
+    /* Header toolbar title */
+    .docs-page-title h1 {
+        font-size: 1.05rem !important;
+    }
+
+    /* Ensure card body padding on mobile is compact */
+    .card-docs > .card-body {
+        padding: 1.5rem 1rem !important;
+    }
+}
+
+

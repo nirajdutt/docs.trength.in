@@ -8,7 +8,7 @@
     <meta name="description" content="Official documentation for Trength Suite - High-speed enterprise retail ERP and POS solutions for Jewellery, Mobile, Clothing, and Electronics retail businesses." />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
     <!--end::Fonts-->
     <!--begin::Page Vendor Stylesheets(used by this page)-->
     <link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css" />
@@ -395,12 +395,12 @@
                                 <!--begin::Toolbar-->
                                 <div class="d-flex align-items-center gap-3">
                                     <!--begin::Language Switcher-->
-                                    <div class="btn-group shadow-sm" role="group" aria-label="Language Switcher">
-                                        <button type="button" class="btn btn-sm btn-primary fw-bolder px-3 py-2 active" id="btn-lang-en" onclick="setLanguage('en')">
-                                            <span class="me-1">🇬🇧</span> English
+                                    <div class="lang-switcher-group shadow-sm" role="group" aria-label="Language Switcher">
+                                        <button type="button" class="lang-switcher-btn active" id="btn-lang-en" onclick="setLanguage('en')">
+                                            <span class="lang-badge">EN</span> English
                                         </button>
-                                        <button type="button" class="btn btn-sm btn-light-warning fw-bolder px-3 py-2" id="btn-lang-hi" onclick="setLanguage('hi')">
-                                            <span class="me-1">🇮🇳</span> हिन्दी
+                                        <button type="button" class="lang-switcher-btn" id="btn-lang-hi" onclick="setLanguage('hi')">
+                                            <span class="lang-badge">HI</span> हिन्दी
                                         </button>
                                     </div>
                                     <!--end::Language Switcher-->
@@ -430,501 +430,439 @@
                             <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                 <!--begin::Section-->
                                 <!--begin::Hero Section-->
-                                <div class="px-md-5 pt-md-5 pb-md-5">
-                                    <div class="text-center mb-15">
+                                <div class="px-md-2 pt-md-2 pb-md-2">
+                                    <div class="text-center mb-8">
                                         <div class="d-inline-flex align-items-center mb-3">
-                                            <span class="badge badge-light-primary fw-bolder fs-7 px-3 py-2 me-2" data-i18n="hero_badge_platform">ENTERPRISE RETAIL PLATFORM</span>
-                                            <span class="badge badge-light-success fw-bolder fs-7 px-3 py-2" data-i18n="hero_badge_suite">MODULAR POS &amp; ERP SUITE</span>
+                                            <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-2 me-2" data-i18n="hero_badge_platform">ENTERPRISE RETAIL PLATFORM</span>
+                                            <span class="badge badge-light-success fw-bolder fs-8 px-3 py-2" data-i18n="hero_badge_suite">MODULAR POS &amp; ERP SUITE</span>
                                         </div>
-                                        <h1 class="fs-2tx fw-bolder mb-4 text-dark" data-i18n="hero_heading">
+                                        <h1 class="fs-2hx fw-bolder mb-3 text-dark" data-i18n="hero_heading">
                                             Empower Your Retail Enterprise with <span class="text-primary position-relative d-inline-block">Trength™ Suite</span>
                                         </h1>
-                                        <p class="fs-4 text-gray-600 max-w-800px mx-auto mb-8" data-i18n="hero_subtitle">
+                                        <p class="fs-5 text-gray-600 max-w-750px mx-auto mb-6" data-i18n="hero_subtitle">
                                             A high-speed, enterprise-grade retail POS and inventory management platform engineered for modern commercial operations. Trength provides specialized, domain-tailored software applications for <strong>Jewellery Showrooms</strong>, <strong>Mobile &amp; Telecom Outlets</strong>, <strong>Clothing &amp; Fashion Chains</strong>, and <strong>Consumer Electronics Retailers</strong>.
                                         </p>
-                                        <div class="d-flex justify-content-center gap-3 flex-wrap">
-                                            <a href="InstallationGuide.html" class="btn btn-primary fw-bold" data-i18n="hero_btn_install">
+                                        <div class="d-flex justify-content-center gap-2 flex-wrap mb-6">
+                                            <a href="InstallationGuide.html" class="btn btn-sm btn-primary fw-bold px-4 py-2" data-i18n="hero_btn_install">
                                                 <i class="bi bi-box-arrow-in-down me-1"></i>Quick Installation Guide
                                             </a>
-                                            <a href="CommandCentre.html" class="btn btn-light-primary fw-bold" data-i18n="hero_btn_command">
+                                            <a href="CommandCentre.html" class="btn btn-sm btn-light-primary fw-bold px-4 py-2" data-i18n="hero_btn_command">
                                                 <i class="bi bi-sliders me-1"></i>Command Centre Setup
                                             </a>
-                                            <a href="Troubleshoot.html" class="btn btn-light-success fw-bold" data-i18n="hero_btn_diagnostics">
+                                            <a href="Troubleshoot.html" class="btn btn-sm btn-light-success fw-bold px-4 py-2" data-i18n="hero_btn_diagnostics">
                                                 <i class="bi bi-wrench me-1"></i>System Diagnostics
+                                            </a>
+                                            <a href="VideoTutorials.html" class="btn btn-sm btn-light-danger fw-bold px-4 py-2">
+                                                <i class="bi bi-play-circle-fill me-1"></i>Video Tutorials
                                             </a>
                                         </div>
 
-                                        <!-- Hero Architecture Showcase -->
-                                        <div class="mt-12 mx-auto max-w-1000px text-start">
-                                            <div class="card card-bordered shadow-lg overflow-hidden border-2 border-primary border-opacity-25">
-                                                <div class="card-body p-2 bg-light">
-                                                    <img src="assets/media/suite/ecosystem-architecture.jpg" class="img-fluid rounded-2 w-100" alt="Trength Suite 100% Offline On-Premises Architecture" />
-                                                </div>
-                                                <div class="card-footer bg-white py-4 px-6 d-flex flex-wrap justify-content-between align-items-center">
-                                                    <div class="d-flex align-items-center">
-                                                        <i class="bi bi-shield-check text-success fs-2x me-3"></i>
-                                                        <div>
-                                                            <strong class="text-gray-900 fs-6 d-block" data-i18n="hero_arch_title">100% On-Premises Local Network Hub</strong>
-                                                            <span class="text-muted fs-7" data-i18n="hero_arch_desc">Zero cloud dependency. Instant Wi-Fi synchronization across tablets, cashier counters, weighing balances &amp; smartphone scanners.</span>
-                                                        </div>
+                                        <!-- Hero Architecture 2D Cinematic Showcase -->
+                                        <div class="mx-auto max-w-1000px text-start">
+                                            <div class="cinematic-img-frame zoom-cursor" onclick="openCinematicModal('assets/media/suite/ecosystem-architecture-2d.jpg', '100% Offline On-Premises Architecture')">
+                                                <img src="assets/media/suite/ecosystem-architecture-2d.jpg" alt="Trength Suite 100% Offline On-Premises Architecture" />
+                                                <span class="cinematic-badge-tag"><i class="bi bi-shield-check text-success me-1"></i>2D ARCHITECTURE • AIR-GAPPED</span>
+                                            </div>
+                                            <div class="d-flex flex-wrap justify-content-between align-items-center bg-light rounded-bottom p-4 border border-top-0">
+                                                <div class="d-flex align-items-center mb-2 mb-md-0">
+                                                    <i class="bi bi-hdd-network text-primary fs-2x me-3"></i>
+                                                    <div>
+                                                        <strong class="text-gray-900 fs-6 d-block" data-i18n="hero_arch_title">100% Offline Local Store Network</strong>
+                                                        <span class="text-muted fs-7" data-i18n="hero_arch_desc">Zero internet required. Single host PC connected to an offline Wi-Fi router; mobile sales reps scan QR tags and sync instantly with attached receipt &amp; QR label printers.</span>
                                                     </div>
-                                                    <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-2 mt-2 mt-md-0" data-i18n="hero_badge_airgap">AIR-GAPPED READY</span>
+                                                </div>
+                                                <div class="d-flex gap-2">
+                                                    <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-2" data-i18n="hero_badge_airgap">AIR-GAPPED READY</span>
+                                                    <span class="badge badge-light-success fw-bolder fs-8 px-3 py-2">ZERO CLOUD LAG</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--end::Hero Section-->
 
-                                    <!--==================== SECTION 1: WHY CHOOSE TRENGTH SUITE ====================-->
-                                    <div class="mb-16">
-                                        <div class="d-flex align-items-center mb-8">
-                                            <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">1</span>
+                                    <!--==================== 3 UNIFIED CORE COMPONENTS ====================-->
+                                    <div class="mb-12">
+                                        <div class="text-center mb-6">
+                                            <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-2 mb-2 text-uppercase">ONE UNIFIED SETUP INSTALLER</span>
+                                            <h2 class="fw-bolder text-gray-900 fs-3 mb-1">What Makes Up Trength™ Suite?</h2>
+                                            <p class="text-muted fs-7 max-w-700px mx-auto mb-0">
+                                                Every purchased variant (Jewellery, Mobile, Clothing, Electronics) installs as a unified 3-part ecosystem on your Windows PC with automated background configuration.
+                                            </p>
+                                        </div>
+
+                                        <div class="row g-4">
+                                            <!-- Part 1: Tray App -->
+                                            <div class="col-md-4">
+                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-primary p-6">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="symbol symbol-45px bg-light-primary me-3">
+                                                            <span class="symbol-label"><i class="bi bi-window-stack fs-2 text-primary"></i></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="badge badge-light-primary fw-bolder fs-9">COMPONENT 1</span>
+                                                            <h5 class="fw-bolder text-gray-800 mb-0 fs-6">Tray App</h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="fs-7 text-gray-600 mb-3">
+                                                        Docked in your Windows system tray for 1-click suite navigation and automatic version updates.
+                                                    </p>
+                                                    <div class="bg-light-primary rounded p-3 mt-auto border border-primary border-opacity-10">
+                                                        <span class="fs-8 text-primary fw-bold d-block"><i class="bi bi-phone me-1"></i>Live Purchase Feed:</span>
+                                                        <span class="fs-8 text-gray-700">Displays real-time incoming transactions completed on connected mobile phones or showroom tablets.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Part 2: CommandCenter -->
+                                            <div class="col-md-4">
+                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-success p-6">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="symbol symbol-45px bg-light-success me-3">
+                                                            <span class="symbol-label"><i class="bi bi-sliders fs-2 text-success"></i></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="badge badge-light-success fw-bolder fs-9">COMPONENT 2</span>
+                                                            <h5 class="fw-bolder text-gray-800 mb-0 fs-6">CommandCenter</h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="fs-7 text-gray-600 mb-3">
+                                                        Total health monitor of the entire Suite engineered specifically for non-technical retail store owners.
+                                                    </p>
+                                                    <div class="bg-light-success rounded p-3 mt-auto border border-success border-opacity-10">
+                                                        <span class="fs-8 text-success fw-bold d-block"><i class="bi bi-wrench me-1"></i>1-Click Self-Healing Auto-Fix:</span>
+                                                        <span class="fs-8 text-gray-700">If any component stalls, fixes issues instantly with zero delay, avoiding support wait times.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Part 3: Trength App -->
+                                            <div class="col-md-4">
+                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-warning p-6">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <div class="symbol symbol-45px bg-light-warning me-3">
+                                                            <span class="symbol-label"><i class="bi bi-shop-window fs-2 text-warning"></i></span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="badge badge-light-warning fw-bolder fs-9">COMPONENT 3</span>
+                                                            <h5 class="fw-bolder text-gray-800 mb-0 fs-6">Trength App</h5>
+                                                        </div>
+                                                    </div>
+                                                    <p class="fs-7 text-gray-600 mb-3">
+                                                        The specialized retail POS &amp; ERP client tailored specifically to your chosen store domain.
+                                                    </p>
+                                                    <div class="bg-light-warning rounded p-3 mt-auto border border-warning border-opacity-10">
+                                                        <span class="fs-8 text-warning fw-bold d-block"><i class="bi bi-layers me-1"></i>Domain-Specific Workflows:</span>
+                                                        <span class="fs-8 text-gray-700">Jewellery bullion/HUID, Mobile IMEI/repairs, Clothing matrix, or Electronics serials/AMC.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end::3 UNIFIED CORE COMPONENTS-->
+
+                                    <!--==================== SECTION 1: INTERACTIVE 2D CINEMATIC VERTICALS ====================-->
+                                    <div class="mb-12">
+                                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-5">
                                             <div>
-                                                <h2 class="fw-bolder mb-1 text-dark" data-i18n="sec1_title">Why Choose Trength™ Suite?</h2>
-                                                <span class="text-muted fs-6" data-i18n="sec1_subtitle">Engineered for retail owners who demand speed, zero hardware bloat, and total data sovereignty</span>
+                                                <h2 class="fw-bolder mb-1 text-dark fs-3" data-i18n="sec2_title">Industry-Specific Retail Applications</h2>
+                                                <span class="text-muted fs-7" data-i18n="sec2_subtitle">Purpose-built software suites designed around unique vertical workflows</span>
                                             </div>
+                                            <span class="badge badge-light-info fw-bolder fs-8 px-3 py-2 mt-2 mt-md-0">4 SPECIALIZED DOMAINS</span>
                                         </div>
 
-                                        <!-- Highlight Grid: 8 Strategic Advantages -->
-                                        <div class="row g-6 mb-10">
-                                            <!-- Advantage 1: 100% Offline & On-Premises Data Privacy -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-primary hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-primary mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-shield-lock-fill fs-2 text-primary"></i></span>
-                                                        </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv1_title">100% On-Premises &amp; Offline</h5>
-                                                        <div class="badge badge-light-primary fw-bolder mb-3 fs-9" data-i18n="adv1_badge">DATA SOVEREIGNTY</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv1_desc">
-                                                            Your confidential ledger, customer accounts, and profit margins stay strictly inside your physical store premises. 100% local database execution with zero cloud exposure or third-party data mining.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <!-- Sleek Tab Switcher -->
+                                        <div class="suite-nav-pills mb-6" role="tablist">
+                                            <button type="button" class="suite-tab-btn active tab-jewellery" onclick="switchSuiteTab('jewellery', this)">
+                                                <i class="bi bi-gem me-2 fs-5 text-warning"></i>Jewellery Showroom
+                                            </button>
+                                            <button type="button" class="suite-tab-btn tab-mobile" onclick="switchSuiteTab('mobile', this)">
+                                                <i class="bi bi-phone me-2 fs-5 text-primary"></i>Mobile &amp; Telecom
+                                            </button>
+                                            <button type="button" class="suite-tab-btn tab-apparel" onclick="switchSuiteTab('apparel', this)">
+                                                <i class="bi bi-tag me-2 fs-5 text-success"></i>Clothing &amp; Fashion
+                                            </button>
+                                            <button type="button" class="suite-tab-btn tab-electronics" onclick="switchSuiteTab('electronics', this)">
+                                                <i class="bi bi-tv me-2 fs-5 text-info"></i>Consumer Electronics
+                                            </button>
+                                        </div>
 
-                                            <!-- Advantage 2: Hardware Purchase List Slashed (Barcode Reader Obsolete) -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-success hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-success mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-upc-scan fs-2 text-success"></i></span>
+                                        <!-- Tab 1: Jewellery -->
+                                        <div class="suite-tab-panel active" id="panel-jewellery">
+                                            <div class="card card-bordered shadow-sm overflow-hidden border-top border-top-4 border-top-warning">
+                                                <div class="card-body p-6 p-lg-8">
+                                                    <div class="row g-6 align-items-center">
+                                                        <div class="col-lg-7">
+                                                            <div class="cinematic-img-frame zoom-cursor" onclick="openCinematicModal('assets/media/suite/jewellery-pos-2d.jpg', 'Trength™ Jewellery POS - Live Rates & HUID Barcode Verification')">
+                                                                <img src="assets/media/suite/jewellery-pos-2d.jpg" alt="Trength Jewellery POS Interface" />
+                                                                <span class="cinematic-badge-tag"><i class="bi bi-arrows-fullscreen me-1"></i>CLICK TO EXPAND</span>
+                                                            </div>
                                                         </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv2_title">Barcode Readers Obsolete</h5>
-                                                        <div class="badge badge-light-success fw-bolder mb-3 fs-9" data-i18n="adv2_badge">HARDWARE SAVINGS</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv2_desc">
-                                                            We slashed your hardware budget. Turn any smartphone or tablet camera into an ultra-responsive 1D/2D barcode &amp; QR scanner. No need to purchase bulky handheld laser guns.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Advantage 3: Multi-User with Zero Extra Hardware -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-warning hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-warning mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-phone-flip fs-2 text-warning"></i></span>
+                                                        <div class="col-lg-5">
+                                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                <span class="badge badge-light-warning fw-bolder fs-8 px-3 py-1" data-i18n="vert1_badge">BULLION &amp; ORNAMENTS</span>
+                                                                <span class="text-muted fs-8">v1.0 Ready</span>
+                                                            </div>
+                                                            <h3 class="fw-bolder text-gray-800 mb-1" data-i18n="vert1_title">Trength™ Jewellery</h3>
+                                                            <div class="text-muted fs-7 mb-3" data-i18n="vert1_sub">Precious Metals • Gems • Hallmark HUID</div>
+                                                            <p class="fs-7 text-gray-600 mb-4" data-i18n="vert1_desc">
+                                                                Engineered for retail jewellers, bullion traders, and goldsmiths. Offers end-to-end ornament lifecycle tracking, live commodity rate feeds, and precision scale connectivity.
+                                                            </p>
+                                                            <div class="d-flex flex-column gap-2 mb-5">
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-graph-up-arrow text-warning fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Live Bullion Feeds:</strong> Automatic 24K, 22K, 18K MCX gold &amp; silver ticker.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-qr-code text-primary fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Hallmark HUID:</strong> BIS 6-digit alphanumeric barcode scanning.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-speedometer2 text-success fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Weighing Balance Link:</strong> RS232 COM link for zero manual weight entry.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-journal-text text-danger fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Karigar Ledger:</strong> Metal issue/receipt, melting loss &amp; job orders.</div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="InstallationGuide.html" class="btn btn-warning fw-bold w-100" data-i18n="vert1_btn">
+                                                                <i class="bi bi-arrow-right me-1"></i>View Jewellery Setup Guide
+                                                            </a>
                                                         </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv3_title">Multi-User, Zero Extra Hardware</h5>
-                                                        <div class="badge badge-light-warning fw-bolder mb-3 fs-9" data-i18n="adv3_badge">BRING YOUR OWN DEVICE</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv3_desc">
-                                                            Equip floor staff instantly. Any existing Android device, iPad, laptop, or desktop on your shop Wi-Fi links as an active sales counter without dedicated server racks or dumb terminals.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Advantage 4: No Extra License Fees -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-danger hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-danger mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-wallet2 fs-2 text-danger"></i></span>
-                                                        </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv4_title">No Extra License Fees</h5>
-                                                        <div class="badge badge-light-danger fw-bolder mb-3 fs-9" data-i18n="adv4_badge">UNLIMITED LOCAL COUNTERS</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv4_desc">
-                                                            Zero per-user tax. Add 3, 10, or 20 sales associates across counters without paying additional seat licenses, recurring user charges, or surprise billing penalties.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Advantage 5: Parallel Invoice Generation Guaranteed -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-info hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-info mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-diagram-3-fill fs-2 text-info"></i></span>
-                                                        </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv5_title">Parallel Invoice Generation</h5>
-                                                        <div class="badge badge-light-info fw-bolder mb-3 fs-9" data-i18n="adv5_badge">CONCURRENCY GUARANTEED</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv5_desc">
-                                                            Zero counter lockups during festival rushes. Multiple cashiers and floor salesmen generate, calculate, and commit sales invoices simultaneously without database conflicts or latency.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Advantage 6: Invoicing Within Seconds -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-dark hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-dark mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-lightning-charge-fill fs-2 text-dark"></i></span>
-                                                        </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv6_title">Sub-Second Invoicing</h5>
-                                                        <div class="badge badge-light-dark fw-bolder mb-3 fs-9" data-i18n="adv6_badge">BLAZING SPEED</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv6_desc">
-                                                            Generate complete GST tax invoices within seconds. Instant barcode lookup, automated discount logic, and direct ESC/POS thermal printing keep checkout queues moving fast.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Advantage 7: Scan QR, Add Customer & Done -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-success hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-success mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-person-check-fill fs-2 text-success"></i></span>
-                                                        </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv7_title">Scan QR, Add &amp; Done</h5>
-                                                        <div class="badge badge-light-success fw-bolder mb-3 fs-9" data-i18n="adv7_badge">FRICTIONLESS ONBOARDING</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv7_desc">
-                                                            Zero typing friction. Scan a customer's UPI or loyalty QR to auto-populate phone, name, and address. Reward points apply instantly, and digital receipts are ready in one tap.
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Advantage 8: Zero Internet Dependency -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-primary hover-elevate-up">
-                                                    <div class="card-body p-6">
-                                                        <div class="symbol symbol-45px bg-light-primary mb-4">
-                                                            <span class="symbol-label"><i class="bi bi-cloud-slash-fill fs-2 text-primary"></i></span>
-                                                        </div>
-                                                        <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="adv8_title">100% Network Uptime</h5>
-                                                        <div class="badge badge-light-primary fw-bolder mb-3 fs-9" data-i18n="adv8_badge">ZERO BROADBAND HALTS</div>
-                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv8_desc">
-                                                            Fiber cuts, ISP slowdowns, or bad weather will never stop your store from billing. The local daemon and offline database keep your entire business operational 24/7/365.
-                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Visual Showcase: Eliminating Hardware Costs -->
-                                        <div class="card card-bordered shadow-sm mb-10 overflow-hidden border-2 border-success border-opacity-25">
-                                            <div class="card-header bg-light py-5">
-                                                <div class="card-title m-0">
-                                                    <h3 class="fw-bolder text-gray-800 fs-4 mb-0" data-i18n="hw_showcase_title">
-                                                        <i class="bi bi-camera text-success me-2"></i>How Trength Eliminates Hardware Costs
-                                                    </h3>
-                                                </div>
-                                                <span class="badge badge-light-success fw-bolder fs-8 px-3 py-2" data-i18n="hw_badge">HARDWARE LIST SLASHED</span>
-                                            </div>
-                                            <div class="card-body p-2 bg-light text-center">
-                                                <img src="assets/media/suite/hardware-savings.jpg" class="img-fluid rounded w-100" alt="Eliminating Hardware Costs - Smartphone Camera as Barcode Scanner" />
-                                            </div>
-                                            <div class="card-footer bg-white p-6">
-                                                <div class="row g-4 text-center">
-                                                    <div class="col-md-3">
-                                                        <div class="fw-bolder text-dark fs-6 mb-1" data-i18n="hw_f1"><i class="bi bi-x-circle text-danger me-1"></i>No Barcode Guns</div>
-                                                        <span class="text-muted fs-7" data-i18n="hw_f1_sub">Saves thousands per counter</span>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="fw-bolder text-dark fs-6 mb-1" data-i18n="hw_f2"><i class="bi bi-check2-circle text-success me-1"></i>Phone/Tablet Camera</div>
-                                                        <span class="text-muted fs-7" data-i18n="hw_f2_sub">Sub-second 1D/2D optical scan</span>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="fw-bolder text-dark fs-6 mb-1" data-i18n="hw_f3"><i class="bi bi-lightning-charge text-warning me-1"></i>Parallel Invoicing</div>
-                                                        <span class="text-muted fs-7" data-i18n="hw_f3_sub">Multiple staff bill in parallel</span>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="fw-bolder text-dark fs-6 mb-1" data-i18n="hw_f4"><i class="bi bi-qr-code-scan text-primary me-1"></i>Scan QR &amp; Done</div>
-                                                        <span class="text-muted fs-7" data-i18n="hw_f4_sub">Customer added in 2 seconds</span>
+                                        <!-- Tab 2: Mobile -->
+                                        <div class="suite-tab-panel" id="panel-mobile">
+                                            <div class="card card-bordered shadow-sm overflow-hidden border-top border-top-4 border-top-primary">
+                                                <div class="card-body p-6 p-lg-8">
+                                                    <div class="row g-6 align-items-center">
+                                                        <div class="col-lg-7">
+                                                            <div class="cinematic-img-frame zoom-cursor" onclick="openCinematicModal('assets/media/suite/mobile-pos-2d.jpg', 'Trength™ Mobile POS - Dual IMEI & Trade-in Hub')">
+                                                                <img src="assets/media/suite/mobile-pos-2d.jpg" alt="Trength Mobile POS Interface" />
+                                                                <span class="cinematic-badge-tag"><i class="bi bi-arrows-fullscreen me-1"></i>CLICK TO EXPAND</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-1" data-i18n="vert2_badge">TELECOM &amp; GADGETS</span>
+                                                                <span class="text-muted fs-8">Multi-Brand POS</span>
+                                                            </div>
+                                                            <h3 class="fw-bolder text-gray-800 mb-1" data-i18n="vert2_title">Trength™ Mobile</h3>
+                                                            <div class="text-muted fs-7 mb-3" data-i18n="vert2_sub">Smartphones • Multi-IMEI • Service Hub</div>
+                                                            <p class="fs-7 text-gray-600 mb-4" data-i18n="vert2_desc">
+                                                                Engineered for multi-brand smartphone retail stores and gadget service centres with serialized inventory and repair job-sheet tracking.
+                                                            </p>
+                                                            <div class="d-flex flex-column gap-2 mb-5">
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-upc-scan text-primary fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Multi-IMEI &amp; Serial:</strong> Dual-SIM IMEI capture, warranty expiry logs.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-arrow-repeat text-success fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Trade-In &amp; Buyback:</strong> Used smartphone condition assessment &amp; exchange voucher.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-tools text-warning fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Service Job-Sheets:</strong> Technician assignments, spare parts &amp; SMS updates.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-lightning-charge text-danger fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Instant Add-Ons:</strong> Barcode scan for chargers, covers, tempered glass.</div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="CommandCentre.html" class="btn btn-primary fw-bold w-100" data-i18n="vert2_btn">
+                                                                <i class="bi bi-arrow-right me-1"></i>Configure Mobile POS
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Comparison Table: Traditional Cloud/Legacy POS vs Trength Suite -->
-                                        <div class="card card-bordered shadow-sm">
-                                            <div class="card-header bg-light py-5">
-                                                <div class="card-title m-0">
-                                                    <h3 class="fw-bolder text-gray-800 fs-4 mb-0" data-i18n="table_title">
-                                                        <i class="bi bi-arrow-left-right text-primary me-2"></i>Traditional Retail Software vs. Trength™ Suite
-                                                    </h3>
+                                        <!-- Tab 3: Apparel -->
+                                        <div class="suite-tab-panel" id="panel-apparel">
+                                            <div class="card card-bordered shadow-sm overflow-hidden border-top border-top-4 border-top-success">
+                                                <div class="card-body p-6 p-lg-8">
+                                                    <div class="row g-6 align-items-center">
+                                                        <div class="col-lg-7">
+                                                            <div class="cinematic-img-frame zoom-cursor" onclick="openCinematicModal('assets/media/suite/clothing-pos-2d.jpg', 'Trength™ Apparel POS - Matrix Inventory & Barcode Tags')">
+                                                                <img src="assets/media/suite/clothing-pos-2d.jpg" alt="Trength Apparel POS Interface" />
+                                                                <span class="cinematic-badge-tag"><i class="bi bi-arrows-fullscreen me-1"></i>CLICK TO EXPAND</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                <span class="badge badge-light-success fw-bolder fs-8 px-3 py-1" data-i18n="vert3_badge">CLOTHING &amp; TEXTILES</span>
+                                                                <span class="text-muted fs-8">Fashion POS</span>
+                                                            </div>
+                                                            <h3 class="fw-bolder text-gray-800 mb-1" data-i18n="vert3_title">Trength™ Apparel</h3>
+                                                            <div class="text-muted fs-7 mb-3" data-i18n="vert3_sub">Fashion • Footwear • Multi-Grid Matrix</div>
+                                                            <p class="fs-7 text-gray-600 mb-4" data-i18n="vert3_desc">
+                                                                Designed for garment showrooms, boutiques, and multi-store fashion chains requiring high-speed barcode checkout and matrix inventory.
+                                                            </p>
+                                                            <div class="d-flex flex-column gap-2 mb-5">
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-grid-3x3-gap text-success fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Size &times; Color &times; Fit:</strong> Matrix tracking across XS/S/M/L/XL/XXL.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-printer text-primary fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Barcode Tag Printing:</strong> Integrated EAN-13 &amp; Code 128 thermal tags with MRP.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-percent text-danger fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Promotional Billing:</strong> Buy 2 Get 1 Free, bundles &amp; seasonal EOSS sales.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-scissors text-warning fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Alteration Cards:</strong> Tailor delivery schedules &amp; customer measurements.</div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="Troubleshoot.html" class="btn btn-success fw-bold w-100" data-i18n="vert3_btn">
+                                                                <i class="bi bi-arrow-right me-1"></i>Apparel Health Diagnostics
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <span class="badge badge-success fw-bolder fs-8 px-3 py-2" data-i18n="table_badge">MODERN ARCHITECTURE ADVANTAGE</span>
                                             </div>
-                                            <div class="card-body p-0">
-                                                <div class="table-responsive">
-                                                    <table class="table table-row-bordered table-striped table-row-gray-200 align-middle gs-6 gy-4 mb-0">
-                                                        <thead>
-                                                            <tr class="fw-bolder text-muted fs-7 text-uppercase bg-lighten">
-                                                                <th class="ps-6 min-w-200px" data-i18n="th_factor">Operational Factor</th>
-                                                                <th class="min-w-250px text-danger" data-i18n="th_legacy">Typical Cloud / Legacy POS</th>
-                                                                <th class="min-w-300px text-success" data-i18n="th_trength">Trength™ Retail Suite</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody class="fs-6">
-                                                            <tr>
-                                                                <td class="ps-6 fw-bold text-gray-800" data-i18n="row1_factor">
-                                                                    <i class="bi bi-database me-2 text-primary"></i>Data Location &amp; Privacy
-                                                                </td>
-                                                                <td class="text-gray-600" data-i18n="row1_legacy">
-                                                                    <span class="badge badge-light-danger me-2"><i class="bi bi-x-circle text-danger me-1"></i>Risk</span>
-                                                                    Stored on third-party servers; vulnerable to cloud outages and data extraction.
-                                                                </td>
-                                                                <td class="text-gray-800 fw-bold" data-i18n="row1_trength">
-                                                                    <span class="badge badge-light-success me-2"><i class="bi bi-check-circle text-success me-1"></i>100% On-Premises</span>
-                                                                    Data never leaves your shop. Full local control and absolute privacy.
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="ps-6 fw-bold text-gray-800" data-i18n="row2_factor">
-                                                                    <i class="bi bi-upc me-2 text-primary"></i>Barcode Scanners
-                                                                </td>
-                                                                <td class="text-gray-600" data-i18n="row2_legacy">
-                                                                    <span class="badge badge-light-danger me-2"><i class="bi bi-x-circle text-danger me-1"></i>Expensive</span>
-                                                                    Requires purchasing separate handheld USB/laser barcode guns for every station.
-                                                                </td>
-                                                                <td class="text-gray-800 fw-bold" data-i18n="row2_trength">
-                                                                    <span class="badge badge-light-success me-2"><i class="bi bi-check-circle text-success me-1"></i>Obsolete</span>
-                                                                    Turns any smartphone or tablet camera into an instant high-speed scanner.
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="ps-6 fw-bold text-gray-800" data-i18n="row3_factor">
-                                                                    <i class="bi bi-people me-2 text-primary"></i>Multi-User Scaling
-                                                                </td>
-                                                                <td class="text-gray-600" data-i18n="row3_legacy">
-                                                                    <span class="badge badge-light-danger me-2"><i class="bi bi-x-circle text-danger me-1"></i>Costly</span>
-                                                                    Requires specialized terminal hardware and expensive client workstations.
-                                                                </td>
-                                                                <td class="text-gray-800 fw-bold" data-i18n="row3_trength">
-                                                                    <span class="badge badge-light-success me-2"><i class="bi bi-check-circle text-success me-1"></i>Zero Extra Hardware</span>
-                                                                    Staff connect using existing phones, tablets, or laptops over shop Wi-Fi.
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="ps-6 fw-bold text-gray-800" data-i18n="row4_factor">
-                                                                    <i class="bi bi-credit-card me-2 text-primary"></i>Software Licensing
-                                                                </td>
-                                                                <td class="text-gray-600" data-i18n="row4_legacy">
-                                                                    <span class="badge badge-light-danger me-2"><i class="bi bi-x-circle text-danger me-1"></i>Recurring Fees</span>
-                                                                    Charges monthly per-user / per-counter fees that skyrocket as you hire staff.
-                                                                </td>
-                                                                <td class="text-gray-800 fw-bold" data-i18n="row4_trength">
-                                                                    <span class="badge badge-light-success me-2"><i class="bi bi-check-circle text-success me-1"></i>No Extra License Fee</span>
-                                                                    Unlimited local counter users without recurring per-seat penalties.
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="ps-6 fw-bold text-gray-800" data-i18n="row5_factor">
-                                                                    <i class="bi bi-speedometer me-2 text-primary"></i>Parallel Billing During Peak Hours
-                                                                </td>
-                                                                <td class="text-gray-600" data-i18n="row5_legacy">
-                                                                    <span class="badge badge-light-danger me-2"><i class="bi bi-x-circle text-danger me-1"></i>Database Locks</span>
-                                                                    Multiple cashiers cause slow page reloads, stock record locks, and billing queues.
-                                                                </td>
-                                                                <td class="text-gray-800 fw-bold" data-i18n="row5_trength">
-                                                                    <span class="badge badge-light-success me-2"><i class="bi bi-check-circle text-success me-1"></i>Guaranteed Parallel</span>
-                                                                    High-concurrency local engine generates multiple invoices simultaneously in sub-seconds.
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="ps-6 fw-bold text-gray-800" data-i18n="row6_factor">
-                                                                    <i class="bi bi-qr-code me-2 text-primary"></i>Customer Onboarding
-                                                                </td>
-                                                                <td class="text-gray-600" data-i18n="row6_legacy">
-                                                                    <span class="badge badge-light-danger me-2"><i class="bi bi-x-circle text-danger me-1"></i>Manual Typing</span>
-                                                                    Cashier asks and types phone number, name, and address by hand, causing errors.
-                                                                </td>
-                                                                <td class="text-gray-800 fw-bold" data-i18n="row6_trength">
-                                                                    <span class="badge badge-light-success me-2"><i class="bi bi-check-circle text-success me-1"></i>Scan QR &amp; Done</span>
-                                                                    Instantly reads customer QR/UPI code, populates profile, and prints invoice.
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                        </div>
+
+                                        <!-- Tab 4: Electronics -->
+                                        <div class="suite-tab-panel" id="panel-electronics">
+                                            <div class="card card-bordered shadow-sm overflow-hidden border-top border-top-4 border-top-info">
+                                                <div class="card-body p-6 p-lg-8">
+                                                    <div class="row g-6 align-items-center">
+                                                        <div class="col-lg-7">
+                                                            <div class="cinematic-img-frame zoom-cursor" onclick="openCinematicModal('assets/media/suite/electronics-pos-2d.jpg', 'Trength™ Electronics POS - Serialized Stock & EMI Calculator')">
+                                                                <img src="assets/media/suite/electronics-pos-2d.jpg" alt="Trength Electronics POS Interface" />
+                                                                <span class="cinematic-badge-tag"><i class="bi bi-arrows-fullscreen me-1"></i>CLICK TO EXPAND</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-5">
+                                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                                <span class="badge badge-light-info fw-bolder fs-8 px-3 py-1" data-i18n="vert4_badge">HOME APPLIANCES</span>
+                                                                <span class="text-muted fs-8">IT &amp; Appliances</span>
+                                                            </div>
+                                                            <h3 class="fw-bolder text-gray-800 mb-1" data-i18n="vert4_title">Trength™ Electronics</h3>
+                                                            <div class="text-muted fs-7 mb-3" data-i18n="vert4_sub">Appliances • Serialized Stocks • AMC</div>
+                                                            <p class="fs-7 text-gray-600 mb-4" data-i18n="vert4_desc">
+                                                                Built for consumer electronics, TV/audio showrooms, IT hardware stores, and home appliance dealers managing warranty contracts and financing.
+                                                            </p>
+                                                            <div class="d-flex flex-column gap-2 mb-5">
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-upc text-info fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Serialized Stock:</strong> Track TVs, laptops, refrigerators by serial barcode.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-shield-check text-success fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Warranty &amp; AMC:</strong> Annual Maintenance Contracts &amp; protection plans.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-credit-card-2-front text-primary fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Consumer EMI Finance:</strong> Native support for Bajaj Finserv &amp; card EMI.</div>
+                                                                </div>
+                                                                <div class="feature-chip-item">
+                                                                    <i class="bi bi-truck text-warning fs-4 me-3 mt-1"></i>
+                                                                    <div class="fs-7"><strong class="text-dark">Delivery &amp; Install:</strong> Van dispatch, technician bookings &amp; sign-offs.</div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="CommandCentre.html" class="btn btn-info fw-bold w-100" data-i18n="vert4_btn">
+                                                                <i class="bi bi-arrow-right me-1"></i>Electronics Setup Guide
+                                                            </a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--end::SECTION 1-->
 
-                                    <!--==================== SECTION 2: THE 4 INDUSTRY VERTICALS ====================-->
-                                    <div class="mb-16">
-                                        <div class="d-flex align-items-center mb-8">
-                                            <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">2</span>
-                                            <div>
-                                                <h2 class="fw-bolder mb-1 text-dark" data-i18n="sec2_title">Industry-Specific Retail Applications</h2>
-                                                <span class="text-muted fs-6" data-i18n="sec2_subtitle">Purpose-built software suites designed around unique vertical workflows</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="row g-6">
-                                            <!-- Card 1: Jewellery -->
+                                    <!--==================== SECTION 2: HARDWARE SAVINGS & STRATEGIC ADVANTAGES ====================-->
+                                    <div class="mb-12">
+                                        <div class="row g-6 align-items-center">
+                                            <!-- Left: 2D Cinematic Hardware Savings Graphic -->
                                             <div class="col-lg-6">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-warning">
-                                                    <div class="card-body p-8">
-                                                        <div class="d-flex justify-content-between align-items-start mb-4">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="symbol symbol-50px bg-light-warning me-4">
-                                                                    <span class="symbol-label"><i class="bi bi-gem fs-2x text-warning"></i></span>
-                                                                </div>
-                                                                <div>
-                                                                    <h3 class="fw-bolder text-gray-800 mb-0" data-i18n="vert1_title">Trength™ Jewellery</h3>
-                                                                    <span class="text-muted fs-7" data-i18n="vert1_sub">Precious Metals &bull; Gems &bull; Hallmark HUID</span>
-                                                                </div>
+                                                <div class="card card-bordered shadow-sm overflow-hidden h-100 border-2 border-success border-opacity-25">
+                                                    <div class="cinematic-img-frame zoom-cursor" onclick="openCinematicModal('assets/media/suite/hardware-savings-2d.jpg', 'Eliminating Hardware Costs - Smartphone Camera as Barcode Scanner')">
+                                                        <img src="assets/media/suite/hardware-savings-2d.jpg" alt="Eliminating Hardware Costs - Smartphone Camera as Barcode Scanner" />
+                                                        <span class="cinematic-badge-tag"><i class="bi bi-check-circle text-success me-1"></i>HARDWARE LIST SLASHED</span>
+                                                    </div>
+                                                    <div class="card-body p-4 bg-white">
+                                                        <div class="row g-2 text-center">
+                                                            <div class="col-6 col-sm-3">
+                                                                <span class="badge badge-light-danger fw-bolder fs-8 mb-1 d-block"><i class="bi bi-x-circle me-1"></i>No Laser Guns</span>
+                                                                <span class="text-muted fs-8">Save thousands</span>
                                                             </div>
-                                                            <span class="badge badge-light-warning fw-bolder" data-i18n="vert1_badge">BULLION &amp; ORNAMENTS</span>
+                                                            <div class="col-6 col-sm-3">
+                                                                <span class="badge badge-light-success fw-bolder fs-8 mb-1 d-block"><i class="bi bi-camera me-1"></i>Phone Camera</span>
+                                                                <span class="text-muted fs-8">Sub-second scan</span>
+                                                            </div>
+                                                            <div class="col-6 col-sm-3">
+                                                                <span class="badge badge-light-warning fw-bolder fs-8 mb-1 d-block"><i class="bi bi-lightning-charge me-1"></i>Parallel POS</span>
+                                                                <span class="text-muted fs-8">No counter lock</span>
+                                                            </div>
+                                                            <div class="col-6 col-sm-3">
+                                                                <span class="badge badge-light-primary fw-bolder fs-8 mb-1 d-block"><i class="bi bi-qr-code me-1"></i>QR Customer</span>
+                                                                <span class="text-muted fs-8">2s onboarding</span>
+                                                            </div>
                                                         </div>
-                                                        <p class="fs-6 text-gray-700 mb-5" data-i18n="vert1_desc">
-                                                            Engineered for retail jewellers, bullion traders, and goldsmiths. Offers end-to-end ornament lifecycle tracking, live commodity rate feeds, and precision scale connectivity.
-                                                        </p>
-                                                        <!-- App Preview Image -->
-                                                        <div class="mb-5 rounded overflow-hidden border border-warning border-opacity-25 shadow-sm">
-                                                            <img src="assets/media/suite/jewellery-pos.jpg" class="img-fluid w-100" alt="Trength Jewellery POS Interface" />
-                                                        </div>
-                                                        <div class="bg-light rounded p-4 mb-4">
-                                                            <h6 class="fw-bolder text-gray-800 mb-2 fs-7 text-uppercase" data-i18n="vert1_head">Core Jewellery Capabilities:</h6>
-                                                            <ul class="fs-7 text-gray-700 mb-0 ps-4">
-                                                                <li class="mb-1" data-i18n="vert1_f1"><strong>Live Bullion Feeds:</strong> Automatic 24K, 22K, 18K Gold, Fine Silver, and Platinum MCX rate sync.</li>
-                                                                <li class="mb-1" data-i18n="vert1_f2"><strong>Hallmark HUID Compliance:</strong> BIS-mandated 6-character alphanumeric barcode scanning and verification.</li>
-                                                                <li class="mb-1" data-i18n="vert1_f3"><strong>Digital Weighing Balance Integration:</strong> RS232 / USB COM port link for auto-capturing Gross &amp; Net weight with zero manual entry.</li>
-                                                                <li class="mb-1" data-i18n="vert1_f4"><strong>Ornament Breakdown:</strong> Stone deductions, wastage %, making charges per gram/piece, and purity karat conversion.</li>
-                                                                <li data-i18n="vert1_f5"><strong>Artisan (Karigar) Ledger:</strong> Metal issue/receipt tracking, melting loss reconciliation, and job-order tracking.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <a href="InstallationGuide.html" class="btn btn-sm btn-light-warning fw-bold" data-i18n="vert1_btn">
-                                                            <i class="bi bi-arrow-right me-1"></i>View Jewellery Setup Guide
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <!-- Card 2: Mobile & Telecom -->
+                                            <!-- Right: 4 Compact Core Advantages -->
                                             <div class="col-lg-6">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-primary">
-                                                    <div class="card-body p-8">
-                                                        <div class="d-flex justify-content-between align-items-start mb-4">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="symbol symbol-50px bg-light-primary me-4">
-                                                                    <span class="symbol-label"><i class="bi bi-phone fs-2x text-primary"></i></span>
-                                                                </div>
-                                                                <div>
-                                                                    <h3 class="fw-bolder text-gray-800 mb-0" data-i18n="vert2_title">Trength™ Mobile</h3>
-                                                                    <span class="text-muted fs-7" data-i18n="vert2_sub">Smartphones &bull; Multi-IMEI &bull; Service Hub</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="badge badge-light-primary fw-bolder" data-i18n="vert2_badge">TELECOM &amp; GADGETS</span>
-                                                        </div>
-                                                        <p class="fs-6 text-gray-700 mb-5" data-i18n="vert2_desc">
-                                                            Engineered for multi-brand smartphone retail stores and gadget service centres with serialized inventory and repair job-sheet tracking.
-                                                        </p>
-                                                        <!-- App Preview Image -->
-                                                        <div class="mb-5 rounded overflow-hidden border border-primary border-opacity-25 shadow-sm">
-                                                            <img src="assets/media/suite/mobile-pos.jpg" class="img-fluid w-100" alt="Trength Mobile POS Interface" />
-                                                        </div>
-                                                        <div class="bg-light rounded p-4 mb-4">
-                                                            <h6 class="fw-bolder text-gray-800 mb-2 fs-7 text-uppercase" data-i18n="vert2_head">Core Mobile Capabilities:</h6>
-                                                            <ul class="fs-7 text-gray-700 mb-0 ps-4">
-                                                                <li class="mb-1" data-i18n="vert2_f1"><strong>Multi-IMEI &amp; Serial Tracking:</strong> Dual-SIM IMEI capture, warranty expiry logs, and instant serial number search.</li>
-                                                                <li class="mb-1" data-i18n="vert2_f2"><strong>Variant Management Matrix:</strong> Organize handsets by Brand &bull; Model &bull; RAM &bull; Storage &bull; Color &bull; Network band.</li>
-                                                                <li class="mb-1" data-i18n="vert2_f3"><strong>Trade-In &amp; Buyback Valuation:</strong> Used smartphone condition assessment checklist with instant customer exchange voucher generation.</li>
-                                                                <li class="mb-1" data-i18n="vert2_f4"><strong>Service &amp; Repair Job-Sheets:</strong> Technician work assignments, spare-parts billing, and customer SMS repair status updates.</li>
-                                                                <li data-i18n="vert2_f5"><strong>Accessories &amp; Recharges:</strong> Fast barcode scanning for covers, chargers, tempered glass, and prepaid plans.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <a href="CommandCentre.html" class="btn btn-sm btn-light-primary fw-bold" data-i18n="vert2_btn">
-                                                            <i class="bi bi-arrow-right me-1"></i>Configure Mobile POS
-                                                        </a>
-                                                    </div>
+                                                <div class="mb-4">
+                                                    <h3 class="fw-bolder text-gray-800 fs-3 mb-1" data-i18n="sec1_title">Why Choose Trength™ Suite?</h3>
+                                                    <span class="text-muted fs-7" data-i18n="sec1_subtitle">Engineered for retail owners who demand speed, zero hardware bloat, and total data sovereignty</span>
                                                 </div>
-                                            </div>
 
-                                            <!-- Card 3: Clothing & Apparel -->
-                                            <div class="col-lg-6">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-success">
-                                                    <div class="card-body p-8">
-                                                        <div class="d-flex justify-content-between align-items-start mb-4">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="symbol symbol-50px bg-light-success me-4">
-                                                                    <span class="symbol-label"><i class="bi bi-tag fs-2x text-success"></i></span>
-                                                                </div>
-                                                                <div>
-                                                                    <h3 class="fw-bolder text-gray-800 mb-0" data-i18n="vert3_title">Trength™ Apparel</h3>
-                                                                    <span class="text-muted fs-7" data-i18n="vert3_sub">Fashion &bull; Footwear &bull; Multi-Grid Matrix</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="badge badge-light-success fw-bolder" data-i18n="vert3_badge">CLOTHING &amp; TEXTILES</span>
+                                                <div class="d-flex flex-column gap-3">
+                                                    <div class="adv-card-compact border-start border-start-4 border-start-primary">
+                                                        <div class="d-flex align-items-center mb-1">
+                                                            <i class="bi bi-shield-lock-fill text-primary fs-4 me-2"></i>
+                                                            <h6 class="fw-bolder text-gray-800 mb-0 fs-6" data-i18n="adv1_title">100% On-Premises &amp; Offline</h6>
+                                                            <span class="badge badge-light-primary fw-bolder fs-9 ms-auto" data-i18n="adv1_badge">DATA SOVEREIGNTY</span>
                                                         </div>
-                                                        <p class="fs-6 text-gray-700 mb-5" data-i18n="vert3_desc">
-                                                            Designed for garment showrooms, boutiques, and multi-store fashion chains requiring high-speed barcode checkout and matrix inventory.
+                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv1_desc">
+                                                            Your confidential ledger, customer accounts, and profit margins stay strictly inside your physical store. Local database with zero third-party mining.
                                                         </p>
-                                                        <!-- App Preview Image -->
-                                                        <div class="mb-5 rounded overflow-hidden border border-success border-opacity-25 shadow-sm">
-                                                            <img src="assets/media/suite/clothing-pos.jpg" class="img-fluid w-100" alt="Trength Apparel POS Interface" />
-                                                        </div>
-                                                        <div class="bg-light rounded p-4 mb-4">
-                                                            <h6 class="fw-bolder text-gray-800 mb-2 fs-7 text-uppercase" data-i18n="vert3_head">Core Clothing Capabilities:</h6>
-                                                            <ul class="fs-7 text-gray-700 mb-0 ps-4">
-                                                                <li class="mb-1" data-i18n="vert3_f1"><strong>Size &times; Color &times; Fit Matrix:</strong> Multi-dimensional inventory tracking across XS/S/M/L/XL/XXL and seasonal shades.</li>
-                                                                <li class="mb-1" data-i18n="vert3_f2"><strong>Automated Barcode Tag Printing:</strong> Integrated EAN-13 / Code 128 thermal tag printing with MRP, discount, and wash-care details.</li>
-                                                                <li class="mb-1" data-i18n="vert3_f3"><strong>Fast Promotional Billing:</strong> "Buy 2 Get 1 Free", bundle discounts, seasonal end-of-season sales (EOSS), and store credits.</li>
-                                                                <li class="mb-1" data-i18n="vert3_f4"><strong>Alteration &amp; Tailoring Management:</strong> Customer measurement cards, trial dates, and tailor delivery schedules.</li>
-                                                                <li data-i18n="vert3_f5"><strong>Inter-Branch Transfers:</strong> Seamless warehouse-to-store distribution with computerized transfer challans.</li>
-                                                            </ul>
-                                                        </div>
-                                                        <a href="Troubleshoot.html" class="btn btn-sm btn-light-success fw-bold" data-i18n="vert3_btn">
-                                                            <i class="bi bi-arrow-right me-1"></i>Apparel Health Diagnostics
-                                                        </a>
                                                     </div>
-                                                </div>
-                                            </div>
 
-                                            <!-- Card 4: Consumer Electronics -->
-                                            <div class="col-lg-6">
-                                                <div class="card card-bordered h-100 shadow-sm border-top border-top-4 border-top-info">
-                                                    <div class="card-body p-8">
-                                                        <div class="d-flex justify-content-between align-items-start mb-4">
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="symbol symbol-50px bg-light-info me-4">
-                                                                    <span class="symbol-label"><i class="bi bi-tv fs-2x text-info"></i></span>
-                                                                </div>
-                                                                <div>
-                                                                    <h3 class="fw-bolder text-gray-800 mb-0" data-i18n="vert4_title">Trength™ Electronics</h3>
-                                                                    <span class="text-muted fs-7" data-i18n="vert4_sub">Appliances &bull; Serialized Stocks &bull; AMC</span>
-                                                                </div>
-                                                            </div>
-                                                            <span class="badge badge-light-info fw-bolder" data-i18n="vert4_badge">HOME APPLIANCES</span>
+                                                    <div class="adv-card-compact border-start border-start-4 border-start-success">
+                                                        <div class="d-flex align-items-center mb-1">
+                                                            <i class="bi bi-phone-flip text-success fs-4 me-2"></i>
+                                                            <h6 class="fw-bolder text-gray-800 mb-0 fs-6" data-i18n="adv3_title">Multi-User, Zero Extra Hardware</h6>
+                                                            <span class="badge badge-light-success fw-bolder fs-9 ms-auto" data-i18n="adv3_badge">BYOD READY</span>
                                                         </div>
-                                                        <p class="fs-6 text-gray-700 mb-5" data-i18n="vert4_desc">
-                                                            Built for consumer electronics, TV/audio showrooms, IT hardware stores, and home appliance dealers managing warranty contracts and financing.
+                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv3_desc">
+                                                            Equip floor staff instantly. Any existing Android device, iPad, laptop, or desktop on shop Wi-Fi links as an active sales counter without server racks.
                                                         </p>
-                                                        <!-- App Preview Image -->
-                                                        <div class="mb-5 rounded overflow-hidden border border-info border-opacity-25 shadow-sm">
-                                                            <img src="assets/media/suite/electronics-pos.jpg" class="img-fluid w-100" alt="Trength Electronics POS Interface" />
+                                                    </div>
+
+                                                    <div class="adv-card-compact border-start border-start-4 border-start-warning">
+                                                        <div class="d-flex align-items-center mb-1">
+                                                            <i class="bi bi-diagram-3-fill text-warning fs-4 me-2"></i>
+                                                            <h6 class="fw-bolder text-gray-800 mb-0 fs-6" data-i18n="adv5_title">Parallel Invoice Generation</h6>
+                                                            <span class="badge badge-light-warning fw-bolder fs-9 ms-auto" data-i18n="adv5_badge">CONCURRENCY</span>
                                                         </div>
-                                                        <div class="bg-light rounded p-4 mb-4">
-                                                            <h6 class="fw-bolder text-gray-800 mb-2 fs-7 text-uppercase" data-i18n="vert4_head">Core Electronics Capabilities:</h6>
-                                                            <ul class="fs-7 text-gray-700 mb-0 ps-4">
-                                                                <li class="mb-1" data-i18n="vert4_f1"><strong>Serialized Inventory &amp; Batch Control:</strong> Track televisions, refrigerators, laptops, and AC units by unique serial barcode.</li>
-                                                                <li class="mb-1" data-i18n="vert4_f2"><strong>Extended Warranty &amp; AMC:</strong> Sell and manage Annual Maintenance Contracts (AMC) and damage protection plans.</li>
-                                                                <li class="mb-1" data-i18n="vert4_f3"><strong>Consumer Financing &amp; EMI Integration:</strong> Native support for Bajaj Finserv, HDFC, and PineLabs credit card EMI schemes.</li>
-                                                                <li class="mb-1" data-i18n="vert4_f4"><strong>Doorstep Delivery &amp; Installation:</strong> Dispatch management for delivery vans, technician booking, and installation sign-offs.</li>
-                                                                <li data-i18n="vert4_f5"><strong>Vendor Claims &amp; RMA:</strong> Streamlined Return Merchandise Authorization for damaged or Dead-On-Arrival (DOA) units.</li>
-                                                            </ul>
+                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv5_desc">
+                                                            Zero counter lockups during festival rushes. Multiple cashiers generate, calculate, and commit sales invoices simultaneously with sub-second response.
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="adv-card-compact border-start border-start-4 border-start-danger">
+                                                        <div class="d-flex align-items-center mb-1">
+                                                            <i class="bi bi-wallet2 text-danger fs-4 me-2"></i>
+                                                            <h6 class="fw-bolder text-gray-800 mb-0 fs-6" data-i18n="adv4_title">No Extra License Fees</h6>
+                                                            <span class="badge badge-light-danger fw-bolder fs-9 ms-auto" data-i18n="adv4_badge">UNLIMITED LOCAL COUNTERS</span>
                                                         </div>
-                                                        <a href="CommandCentre.html" class="btn btn-sm btn-light-info fw-bold" data-i18n="vert4_btn">
-                                                            <i class="bi bi-arrow-right me-1"></i>Electronics Setup Guide
-                                                        </a>
+                                                        <p class="fs-7 text-gray-600 mb-0" data-i18n="adv4_desc">
+                                                            Zero per-user tax. Add 3, 10, or 20 sales associates across counters without paying additional seat licenses or recurring monthly penalties.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -932,152 +870,93 @@
                                     </div>
                                     <!--end::SECTION 2-->
 
-                                    <!--==================== SECTION 3: ARCHITECTURAL PILLARS ====================-->
-                                    <div class="mb-16">
-                                        <div class="d-flex align-items-center mb-8">
-                                            <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">3</span>
-                                            <div>
-                                                <h2 class="fw-bolder mb-1 text-dark" data-i18n="sec3_title">Platform Architecture &amp; Enterprise Pillars</h2>
-                                                <span class="text-muted fs-6" data-i18n="sec3_subtitle">Robust foundational engineering shared across the entire Trength Suite</span>
-                                            </div>
+                                    <!--==================== SECTION 3: DOCUMENTATION DOCK ====================-->
+                                    <div class="mb-8">
+                                        <div class="d-flex justify-content-between align-items-center mb-4">
+                                            <h3 class="fw-bolder mb-0 text-dark fs-4" data-i18n="sec4_title">Documentation Navigator</h3>
+                                            <span class="text-muted fs-7" data-i18n="sec4_subtitle">Step-by-step technical guides</span>
                                         </div>
 
-                                        <div class="row g-6">
-                                            <div class="col-md-4">
-                                                <div class="p-6 bg-light rounded-3 border h-100">
-                                                    <i class="bi bi-shield-lock text-primary fs-2x mb-3 d-block"></i>
-                                                    <h5 class="fw-bolder text-dark mb-2" data-i18n="pil1_title">Offline-First Resilience</h5>
-                                                    <p class="fs-7 text-gray-600 mb-0" data-i18n="pil1_desc">
-                                                        Billing never stops when internet cables get cut. Counters process invoices and print receipts at sub-second speed with local SQLite/SQL ledgers, syncing transactions to the cloud once connectivity restores.
-                                                    </p>
+                                        <div class="row g-4">
+                                            <!-- Doc 1 -->
+                                            <div class="col-sm-6 col-xl-3">
+                                                <div class="card card-bordered h-100 shadow-sm p-4 text-center hover-elevate-up">
+                                                    <div class="symbol symbol-40px bg-light-primary mx-auto mb-3">
+                                                        <span class="symbol-label"><i class="bi bi-box-arrow-in-down fs-3 text-primary"></i></span>
+                                                    </div>
+                                                    <h6 class="fw-bolder text-gray-800 mb-1 fs-6" data-i18n="doc1_title">Quick Installation</h6>
+                                                    <p class="fs-8 text-gray-600 mb-3" data-i18n="doc1_desc">Setup wizard, license code verification &amp; tray startup.</p>
+                                                    <a href="InstallationGuide.html" class="btn btn-sm btn-light-primary fw-bold mt-auto py-1 fs-8" data-i18n="doc1_btn">Read Guide</a>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <div class="p-6 bg-light rounded-3 border h-100">
-                                                    <i class="bi bi-tablet text-success fs-2x mb-3 d-block"></i>
-                                                    <h5 class="fw-bolder text-dark mb-2" data-i18n="pil2_title">Multi-Counter &amp; Tablet Pairing</h5>
-                                                    <p class="fs-7 text-gray-600 mb-0" data-i18n="pil2_desc">
-                                                        Sales associates carry wireless tablets on the showroom floor to assist shoppers, search catalogs, build carts, and hand off instantly to cashier counters for checkout.
-                                                    </p>
+                                            <!-- Doc 2 -->
+                                            <div class="col-sm-6 col-xl-3">
+                                                <div class="card card-bordered h-100 shadow-sm p-4 text-center hover-elevate-up">
+                                                    <div class="symbol symbol-40px bg-light-success mx-auto mb-3">
+                                                        <span class="symbol-label"><i class="bi bi-sliders fs-3 text-success"></i></span>
+                                                    </div>
+                                                    <h6 class="fw-bolder text-gray-800 mb-1 fs-6" data-i18n="doc2_title">Command Centre</h6>
+                                                    <p class="fs-8 text-gray-600 mb-3" data-i18n="doc2_desc">Network adapter bindings, Windows service &amp; mDNS.</p>
+                                                    <a href="CommandCentre.html" class="btn btn-sm btn-light-success fw-bold mt-auto py-1 fs-8" data-i18n="doc2_btn">Configure</a>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <div class="p-6 bg-light rounded-3 border h-100">
-                                                    <i class="bi bi-receipt text-warning fs-2x mb-3 d-block"></i>
-                                                    <h5 class="fw-bolder text-dark mb-2" data-i18n="pil3_title">GST &amp; Statutory E-Invoicing</h5>
-                                                    <p class="fs-7 text-gray-600 mb-0" data-i18n="pil3_desc">
-                                                        Automated multi-slab GST calculation (CGST, SGST, IGST), e-Way Bill JSON generation, QR-code e-invoices, and one-click monthly GSTR-1 &amp; GSTR-3B audit reconciliation.
-                                                    </p>
+                                            <!-- Doc 3 -->
+                                            <div class="col-sm-6 col-xl-3">
+                                                <div class="card card-bordered h-100 shadow-sm p-4 text-center hover-elevate-up">
+                                                    <div class="symbol symbol-40px bg-light-warning mx-auto mb-3">
+                                                        <span class="symbol-label"><i class="bi bi-wrench fs-3 text-warning"></i></span>
+                                                    </div>
+                                                    <h6 class="fw-bolder text-gray-800 mb-1 fs-6" data-i18n="doc3_title">Troubleshooting</h6>
+                                                    <p class="fs-8 text-gray-600 mb-3" data-i18n="doc3_desc">26 automated health checks with one-click Auto-Fix engine.</p>
+                                                    <a href="Troubleshoot.html" class="btn btn-sm btn-light-warning fw-bold mt-auto py-1 fs-8" data-i18n="doc3_btn">Diagnose</a>
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <div class="p-6 bg-light rounded-3 border h-100">
-                                                    <i class="bi bi-gear-wide-connected text-info fs-2x mb-3 d-block"></i>
-                                                    <h5 class="fw-bolder text-dark mb-2" data-i18n="pil4_title">Windows Service &amp; Command Centre</h5>
-                                                    <p class="fs-7 text-gray-600 mb-0" data-i18n="pil4_desc">
-                                                        A dedicated native Windows daemon manages background WebSockets, port bindings (8082), automated daily bullion rate syncs, and self-healing diagnostics.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <div class="p-6 bg-light rounded-3 border h-100">
-                                                    <i class="bi bi-printer text-danger fs-2x mb-3 d-block"></i>
-                                                    <h5 class="fw-bolder text-dark mb-2" data-i18n="pil5_title">Hardware Peripheral Ecosystem</h5>
-                                                    <p class="fs-7 text-gray-600 mb-0" data-i18n="pil5_desc">
-                                                        Native driver bridges for thermal POS receipt printers (ESC/POS), 2D barcode scanners, customer pole displays, electronic cash drawers, and precision weighing scales.
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4">
-                                                <div class="p-6 bg-light rounded-3 border h-100">
-                                                    <i class="bi bi-graph-up-arrow text-primary fs-2x mb-3 d-block"></i>
-                                                    <h5 class="fw-bolder text-dark mb-2" data-i18n="pil6_title">Omnichannel Cloud Synchronization</h5>
-                                                    <p class="fs-7 text-gray-600 mb-0" data-i18n="pil6_desc">
-                                                        Consolidate multi-store stock positions, track store-level profitability, manage staff roles and biometric permissions, and view live executive reports anywhere.
-                                                    </p>
+                                            <!-- Doc 4 -->
+                                            <div class="col-sm-6 col-xl-3">
+                                                <div class="card card-bordered h-100 shadow-sm p-4 text-center hover-elevate-up">
+                                                    <div class="symbol symbol-40px bg-light-danger mx-auto mb-3">
+                                                        <span class="symbol-label"><i class="bi bi-play-circle-fill fs-3 text-danger"></i></span>
+                                                    </div>
+                                                    <h6 class="fw-bolder text-gray-800 mb-1 fs-6" data-i18n="doc4_title">Video Tutorials</h6>
+                                                    <p class="fs-8 text-gray-600 mb-3" data-i18n="doc4_desc">Visual walkthroughs for billing, counters &amp; masters.</p>
+                                                    <a href="VideoTutorials.html" class="btn btn-sm btn-light-danger fw-bold mt-auto py-1 fs-8" data-i18n="doc4_btn">Watch Videos</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!--end::SECTION 3-->
 
-                                    <!--==================== SECTION 4: DOCUMENTATION EXPLORER ====================-->
-                                    <div class="mb-10">
-                                        <div class="d-flex align-items-center mb-8">
-                                            <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">4</span>
-                                            <div>
-                                                <h2 class="fw-bolder mb-1 text-dark" data-i18n="sec4_title">Documentation Navigator</h2>
-                                                <span class="text-muted fs-6" data-i18n="sec4_subtitle">Step-by-step technical guides for setup, configuration, and diagnostics</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="row g-6">
-                                            <!-- Doc 1 -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm p-6 text-center hover-elevate-up">
-                                                    <div class="symbol symbol-50px bg-light-primary mx-auto mb-4">
-                                                        <span class="symbol-label"><i class="bi bi-box-arrow-in-down fs-2 text-primary"></i></span>
-                                                    </div>
-                                                    <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="doc1_title">Quick Installation</h5>
-                                                    <p class="fs-7 text-gray-600 mb-4" data-i18n="doc1_desc">Setup wizard, license code verification, and tray monitor startup.</p>
-                                                    <a href="InstallationGuide.html" class="btn btn-sm btn-light-primary fw-bold mt-auto" data-i18n="doc1_btn">Read Guide</a>
-                                                </div>
-                                            </div>
-
-                                            <!-- Doc 2 -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm p-6 text-center hover-elevate-up">
-                                                    <div class="symbol symbol-50px bg-light-success mx-auto mb-4">
-                                                        <span class="symbol-label"><i class="bi bi-sliders fs-2 text-success"></i></span>
-                                                    </div>
-                                                    <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="doc2_title">Command Centre</h5>
-                                                    <p class="fs-7 text-gray-600 mb-4" data-i18n="doc2_desc">Network adapter bindings, Windows service power, and local mDNS discovery.</p>
-                                                    <a href="CommandCentre.html" class="btn btn-sm btn-light-success fw-bold mt-auto" data-i18n="doc2_btn">Configure</a>
-                                                </div>
-                                            </div>
-
-                                            <!-- Doc 3 -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm p-6 text-center hover-elevate-up">
-                                                    <div class="symbol symbol-50px bg-light-warning mx-auto mb-4">
-                                                        <span class="symbol-label"><i class="bi bi-wrench fs-2 text-warning"></i></span>
-                                                    </div>
-                                                    <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="doc3_title">Troubleshooting</h5>
-                                                    <p class="fs-7 text-gray-600 mb-4" data-i18n="doc3_desc">26 automated health checks with one-click Auto-Fix repair engine.</p>
-                                                    <a href="Troubleshoot.html" class="btn btn-sm btn-light-warning fw-bold mt-auto" data-i18n="doc3_btn">Diagnose</a>
-                                                </div>
-                                            </div>
-
-                                            <!-- Doc 4 -->
-                                            <div class="col-md-6 col-xl-3">
-                                                <div class="card card-bordered h-100 shadow-sm p-6 text-center hover-elevate-up">
-                                                    <div class="symbol symbol-50px bg-light-danger mx-auto mb-4">
-                                                        <span class="symbol-label"><i class="bi bi-play-circle-fill fs-2 text-danger"></i></span>
-                                                    </div>
-                                                    <h5 class="fw-bolder text-gray-800 mb-2" data-i18n="doc4_title">Video Tutorials</h5>
-                                                    <p class="fs-7 text-gray-600 mb-4" data-i18n="doc4_desc">Visual walkthroughs demonstrating billing, counter management, and masters.</p>
-                                                    <a href="VideoTutorials.html" class="btn btn-sm btn-light-danger fw-bold mt-auto" data-i18n="doc4_btn">Watch Videos</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--end::SECTION 4-->
-
                                     <!-- Client Support Notice -->
-                                    <div class="notice d-flex bg-light-primary rounded border-primary border border-dashed p-6 mt-12">
-                                        <i class="bi bi-headset text-primary fs-2x me-4 mt-1"></i>
-                                        <div>
-                                            <strong class="text-gray-900 fs-6 d-block mb-1" data-i18n="support_title">Enterprise Support &amp; Onboarding Assistance:</strong>
-                                            <span data-i18n="support_desc">Need help setting up your store network, connecting weighing balances, or configuring multi-counter tablet pairing? Contact our engineering team at <a href="mailto:support@trength.in" class="fw-bold">support@trength.in</a> or visit our official portal at <a href="https://trength.in" target="_blank" class="fw-bold">https://trength.in</a>.</span>
+                                    <div class="d-flex align-items-center bg-light-primary rounded border border-primary border-dashed p-4">
+                                        <i class="bi bi-headset text-primary fs-2x me-3"></i>
+                                        <div class="flex-grow-1">
+                                            <strong class="text-gray-900 fs-7 d-block mb-1" data-i18n="support_title">Enterprise Support &amp; Onboarding Assistance:</strong>
+                                            <span class="fs-8 text-gray-600" data-i18n="support_desc">Need help setting up your store network, connecting weighing balances, or configuring multi-counter tablet pairing? Contact our engineering team at <a href="mailto:support@trength.in" class="fw-bold">support@trength.in</a> or visit our official portal at <a href="https://trength.in" target="_blank" class="fw-bold">https://trength.in</a>.</span>
                                         </div>
                                     </div>
                                 </div>
                                 <!--end::Section-->
+
+                                <!-- Cinematic Lightbox Modal -->
+                                <div class="modal fade" id="cinematicModal" tabindex="-1" aria-labelledby="cinematicModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                                        <div class="modal-content bg-white border border-gray-300 shadow-lg">
+                                            <div class="modal-header border-bottom py-3 px-5">
+                                                <h5 class="modal-title text-gray-900 fs-6 fw-bold" id="cinematicModalLabel">Cinematic Interface Preview</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body text-center p-4 bg-light">
+                                                <img id="cinematicModalImg" src="" class="img-fluid rounded border shadow-sm" style="max-height: 80vh; object-fit: contain; background: #fff;" alt="Full Resolution Cinematic Preview" />
+                                            </div>
+                                            <div class="modal-footer border-top py-2 px-5 text-center justify-content-center">
+                                                <span class="text-muted fs-8"><i class="bi bi-info-circle me-1"></i>2D Cinematic Vector Interface — Trength™ Retail Suite</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!--end::Section-->
                             </div>
                             <!--end::Card Body-->
@@ -1180,6 +1059,35 @@
     <script src="assets/js/custom/documentation/documentation.js"></script>
     <script src="assets/js/custom/documentation/search.js"></script>
     <script src="assets/js/i18n.js"></script>
+    <script>
+        function switchSuiteTab(tabKey, btnEl) {
+            document.querySelectorAll('.suite-tab-btn').forEach(function(b) {
+                b.classList.remove('active');
+            });
+            document.querySelectorAll('.suite-tab-panel').forEach(function(p) {
+                p.classList.remove('active');
+            });
+            if (btnEl) btnEl.classList.add('active');
+            var panel = document.getElementById('panel-' + tabKey);
+            if (panel) panel.classList.add('active');
+        }
+
+        function openCinematicModal(imgSrc, titleText) {
+            var modalImg = document.getElementById('cinematicModalImg');
+            var modalTitle = document.getElementById('cinematicModalLabel');
+            if (modalImg) modalImg.src = imgSrc;
+            if (modalTitle && titleText) modalTitle.innerText = titleText;
+            var modalEl = document.getElementById('cinematicModal');
+            if (modalEl) {
+                if (window.bootstrap && window.bootstrap.Modal) {
+                    var bsModal = bootstrap.Modal.getOrCreateInstance(modalEl);
+                    bsModal.show();
+                } else if (window.$ && $(modalEl).modal) {
+                    $(modalEl).modal('show');
+                }
+            }
+        }
+    </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
 </body>
