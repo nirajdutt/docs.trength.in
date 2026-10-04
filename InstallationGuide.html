@@ -66,6 +66,15 @@
                                     <span class="menu-title" data-i18n="nav_installation">Installation</span>
                                 </a>
                             </div>
+                            <div class="menu-item">
+                                <a class="menu-link py-2" href="VideoTutorials.html">
+                                    <span class="menu-title" data-i18n="nav_video_tutorials">Video Tutorials</span>
+                                </a>
+                            </div>
+
+                            <div class="menu-item">
+                                <h4 class="menu-content text-muted mb-0 fs-7 text-uppercase" data-i18n="nav_system_utilities">System &amp; Utilities</h4>
+                            </div>
                             <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                 <span class="menu-link py-2">
                                     <span class="menu-title" data-i18n="nav_command_centre">Command Centre</span>
@@ -90,11 +99,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="menu-item">
-                                <a class="menu-link py-2" href="VideoTutorials.html">
-                                    <span class="menu-title" data-i18n="nav_video_tutorials">Video Tutorials</span>
-                                </a>
-                            </div>
+
                             <div class="menu-item">
                                 <h4 class="menu-content text-muted mb-0 fs-7 text-uppercase" data-i18n="nav_jewellery_app">Jewellery Application</h4>
                             </div>
@@ -418,22 +423,8 @@
                                         <!-- Hardware Spec Grid -->
                                         <div class="p-6">
                                             <div class="row g-4">
-                                                <!-- Spec 1: CPU -->
-                                                <div class="col-sm-6 col-lg-3">
-                                                    <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-primary">
-                                                        <div class="d-flex align-items-center justify-content-between mb-3">
-                                                            <span class="text-muted fw-bold fs-8 text-uppercase">Processor (CPU)</span>
-                                                            <div class="symbol symbol-30px bg-light-primary rounded d-flex align-items-center justify-content-center">
-                                                                <i class="bi bi-cpu fs-5 text-primary"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="fw-bolder text-dark fs-6 mb-1">Intel Core i3 / AMD Ryzen 3</div>
-                                                        <div class="text-muted fs-8">64-bit multi-core (2.0 GHz or higher)</div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Spec 2: RAM -->
-                                                <div class="col-sm-6 col-lg-3">
+                                                <!-- Spec 1: RAM -->
+                                                <div class="col-md-4">
                                                     <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-info">
                                                         <div class="d-flex align-items-center justify-content-between mb-3">
                                                             <span class="text-muted fw-bold fs-8 text-uppercase">System Memory</span>
@@ -448,8 +439,8 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- Spec 3: Storage -->
-                                                <div class="col-sm-6 col-lg-3">
+                                                <!-- Spec 2: Storage -->
+                                                <div class="col-md-4">
                                                     <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-success">
                                                         <div class="d-flex align-items-center justify-content-between mb-3">
                                                             <span class="text-muted fw-bold fs-8 text-uppercase">Disk Storage</span>
@@ -462,8 +453,8 @@
                                                     </div>
                                                 </div>
 
-                                                <!-- Spec 4: OS & Display -->
-                                                <div class="col-sm-6 col-lg-3">
+                                                <!-- Spec 3: OS & Display -->
+                                                <div class="col-md-4">
                                                     <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-warning">
                                                         <div class="d-flex align-items-center justify-content-between mb-3">
                                                             <span class="text-muted fw-bold fs-8 text-uppercase">OS &amp; Screen</span>
@@ -495,7 +486,7 @@
                                             <div class="col-md-4">
                                                 <div class="p-4 bg-white rounded border border-gray-300 h-100">
                                                     <div class="fw-bolder text-primary fs-6 mb-2">🌐 Internet Connection</div>
-                                                    <span data-i18n="inst_offline_internet_desc">Used for license activation, software updates, and cloud backup.</span>
+                                                    <span data-i18n="inst_offline_internet_desc">Used for license activation and software updates.</span>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -522,40 +513,70 @@
                                         <h2 class="fw-bolder mb-0 text-dark" data-i18n="inst_guide_title">Follow These Simple Screens</h2>
                                     </div>
 
-                                    <!-- Interactive Wizard Step Nav Buttons -->
-                                    <div class="card card-bordered shadow-sm mb-6 p-4 bg-light">
-                                        <div class="d-flex flex-wrap gap-2 justify-content-center" id="wizard-step-tabs">
-                                            <button type="button" class="btn btn-primary fw-bolder px-4 py-2" id="install-tab-1" onclick="showInstallStep(1)">
-                                                <span class="badge badge-white text-primary rounded-circle me-1">1</span> Launch Setup
-                                            </button>
-                                            <button type="button" class="btn btn-light fw-bolder px-4 py-2" id="install-tab-2" onclick="showInstallStep(2)">
-                                                <span class="badge badge-secondary me-1">2</span> Choose Folder
-                                            </button>
-                                            <button type="button" class="btn btn-light fw-bolder px-4 py-2" id="install-tab-3" onclick="showInstallStep(3)">
-                                                <span class="badge badge-secondary me-1">3</span> Connection Type
-                                            </button>
-                                            <button type="button" class="btn btn-light fw-bolder px-4 py-2" id="install-tab-4" onclick="showInstallStep(4)">
-                                                <span class="badge badge-secondary me-1">4</span> Confirm
-                                            </button>
-                                            <button type="button" class="btn btn-light fw-bolder px-4 py-2" id="install-tab-5" onclick="showInstallStep(5)">
-                                                <span class="badge badge-secondary me-1">5</span> Complete
-                                            </button>
+                                    <!-- Modern Interactive Stepper Navigation -->
+                                    <div class="install-stepper-wrap mb-8">
+                                        <div class="install-stepper-header d-flex flex-wrap align-items-center justify-content-between gap-2">
+                                            <div class="d-flex align-items-center">
+                                                <span class="badge badge-light-primary fw-bolder fs-8 me-2 text-uppercase">INSTALLATION FLOW</span>
+                                                <span class="fs-7 text-gray-800 fw-bolder" id="stepper-active-title">Step 1: Welcome to Trength Suite</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge badge-light-info fs-8 fw-bolder" id="stepper-step-indicator">Step 1 of 8</span>
+                                                <span class="badge badge-light-success fs-8 fw-bolder" id="stepper-progress-text">12% Completed</span>
+                                            </div>
+                                        </div>
+                                        <div class="install-stepper-nav" id="wizard-step-tabs">
+                                            <div class="install-step-btn active" id="install-tab-1" onclick="showInstallStep(1)" role="button" tabindex="0">
+                                                <span class="step-num">1</span>
+                                                <span class="step-label">Welcome</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-2" onclick="showInstallStep(2)" role="button" tabindex="0">
+                                                <span class="step-num">2</span>
+                                                <span class="step-label">License</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-3" onclick="showInstallStep(3)" role="button" tabindex="0">
+                                                <span class="step-num">3</span>
+                                                <span class="step-label">Destination</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-4" onclick="showInstallStep(4)" role="button" tabindex="0">
+                                                <span class="step-num">4</span>
+                                                <span class="step-label">Network</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-5" onclick="showInstallStep(5)" role="button" tabindex="0">
+                                                <span class="step-num">5</span>
+                                                <span class="step-label">Ready</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-6" onclick="showInstallStep(6)" role="button" tabindex="0">
+                                                <span class="step-num">6</span>
+                                                <span class="step-label">UAC / Admin</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-7" onclick="showInstallStep(7)" role="button" tabindex="0">
+                                                <span class="step-num">7</span>
+                                                <span class="step-label">Installing</span>
+                                            </div>
+                                            <div class="install-step-btn" id="install-tab-8" onclick="showInstallStep(8)" role="button" tabindex="0">
+                                                <span class="step-num">8</span>
+                                                <span class="step-label">Summary</span>
+                                            </div>
+                                        </div>
+                                        <div class="install-progress-track mt-4">
+                                            <div class="install-progress-bar" id="install-progress-bar" style="width: 12.5%;"></div>
                                         </div>
                                     </div>
 
                                     <!-- Wizard Step Cards Container (Non-Scrollable Single Active Step View) -->
                                     <div id="install-wizard-body" class="mb-6">
-                                        <!-- Step 1 Card -->
+                                        <!-- Step 1 Card: Introduction -->
                                         <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-1" style="display: block;">
                                             <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 1 OF 5</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step1_title">Launch Trength Setup</h3>
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 1 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step1_title">Welcome to Trength Suite Setup</h3>
                                             </div>
                                             <div class="card-body p-6">
                                                 <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step1_desc">
-                                                    Double-click <code>TrengthSetup.exe</code> on your computer. When the Setup Wizard opens, simply click <strong>Next &gt;</strong>.
+                                                    Double-click <code>TrengthSetup.exe</code> on your computer. When the Setup Wizard opens with the Introduction screen, click <strong>Next &gt;</strong> to continue.
                                                 </p>
-                                                <div class="text-center mx-auto" style="max-width: 520px;">
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
                                                     <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
                                                         <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
                                                             <div class="d-flex align-items-center gap-1 ms-1">
@@ -563,34 +584,63 @@
                                                                 <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
                                                                 <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
                                                             </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Setup — Step 1</span>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Introduction</span>
                                                             <span style="width: 30px;"></span>
                                                         </div>
                                                         <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step1-welcome.png" alt="Step 1 Installer Screen" class="img-fluid rounded border shadow-xs" style="max-height: 340px; object-fit: contain;" />
+                                                            <img src="assets/media/installation/step1-welcome.png" alt="Step 1 - Welcome Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Step 2 Card -->
+                                        <!-- Step 2 Card: License Agreement -->
                                         <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-2" style="display: none;">
                                             <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 2 OF 5</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step2_title">Choose Where Trength Will Be Installed</h3>
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 2 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step2_title">End-User License Agreement (EULA)</h3>
                                             </div>
                                             <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-2" data-i18n="inst_step2_desc">
-                                                    Trength automatically suggests the best location on your computer:
+                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step2_desc">
+                                                    Read through the license agreement, check the box <strong>"I accept the terms in the License Agreement"</strong>, and click <strong>Next &gt;</strong>.
+                                                </p>
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
+                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
+                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
+                                                            <div class="d-flex align-items-center gap-1 ms-1">
+                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                            </div>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — License Agreement</span>
+                                                            <span style="width: 30px;"></span>
+                                                        </div>
+                                                        <div class="p-3 bg-light-subtle">
+                                                            <img src="assets/media/installation/step2-license.png" alt="Step 2 - License Agreement Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 3 Card: Destination Select -->
+                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-3" style="display: none;">
+                                            <div class="card-header bg-light d-flex align-items-center py-4">
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 3 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step3_title">Destination Folder Selection</h3>
+                                            </div>
+                                            <div class="card-body p-6">
+                                                <p class="fs-6 text-gray-700 mb-2" data-i18n="inst_step3_desc">
+                                                    Trength automatically selects the recommended installation path on your computer:
                                                 </p>
                                                 <div class="notice bg-light-primary border-primary border border-dashed rounded p-4 mb-4">
                                                     <code>C:\Program Files (x86)\Trength Suite\</code>
                                                 </div>
-                                                <p class="fs-6 text-dark fw-bold mb-4" data-i18n="inst_step2_tip">
-                                                    👉 For most users, simply leave the default location and click Next.
+                                                <p class="fs-6 text-dark fw-bold mb-4" data-i18n="inst_step3_tip">
+                                                    👉 For most users, leave the default folder and click <strong>Next &gt;</strong>.
                                                 </p>
-                                                <div class="text-center mx-auto" style="max-width: 520px;">
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
                                                     <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
                                                         <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
                                                             <div class="d-flex align-items-center gap-1 ms-1">
@@ -598,57 +648,28 @@
                                                                 <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
                                                                 <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
                                                             </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Setup — Step 2</span>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Destination Folder</span>
                                                             <span style="width: 30px;"></span>
                                                         </div>
                                                         <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step2-folder.png" alt="Step 2 Installer Screen" class="img-fluid rounded border shadow-xs" style="max-height: 340px; object-fit: contain;" />
+                                                            <img src="assets/media/installation/step3-destination.png" alt="Step 3 - Destination Folder Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Step 3 Card -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-3" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 3 OF 5</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step3_title">Choose Your Connection Type</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step3_desc">
-                                                    Select <strong>WIFI</strong> if your computer uses wireless internet, or <strong>ETHERNET</strong> if connected via network cable. Then click <strong>Next &gt;</strong>.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 520px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Setup — Step 3</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step3-connection.png" alt="Step 3 Installer Screen" class="img-fluid rounded border shadow-xs" style="max-height: 340px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 4 Card -->
+                                        <!-- Step 4 Card: Network Type -->
                                         <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-4" style="display: none;">
                                             <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 4 OF 5</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step4_title">Confirm & Start Installation</h3>
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 4 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step4_title">Choose Network Connection Type</h3>
                                             </div>
                                             <div class="card-body p-6">
                                                 <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step4_desc">
-                                                    Click <strong>Next &gt;</strong> to start copying files. If Windows displays a permission prompt (UAC), click <strong>Yes</strong>.
+                                                    Select how this computer connects to your local network: choose <strong>Wi-Fi (Wireless Connection)</strong> if using Wi-Fi, or <strong>Ethernet (Wired LAN Connection)</strong> if connected with a network cable. Then click <strong>Next &gt;</strong>.
                                                 </p>
-                                                <div class="text-center mx-auto" style="max-width: 520px;">
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
                                                     <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
                                                         <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
                                                             <div class="d-flex align-items-center gap-1 ms-1">
@@ -656,28 +677,57 @@
                                                                 <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
                                                                 <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
                                                             </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Setup — Step 4</span>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Network Connection Type</span>
                                                             <span style="width: 30px;"></span>
                                                         </div>
                                                         <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step4-confirm.png" alt="Step 4 Installer Screen" class="img-fluid rounded border shadow-xs" style="max-height: 340px; object-fit: contain;" />
+                                                            <img src="assets/media/installation/step4-network.png" alt="Step 4 - Network Connection Type Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <!-- Step 5 Card -->
+                                        <!-- Step 5 Card: Ready to Install -->
                                         <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-5" style="display: none;">
                                             <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 5 OF 5</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step5_title">Windows Administrator Permission (UAC)</h3>
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 5 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step5_title">Ready to Install Trength Suite</h3>
                                             </div>
                                             <div class="card-body p-6">
                                                 <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step5_desc">
-                                                    When Windows displays a User Account Control (UAC) prompt asking <em>"Do you want to allow this app to make changes to your device?"</em>, click <strong>Yes</strong> to grant administrator permission.
+                                                    Review your setup options and click the <strong>Install</strong> button (with shield icon) to begin copying files and configuring Trength services.
                                                 </p>
-                                                <div class="text-center mx-auto" style="max-width: 520px;">
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
+                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
+                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
+                                                            <div class="d-flex align-items-center gap-1 ms-1">
+                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                            </div>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Ready to Install</span>
+                                                            <span style="width: 30px;"></span>
+                                                        </div>
+                                                        <div class="p-3 bg-light-subtle">
+                                                            <img src="assets/media/installation/step5-ready.png" alt="Step 5 - Ready to Install Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 6 Card: Admin Permission (UAC) -->
+                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-6" style="display: none;">
+                                            <div class="card-header bg-light d-flex align-items-center py-4">
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 6 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step6_title">Windows Administrator Permission (UAC)</h3>
+                                            </div>
+                                            <div class="card-body p-6">
+                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step6_desc">
+                                                    When Windows displays a User Account Control (UAC) dialog asking <em>"Do you want to allow this app to make changes to your device?"</em>, click <strong>Yes</strong> to grant administrator privileges and finalize the setup.
+                                                </p>
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
                                                     <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
                                                         <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
                                                             <div class="d-flex align-items-center gap-1 ms-1">
@@ -689,7 +739,65 @@
                                                             <span style="width: 30px;"></span>
                                                         </div>
                                                         <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step5-uac.jpg" alt="Step 5 Installer Screen - UAC Permission" class="img-fluid rounded border shadow-xs" style="max-height: 340px; object-fit: contain;" />
+                                                            <img src="assets/media/installation/step6-uac.png" alt="Step 6 - Windows UAC Permission Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 7 Card: Installing -->
+                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-7" style="display: none;">
+                                            <div class="card-header bg-light d-flex align-items-center py-4">
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 7 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step7_title">Installing Trength Suite</h3>
+                                            </div>
+                                            <div class="card-body p-6">
+                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step7_desc">
+                                                    Please wait while the Setup Wizard installs Trength Suite. The progress bar shows real-time progress while files and background services are configured.
+                                                </p>
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
+                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
+                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
+                                                            <div class="d-flex align-items-center gap-1 ms-1">
+                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                            </div>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Installing</span>
+                                                            <span style="width: 30px;"></span>
+                                                        </div>
+                                                        <div class="p-3 bg-light-subtle">
+                                                            <img src="assets/media/installation/step7-installing.png" alt="Step 7 - Installing Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Step 8 Card: Summary -->
+                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-8" style="display: none;">
+                                            <div class="card-header bg-light d-flex align-items-center py-4">
+                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 8 OF 8</span>
+                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step8_title">Completed Trength Suite Setup</h3>
+                                            </div>
+                                            <div class="card-body p-6">
+                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step8_desc">
+                                                    Installation is complete! Ensure <strong>"Launch Trength Suite Tray"</strong> is selected, then click the <strong>Finish</strong> button to exit the wizard and start the application.
+                                                </p>
+                                                <div class="text-center mx-auto" style="max-width: 580px;">
+                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
+                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
+                                                            <div class="d-flex align-items-center gap-1 ms-1">
+                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
+                                                            </div>
+                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Summary</span>
+                                                            <span style="width: 30px;"></span>
+                                                        </div>
+                                                        <div class="p-3 bg-light-subtle">
+                                                            <img src="assets/media/installation/step8-complete.png" alt="Step 8 - Completed Setup Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -702,7 +810,7 @@
                                         <button type="button" class="btn btn-secondary fw-bolder" id="install-prev-btn" disabled onclick="navigateInstallStep(-1)">
                                             <i class="bi bi-arrow-left me-1"></i> Previous Screen
                                         </button>
-                                        <span class="badge badge-light-primary fs-7 fw-bolder px-4 py-2" id="install-step-counter">Step 1 of 5</span>
+                                        <span class="badge badge-light-primary fs-7 fw-bolder px-4 py-2" id="install-step-counter">Step 1 of 8</span>
                                         <button type="button" class="btn btn-primary fw-bolder" id="install-next-btn" onclick="navigateInstallStep(1)">
                                             Next Screen <i class="bi bi-arrow-right ms-1"></i>
                                         </button>
@@ -811,30 +919,61 @@
                                             <div class="col-md-4">
                                                 <div class="p-4 bg-white rounded border border-primary text-center h-100">
                                                     <span class="badge badge-primary rounded-circle fs-6 mb-2">3</span>
-                                                    <h5 class="fw-bolder text-dark fs-6" data-i18n="inst_t1_s3_title">Check Connectivity</h5>
-                                                    <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_t1_s3_desc">Right-click tray icon &rarr; select "Check Connectivity".</p>
+                                                    <h5 class="fw-bolder text-dark fs-6" data-i18n="inst_t1_s3_title">Command Centre</h5>
+                                                    <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_t1_s3_desc">Right-click tray icon &rarr; select "Command Centre".</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Tier 2: Technical Troubleshooting -->
-                                    <div class="accordion accordion-icon-toggle" id="accordion_technical_troubleshooting">
-                                        <div class="accordion-item mb-5 border rounded">
-                                            <div class="accordion-header py-4 px-6 bg-light cursor-pointer" data-bs-toggle="collapse" data-bs-target="#kt_tech_trouble">
-                                                <span class="accordion-icon"><i class="bi bi-chevron-right fs-4 text-primary"></i></span>
-                                                <h4 class="fw-bolder text-dark mb-0 fs-5" data-i18n="inst_t2_title">Still not working? Advanced Technical Troubleshooting</h4>
+                                    <!-- Tier 2: Automated Diagnostic & Auto-Fix in Command Centre -->
+                                    <div class="card card-bordered border-primary border-opacity-20 shadow-xs mb-5 rounded-3 bg-light-primary bg-opacity-25 p-6">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                                            <div class="d-flex align-items-center">
+                                                <div class="symbol symbol-40px bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 shadow-xs">
+                                                    <i class="bi bi-wrench-adjustable fs-3 text-white"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="fw-bolder text-gray-900 mb-0 fs-5" data-i18n="inst_t2_title">Built-in Automated Diagnostics &amp; One-Click Fix</h4>
+                                                    <span class="text-muted fs-7">No complex manual Windows configuration needed</span>
+                                                </div>
                                             </div>
-                                            <div id="kt_tech_trouble" class="collapse p-6 bg-white">
-                                                <p class="text-gray-700 fs-6 mb-4">
-                                                    If Trength POS service remains stopped, your IT technician can perform these steps:
-                                                </p>
-                                                <ol class="text-gray-700 fs-6 space-y-3 ps-5">
-                                                    <li>Press <code>Win + R</code>, type <code>services.msc</code>, and press Enter.</li>
-                                                    <li>Locate <strong>Trength POS Service</strong> in the list.</li>
-                                                    <li>Right-click it and select <strong>Restart</strong>.</li>
-                                                    <li>Verify that Windows Firewall allows inbound connections on port <code>8080</code> and <code>443</code>.</li>
-                                                </ol>
+                                            <a href="Troubleshoot.html" class="btn btn-sm btn-primary fw-bolder">
+                                                <i class="bi bi-box-arrow-up-right me-1"></i>View Full Troubleshoot Guide
+                                            </a>
+                                        </div>
+
+                                        <p class="text-gray-700 fs-6 mb-4">
+                                            If the service is stopped or a connection issue occurs, use the automated diagnostic engine inside <strong>Trength Command Centre</strong>:
+                                        </p>
+
+                                        <div class="row g-3 text-gray-800 fs-6">
+                                            <div class="col-md-4">
+                                                <div class="p-4 bg-white rounded border shadow-2xs h-100">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <span class="badge badge-light-primary fw-bolder rounded-circle me-2">1</span>
+                                                        <strong class="text-dark">Open Troubleshoot Tab</strong>
+                                                    </div>
+                                                    <span class="text-muted fs-7">Right-click the golden tray icon, select <strong>Command Centre</strong>, and switch to the <strong>Troubleshoot</strong> tab.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="p-4 bg-white rounded border shadow-2xs h-100">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <span class="badge badge-light-warning fw-bolder rounded-circle me-2">2</span>
+                                                        <strong class="text-dark">Automated Diagnostics</strong>
+                                                    </div>
+                                                    <span class="text-muted fs-7">The app automatically runs diagnostic checks across all services, firewall rules, and ports, prompting you with the exact reason for any failure.</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="p-4 bg-white rounded border shadow-2xs h-100">
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <span class="badge badge-light-success fw-bolder rounded-circle me-2">3</span>
+                                                        <strong class="text-dark">One-Click "Fix" / "Fix All"</strong>
+                                                    </div>
+                                                    <span class="text-muted fs-7">Click the individual <span class="badge badge-light-primary fs-8 fw-bold">Fix</span> button next to any issue, or click <span class="badge badge-success fs-8 fw-bold">Fix All</span> to automatically resolve all failures in one click.</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -950,25 +1089,63 @@
     <!--begin::Wizard Step Controller Javascript-->
     <script>
         var currentInstallStep = 1;
+        var stepTitles = [
+            "",
+            "Step 1: Welcome to Trength Suite",
+            "Step 2: License Agreement",
+            "Step 3: Destination Select",
+            "Step 4: Network Type Selection",
+            "Step 5: Ready to Install",
+            "Step 6: Administrator Permission (UAC)",
+            "Step 7: Installing Components",
+            "Step 8: Installation Complete & Summary"
+        ];
+
         function showInstallStep(stepNum) {
             currentInstallStep = stepNum;
-            for (var i = 1; i <= 5; i++) {
+            for (var i = 1; i <= 8; i++) {
                 var stepEl = document.getElementById('install-step-' + i);
                 var tabEl = document.getElementById('install-tab-' + i);
                 if (stepEl) {
                     stepEl.style.display = (i === stepNum) ? 'block' : 'none';
                 }
                 if (tabEl) {
+                    var numEl = tabEl.querySelector('.step-num');
                     if (i === stepNum) {
-                        tabEl.className = 'btn btn-primary fw-bolder px-4 py-2 active';
-                        var badge = tabEl.querySelector('.badge');
-                        if (badge) badge.className = 'badge badge-white text-primary rounded-circle me-1';
+                        tabEl.className = 'install-step-btn active';
+                        if (numEl) numEl.innerHTML = i;
+                    } else if (i < stepNum) {
+                        tabEl.className = 'install-step-btn completed';
+                        if (numEl) numEl.innerHTML = '<i class="bi bi-check-lg fs-7 text-white"></i>';
                     } else {
-                        tabEl.className = 'btn btn-light fw-bolder px-4 py-2';
-                        var badge = tabEl.querySelector('.badge');
-                        if (badge) badge.className = 'badge badge-secondary me-1';
+                        tabEl.className = 'install-step-btn';
+                        if (numEl) numEl.innerHTML = i;
                     }
                 }
+            }
+
+            var activeTitleEl = document.getElementById('stepper-active-title');
+            if (activeTitleEl && stepTitles[stepNum]) {
+                activeTitleEl.innerText = stepTitles[stepNum];
+            }
+
+            var stepIndicatorEl = document.getElementById('stepper-step-indicator');
+            if (stepIndicatorEl) {
+                stepIndicatorEl.innerText = 'Step ' + stepNum + ' of 8';
+            }
+
+            var progressTextEl = document.getElementById('stepper-progress-text');
+            var progressBarEl = document.getElementById('install-progress-bar');
+            var pct = Math.round((stepNum / 8) * 100);
+            if (progressTextEl) {
+                if (stepNum === 8) {
+                    progressTextEl.innerText = '100% Completed';
+                } else {
+                    progressTextEl.innerText = pct + '% Completed';
+                }
+            }
+            if (progressBarEl) {
+                progressBarEl.style.width = pct + '%';
             }
 
             var prevBtn = document.getElementById('install-prev-btn');
@@ -976,10 +1153,10 @@
             var counterEl = document.getElementById('install-step-counter');
 
             if (prevBtn) prevBtn.disabled = (stepNum === 1);
-            if (counterEl) counterEl.innerText = 'Step ' + stepNum + ' of 5';
+            if (counterEl) counterEl.innerText = 'Step ' + stepNum + ' of 8';
 
             if (nextBtn) {
-                if (stepNum === 5) {
+                if (stepNum === 8) {
                     nextBtn.innerHTML = 'Complete & Restart 🔄';
                     nextBtn.className = 'btn btn-success fw-bolder';
                 } else {
@@ -991,9 +1168,9 @@
 
         function navigateInstallStep(delta) {
             var newStep = currentInstallStep + delta;
-            if (newStep >= 1 && newStep <= 5) {
+            if (newStep >= 1 && newStep <= 8) {
                 showInstallStep(newStep);
-            } else if (newStep > 5) {
+            } else if (newStep > 8) {
                 var restartEl = document.getElementById('step-restart');
                 if (restartEl) restartEl.scrollIntoView({ behavior: 'smooth' });
             }
