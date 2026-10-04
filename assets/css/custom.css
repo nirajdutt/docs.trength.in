@@ -330,83 +330,34 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ==========================================================================
-   Language Switcher & Multilingual Typography (English / Hindi)
+   Mobile & Responsive Device Optimization (Tablets, Phones & In-App WebViews)
    ========================================================================== */
 
-/* Enhanced Indic/Hindi Font Support & Line-height */
-:lang(hi), [lang="hi"] {
-    font-family: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Nirmala UI', 'Segoe UI', -apple-system, sans-serif !important;
+/* Universal text break to prevent horizontal scrolling on mobile */
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
-[lang="hi"] h1, [lang="hi"] h2, [lang="hi"] h3, [lang="hi"] h4, [lang="hi"] h5, [lang="hi"] h6, 
-[lang="hi"] p, [lang="hi"] span, [lang="hi"] a {
-    line-height: 1.6;
+code, pre {
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    white-space: pre-wrap !important;
 }
 
-/* Premium High-Contrast Language Switcher */
-.lang-switcher-group {
-    display: inline-flex;
-    align-items: center;
-    background: #F1F5F9;
-    padding: 3px;
-    border-radius: 8px;
-    border: 1px solid #CBD5E1;
-    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+@media (max-width: 991px) {
+    /* Aside drawer smoothly styled on mobile */
+    .docs-aside {
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    /* Header layout breathing room */
+    .docs-header {
+        margin-bottom: 1rem !important;
+    }
 }
-
-.lang-switcher-btn {
-    border: none !important;
-    outline: none !important;
-    background: transparent !important;
-    color: #334155 !important;
-    font-weight: 700 !important;
-    font-size: 13px !important;
-    padding: 6px 14px !important;
-    border-radius: 6px !important;
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    line-height: 1.2;
-    text-decoration: none !important;
-}
-
-.lang-switcher-btn:hover {
-    color: #0F172A !important;
-    background: #E2E8F0 !important;
-}
-
-.lang-switcher-btn.active {
-    background: #0066FF !important;
-    color: #FFFFFF !important;
-    box-shadow: 0 2px 5px rgba(0, 102, 255, 0.25) !important;
-}
-
-.lang-switcher-btn.active span,
-.lang-switcher-btn.active strong {
-    color: #FFFFFF !important;
-}
-
-.lang-badge {
-    font-size: 10.5px;
-    font-weight: 800;
-    padding: 2px 5px;
-    border-radius: 4px;
-    background: rgba(15, 23, 42, 0.08);
-    color: #475569;
-    line-height: 1;
-    letter-spacing: 0.5px;
-}
-
-.lang-switcher-btn.active .lang-badge {
-    background: rgba(255, 255, 255, 0.25);
-    color: #FFFFFF !important;
-}
-
-/* ==========================================================================
-   Mobile Responsiveness Enhancements (< 768px & < 576px)
-   ========================================================================== */
 
 @media (max-width: 768px) {
     /* Hide floating badge overlay on mobile so it doesn't obstruct diagram titles */
@@ -416,42 +367,224 @@ h1, h2, h3, h4, h5, h6,
 
     /* Diagram frame smooth rounded corners */
     .cinematic-img-frame {
-        border-radius: 0.75rem 0.75rem 0 0 !important;
+        border-radius: 0.75rem !important;
     }
 
-    /* Comfortable heading scale on mobile */
-    .fs-2tx {
+    /* Optimal heading scales for phones & small tablets */
+    .fs-2hx {
         font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .fs-2tx {
+        font-size: 1.45rem !important;
+        line-height: 1.35 !important;
+    }
+
+    .fs-3 {
+        font-size: 1.18rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .fs-4 {
+        font-size: 1.05rem !important;
+        line-height: 1.45 !important;
+    }
+
+    .fs-5 {
+        font-size: 0.98rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .fs-6 {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .fs-7 {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Card padding optimized for mobile viewports */
+    .card-docs > .card-body,
+    .card-body.py-15.px-10 {
+        padding: 1.5rem 1rem !important;
+    }
+
+    /* Wizard navigation buttons on mobile */
+    #wizard-step-tabs {
+        gap: 6px !important;
+    }
+
+    #wizard-step-tabs .btn {
+        padding: 6px 12px !important;
+        font-size: 0.82rem !important;
+        flex: 1 1 auto !important;
+        min-height: 40px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Flow step badges on mobile */
+    .flow-step-box {
+        padding: 8px 14px !important;
+        font-size: 0.85rem !important;
+        flex: 1 1 calc(50% - 10px);
+        justify-content: center;
+    }
+
+    /* Quick chips on mobile */
+    .quick-chip-item {
+        padding: 6px 14px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Installation screenshot frame */
+    .p-3.bg-light-subtle img {
+        max-height: 240px !important;
     }
 }
 
 @media (max-width: 576px) {
-    /* Language Switcher compact sizing for narrow viewports */
-    .lang-switcher-group {
-        padding: 2px !important;
-        border-radius: 6px !important;
-    }
-
-    .lang-switcher-btn {
-        padding: 5px 8px !important;
-        font-size: 11.5px !important;
-        gap: 4px !important;
-    }
-
-    .lang-badge {
-        font-size: 9.5px !important;
-        padding: 1px 4px !important;
-    }
-
-    /* Header toolbar title */
+    /* Header title */
     .docs-page-title h1 {
-        font-size: 1.05rem !important;
+        font-size: 1rem !important;
     }
 
-    /* Ensure card body padding on mobile is compact */
-    .card-docs > .card-body {
-        padding: 1.5rem 1rem !important;
+    /* Extra compact container padding */
+    .container {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .card-docs > .card-body,
+    .card-body.py-15.px-10 {
+        padding: 1.25rem 0.75rem !important;
+    }
+
+    /* Hardware spec cards line-height for mobile reading */
+    .card-body p, 
+    .card-body span, 
+    .notice div {
+        line-height: 1.6 !important;
+    }
+
+    /* Ensure notices and alert boxes look clean */
+    .notice {
+        padding: 0.85rem 1rem !important;
+    }
+
+    /* Footer adjustments */
+    #kt_footer {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    
+    #kt_footer .menu {
+        justify-content: center !important;
+        gap: 8px !important;
     }
 }
+
+/* ==========================================================================
+   Quick Capability Chips & Business Flow Enhancements
+   ========================================================================== */
+.quick-chip-item {
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    padding: 8px 18px;
+    border-radius: 50px;
+    color: #1E293B;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+}
+
+.quick-chip-item:hover {
+    background: #EDF2F7;
+    border-color: #CBD5E1;
+    transform: translateY(-1px);
+}
+
+.quick-chip-divider {
+    color: #CBD5E1;
+    font-weight: 300;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.flow-step-box {
+    background: #FFFFFF;
+    border: 1.5px solid #E2E8F0;
+    padding: 10px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #0F172A;
+    transition: all 0.2s ease;
+}
+
+.flow-step-box:hover {
+    border-color: #009EF7;
+    box-shadow: 0 4px 12px rgba(0,158,247,0.15);
+    transform: translateY(-2px);
+}
+
+.flow-arrow {
+    color: #009EF7;
+    font-weight: 800;
+    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   Layout Alignment & Utility Classes
+   ========================================================================== */
+
+/* Max-width helper utilities - expanded to 100% width */
+.max-w-850px,
+.max-w-800px,
+.max-w-700px,
+.max-w-600px {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Header vertical alignment fix */
+.docs-header .docs-page-title {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Equal height card content layout */
+.card-docs .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Differentiator image card alignment */
+.cinematic-img-frame-wrapper {
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Hide raw text chip dividers to avoid hanging characters when wrapping */
+.quick-chip-divider {
+    display: none !important;
+}
+
+
+
+
 
 

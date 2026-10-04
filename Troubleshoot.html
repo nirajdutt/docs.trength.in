@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no" class="notranslate">
 <head>
     <title>Trength | Documentation - Troubleshoot</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google" content="notranslate" />
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
@@ -255,16 +256,6 @@
                                 <!--end::Header title-->
                                 <!--begin::Toolbar-->
                                 <div class="d-flex align-items-center gap-3">
-                                    <!--begin::Language Switcher-->
-                                    <div class="lang-switcher-group shadow-sm" role="group" aria-label="Language Switcher">
-                                        <button type="button" class="lang-switcher-btn active" id="btn-lang-en" onclick="setLanguage('en')">
-                                            <span class="lang-badge">EN</span> English
-                                        </button>
-                                        <button type="button" class="lang-switcher-btn" id="btn-lang-hi" onclick="setLanguage('hi')">
-                                            <span class="lang-badge">HI</span> हिन्दी
-                                        </button>
-                                    </div>
-                                    <!--end::Language Switcher-->
                                     <!--begin::Official Portal link-->
                                     <a class="btn btn-primary btn-flex h-40px border-0 fw-bolder px-4 px-lg-6" href="https://trength.in" target="_blank">
                                         <i class="bi bi-box-arrow-up-right me-2"></i>trength.in
@@ -310,7 +301,7 @@
                                             <span class="badge badge-success fw-bolder"><i class="bi bi-check2-circle text-white me-1"></i>Live Capture</span>
                                         </div>
                                         <div class="card-body p-4 text-center bg-light">
-                                            <img src="assets/media/command-center/troubleshoot.png" alt="Trength Command Center Troubleshooting Screen" class="img-fluid rounded shadow-sm border mw-100" />
+                                            <img src="assets/media/command-center/troubleshoot.png" alt="Trength Command Center Troubleshooting Screen" class="img-fluid rounded shadow-sm border mw-100" style="max-height: 480px; object-fit: contain;" />
                                             <div class="text-muted fs-7 mt-3">Figure 2: Trength Command Center &ndash; Automated System Health &amp; Diagnostics Dashboard</div>
                                         </div>
                                     </div>
@@ -625,7 +616,7 @@
                 <div class="py-4 d-flex flex-lg-column py-6" id="kt_footer">
                     <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
                         <div class="text-dark order-2 order-md-1">
-                            <span class="text-muted fw-bold me-1">2021©</span>
+                            <span class="text-muted fw-bold me-1">&copy; 2021</span>
                             <a href="https://trength.in" target="_blank" class="text-gray-800 text-hover-primary">V.I.R Technologies LLP.</a>
                         </div>
                         <ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1 align-items-center mb-3 mb-md-0">
@@ -651,7 +642,6 @@
     <script src="assets/js/scripts.bundle.js"></script>
     <script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
     <script src="assets/js/custom/documentation/documentation.js"></script>
-    <script src="assets/js/i18n.js" charset="UTF-8"></script>
     <!--end::Javascript-->
 </body>
 </html>
