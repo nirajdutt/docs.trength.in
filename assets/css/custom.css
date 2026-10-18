@@ -27,6 +27,32 @@ h1, h2, h3, h4, h5, h6,
 .text-gray-800, .text-gray-900 {
     color: #181C32 !important;
 }
+/* Sidebar Brand Logo sizing to fill the available space */
+.docs-aside-logo {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem !important;
+}
+
+.docs-aside-logo a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.docs-aside-logo img,
+.docs-aside-logo .h-25px {
+    height: 52px !important;
+    max-height: 56px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.docs-aside-logo a:hover img {
+    transform: scale(1.02);
+}
 
 /* Mobile Aside Toggle (Hamburger Menu) High Visibility */
 #kt_docs_aside_toggle {
