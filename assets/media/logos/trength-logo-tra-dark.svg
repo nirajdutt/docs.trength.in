@@ -1,0 +1,35 @@
+<svg width="540" height="160" viewBox="0 0 540 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;family=Noto+Sans+Devanagari:wght@900&amp;display=swap');
+            .trength-tra-glyph-dark {
+                font-family: 'Noto Sans Devanagari', 'Poppins', 'Segoe UI', sans-serif;
+                font-weight: 900;
+                font-size: 82px;
+                text-anchor: middle;
+                fill: #0F172A;
+                user-select: none;
+            }
+            .trength-wordmark-text-dark {
+                font-family: 'Montserrat', 'Arial Black', -apple-system, sans-serif;
+                font-weight: 900;
+                font-size: 78px;
+                letter-spacing: 4px;
+                fill: #FFFFFF;
+                user-select: none;
+            }
+        </style>
+    </defs>
+
+    <!-- Outer Rectangle White Border (Transparent Interior) -->
+    <rect x="6" y="6" width="528" height="148" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+
+    <!-- Solid White Square Box -->
+    <rect x="30" y="24" width="112" height="112" fill="#FFFFFF"/>
+
+    <!-- Dark Hindi Devanagari 'त्र' (Tra) Glyph inside White Square -->
+    <text x="86" y="106" class="trength-tra-glyph-dark">त्र</text>
+
+    <!-- 'RENGTH' Typography in White -->
+    <text x="162" y="107" class="trength-wordmark-text-dark">RENGTH</text>
+</svg>

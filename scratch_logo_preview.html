@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trength Logo Design - Tra (त्र) Variants</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@700;800;900&family=Noto+Sans+Devanagari:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #F8FAFC;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            color: #0F172A;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #64748B;
+            font-size: 16px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-dark {
+            background: #0F172A;
+            border-color: #334155;
+        }
+        .card-dark .card-title {
+            color: #F8FAFC;
+        }
+        .card-title {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1E293B;
+            margin-bottom: 20px;
+        }
+        .logo-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .logo-svg {
+            max-width: 420px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Trength™ Logo Redesign</h1>
+        <p>Replacing 'T' with Hindi Devanagari 'त्र' (Tra) matching user reference</p>
+    </div>
+
+    <div class="grid">
+        <!-- Variant 1: Exact Match to User Mockup (Bold Geometric Tra + REBNGTH) -->
+        <div class="card">
+            <div class="card-title">Variant 1: Exact Match (Geometric Bold Devanagari 'त्र')</div>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Rectangle Border -->
+                    <rect x="6" y="6" width="528" height="148" fill="#FFFFFF" stroke="#000000" stroke-width="6"/>
+                    
+                    <!-- Solid Black Square Box -->
+                    <rect x="30" y="24" width="112" height="112" fill="#000000"/>
+                    
+                    <!-- White Devanagari 'त्र' inside the box -->
+                    <g fill="#FFFFFF">
+                        <!-- Shirorekha (Top bar) -->
+                        <rect x="47" y="47" width="78" height="11" rx="1"/>
+                        <!-- Vertical Danda (Right stem) -->
+                        <rect x="99" y="47" width="12" height="66" rx="1"/>
+                        <!-- Upper Loop / Diagonal of 'त्र' -->
+                        <path d="M100 70 C84 69 66 64 57 73 C51 79 53 87 60 88 C66 89 70 85 68 80 C66 76 71 73 78 74 C86 75 94 77 100 80 Z"/>
+                        <!-- Lower Leg of 'त्र' -->
+                        <polygon points="100,74 61,107 68,113 100,86"/>
+                    </g>
+                    
+                    <!-- REBNGTH Text -->
+                    <text x="160" y="107" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="78" letter-spacing="4" fill="#000000">RENGTH</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Variant 2: Clean Authentic Devanagari 'त्र' (Noto Sans / Poppins style) -->
+        <div class="card">
+            <div class="card-title">Variant 2: Authentic Devanagari 'त्र' (Harmonized Weight)</div>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Rectangle Border -->
+                    <rect x="6" y="6" width="528" height="148" fill="#FFFFFF" stroke="#000000" stroke-width="6"/>
+                    
+                    <!-- Solid Black Square Box -->
+                    <rect x="30" y="24" width="112" height="112" fill="#000000"/>
+                    
+                    <!-- White Devanagari 'त्र' rendered via bold typography paths -->
+                    <text x="86" y="106" font-family="'Noto Sans Devanagari', 'Poppins', sans-serif" font-weight="900" font-size="82" text-anchor="middle" fill="#FFFFFF">त्र</text>
+                    
+                    <!-- REBNGTH Text -->
+                    <text x="160" y="107" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="78" letter-spacing="4" fill="#000000">RENGTH</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Variant 3: Solid Vector Paths Only (Zero External Font Dependencies) -->
+        <div class="card">
+            <div class="card-title">Variant 3: Pure Solid Vector Paths (Universal Compatibility)</div>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Border -->
+                    <rect x="6" y="6" width="528" height="148" fill="#FFFFFF" stroke="#000000" stroke-width="6"/>
+                    <!-- Solid Black Square Box -->
+                    <rect x="30" y="24" width="112" height="112" fill="#000000"/>
+                    
+                    <!-- Pure Vector Devanagari 'त्र' -->
+                    <!-- Top horizontal bar -->
+                    <rect x="50" y="48" width="72" height="12" fill="#FFFFFF"/>
+                    <!-- Vertical Danda -->
+                    <rect x="98" y="48" width="12" height="64" fill="#FFFFFF"/>
+                    <!-- Upper diagonal/curve -->
+                    <path d="M100 76 L75 60 C64 53 52 64 61 74 C67 80 77 75 74 69 C72 65 77 62 82 65 L100 77 Z" fill="#FFFFFF"/>
+                    <!-- Lower diagonal leg -->
+                    <polygon points="100,75 62,107 72,112 100,87" fill="#FFFFFF"/>
+                    
+                    <!-- REBNGTH Letters converted to exact vector shapes -->
+                    <g fill="#000000">
+                        <!-- R -->
+                        <path d="M165 47 H202 C216 47 225 55 225 68 C225 78 218 84 209 87 L226 112 H210 L195 90 H179 V112 H165 V47 Z M179 60 V77 H200 C207 77 211 74 211 68 C211 63 207 60 200 60 Z"/>
+                        <!-- E -->
+                        <path d="M236 47 H278 V60 H250 V73 H274 V86 H250 V99 H279 V112 H236 Z"/>
+                        <!-- N -->
+                        <path d="M290 47 H304 L331 92 V47 H345 V112 H331 L304 67 V112 H290 Z"/>
+                        <!-- G -->
+                        <path d="M386 46 C404 46 414 55 418 67 L405 72 C402 64 396 59 386 59 C372 59 365 70 365 79 C365 89 372 100 386 100 C394 100 401 96 404 90 H387 V78 H418 V103 C410 110 399 113 386 113 C364 113 350 99 350 79 C350 60 364 46 386 46 Z"/>
+                        <!-- T -->
+                        <path d="M424 47 H474 V60 H456 V112 H442 V60 H424 Z"/>
+                        <!-- H -->
+                        <path d="M485 47 H499 V73 H521 V47 H535 V112 H521 V86 H499 V112 H485 Z"/>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Variant 4: Transparent / Dark Mode Showcase -->
+        <div class="card card-dark">
+            <div class="card-title">Variant 4: Dark Mode / Transparent (Inverted Palette)</div>
+            <div class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 540 160" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="528" height="148" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+                    <rect x="30" y="24" width="112" height="112" fill="#FFFFFF"/>
+                    <text x="86" y="106" font-family="'Noto Sans Devanagari', 'Poppins', sans-serif" font-weight="900" font-size="82" text-anchor="middle" fill="#000000">त्र</text>
+                    <text x="160" y="107" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="78" letter-spacing="4" fill="#FFFFFF">RENGTH</text>
+                </svg>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
