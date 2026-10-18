@@ -818,6 +818,17 @@ code, pre {
     transform: translateY(-1px);
 }
 
+.flag-icon {
+    width: 22px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 /* ==========================================================================
    Dynamic Visual Effects: Aurora Glow, Particle Canvas, & Shimmer Grid
    ========================================================================== */
