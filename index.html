@@ -426,7 +426,17 @@
                     <!--begin::Container-->
                     <div class="container d-flex flex-column flex-lg-row" id="kt_docs_content_container">
                         <!--begin::Card-->
-                        <div class="card card-docs flex-row-fluid mb-2">
+                        <div class="card card-docs has-shimmer-grid flex-row-fluid mb-2" id="docs-main-card">
+                            <!-- Dynamic Visual Effect 1: Ambient Aurora Glow Orbs -->
+                            <div class="ambient-aurora-wrapper" id="ambient-aurora-layer">
+                                <div class="aurora-orb aurora-orb-1"></div>
+                                <div class="aurora-orb aurora-orb-2"></div>
+                                <div class="aurora-orb aurora-orb-3"></div>
+                            </div>
+
+                            <!-- Dynamic Visual Effect 2: Tech Particle Canvas -->
+                            <canvas id="tech-particles-canvas"></canvas>
+
                             <!--begin::Card Body-->
                             <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
                                 <!--begin::Section-->
@@ -443,13 +453,13 @@
                                         High-speed POS billing, stock control, and multi-counter management built for local store reliability.
                                     </p>
 
-                                    <!-- Store Type Badges -->
+                                    <!-- Store Type Badges with subtle shimmer -->
                                     <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap mb-2">
-                                        <span class="badge badge-outline badge-secondary text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-gem text-warning me-1"></i> Jewellery</span>
-                                        <span class="badge badge-outline badge-secondary text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-phone text-primary me-1"></i> Mobile</span>
-                                        <span class="badge badge-outline badge-secondary text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-laptop text-info me-1"></i> Electronics</span>
-                                        <span class="badge badge-outline badge-secondary text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-tag text-success me-1"></i> Clothing</span>
-                                        <span class="badge badge-outline badge-secondary text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-capsule text-danger me-1"></i> Chemist</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-gem text-warning me-1"></i> Jewellery</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-phone text-primary me-1"></i> Mobile</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-laptop text-info me-1"></i> Electronics</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-tag text-success me-1"></i> Clothing</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-capsule text-danger me-1"></i> Chemist</span>
                                     </div>
                                 </div>
                                 <!--end::Hero Section-->
@@ -478,8 +488,8 @@
                                         </div>
                                     </div>
 
-                                    <!-- Video Theater Card -->
-                                    <div class="overview-theater-card mb-8">
+                                    <!-- Video Theater Card with Shimmer Border -->
+                                    <div class="overview-theater-card has-border-shimmer mb-8" id="overview-theater-card">
                                         <div class="overview-theater-header d-flex flex-wrap align-items-center justify-content-between gap-3">
                                             <div class="d-flex align-items-center gap-2">
                                                 <span class="badge badge-primary px-3 py-1 fs-8 fw-bold" id="theater-lang-badge">ENGLISH</span>
@@ -764,9 +774,200 @@
                 }
             }
         }
+
+        // ==========================================================================
+        // Dynamic Visual Effects Manager (Aurora, Tech Particles, Shimmer Grid)
+        // ==========================================================================
+        var dynamicsState = {
+            aurora: true,
+            particles: true,
+            shimmer: true
+        };
+
+        function toggleDynamicEffect(type) {
+            dynamicsState[type] = !dynamicsState[type];
+            var btn = document.getElementById('toggle-' + type);
+            if (btn) {
+                if (dynamicsState[type]) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            }
+
+            if (type === 'aurora') {
+                var layer = document.getElementById('ambient-aurora-layer');
+                if (layer) {
+                    if (dynamicsState.aurora) layer.classList.remove('effect-disabled');
+                    else layer.classList.add('effect-disabled');
+                }
+            } else if (type === 'particles') {
+                var canvas = document.getElementById('tech-particles-canvas');
+                if (canvas) {
+                    if (dynamicsState.particles) canvas.classList.remove('effect-disabled');
+                    else canvas.classList.add('effect-disabled');
+                }
+            } else if (type === 'shimmer') {
+                var card = document.getElementById('docs-main-card');
+                var theater = document.getElementById('overview-theater-card');
+                if (card) {
+                    if (dynamicsState.shimmer) card.classList.add('has-shimmer-grid');
+                    else card.classList.remove('has-shimmer-grid');
+                }
+                if (theater) {
+                    if (dynamicsState.shimmer) theater.classList.add('has-border-shimmer');
+                    else theater.classList.remove('has-border-shimmer');
+                }
+            }
+        }
+
+        // Lightweight Tech Particle Network
+        (function initTechParticles() {
+            var canvas = document.getElementById('tech-particles-canvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            var card = document.getElementById('docs-main-card');
+            if (!card) return;
+
+            var width = 0;
+            var height = 0;
+            var particles = [];
+            var particleCount = 42;
+            var mouse = { x: null, y: null, maxDist: 140 };
+
+            function resize() {
+                if (!card) return;
+                var rect = card.getBoundingClientRect();
+                width = canvas.width = rect.width;
+                height = canvas.height = rect.height;
+            }
+
+            function Particle() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.65;
+                this.vy = (Math.random() - 0.5) * 0.65;
+                this.radius = Math.random() * 2 + 1.2;
+                this.alpha = Math.random() * 0.35 + 0.25;
+            }
+
+            Particle.prototype.update = function() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0) this.x = width;
+                else if (this.x > width) this.x = 0;
+
+                if (this.y < 0) this.y = height;
+                else if (this.y > height) this.y = 0;
+            };
+
+            Particle.prototype.draw = function() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 158, 247, ' + this.alpha + ')';
+                ctx.fill();
+            };
+
+            function createParticles() {
+                particles = [];
+                var count = Math.min(particleCount, Math.floor(width / 26));
+                if (count < 22) count = 22;
+                for (var i = 0; i < count; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connectParticles() {
+                var maxDistance = 115;
+                for (var i = 0; i < particles.length; i++) {
+                    for (var j = i + 1; j < particles.length; j++) {
+                        var dx = particles[i].x - particles[j].x;
+                        var dy = particles[i].y - particles[j].y;
+                        var dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < maxDistance) {
+                            var opacity = (1 - dist / maxDistance) * 0.16;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = 'rgba(0, 158, 247, ' + opacity + ')';
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Mouse interaction
+                    if (mouse.x !== null && mouse.y !== null) {
+                        var mdx = particles[i].x - mouse.x;
+                        var mdy = particles[i].y - mouse.y;
+                        var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                        if (mdist < mouse.maxDist) {
+                            var mOpacity = (1 - mdist / mouse.maxDist) * 0.35;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.strokeStyle = 'rgba(114, 57, 234, ' + mOpacity + ')';
+                            ctx.lineWidth = 1.2;
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function animate() {
+                if (dynamicsState.particles) {
+                    ctx.clearRect(0, 0, width, height);
+                    for (var i = 0; i < particles.length; i++) {
+                        particles[i].update();
+                        particles[i].draw();
+                    }
+                    connectParticles();
+                }
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', function() {
+                resize();
+            });
+
+            card.addEventListener('mousemove', function(e) {
+                var rect = card.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+
+            card.addEventListener('mouseleave', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            // Initial setup once DOM ready
+            setTimeout(function() {
+                resize();
+                createParticles();
+                requestAnimationFrame(animate);
+            }, 100);
+        })();
     </script>
     <!--end::Page Custom Javascript-->
     <!--end::Javascript-->
+
+    <!-- Dynamic Effects Showcase Controller Widget -->
+    <div class="dynamics-control-pill" id="dynamics-control-pill" title="Toggle dynamic animations">
+        <span class="dynamics-control-title">
+            <i class="bi bi-magic text-primary fs-6"></i> Dynamics:
+        </span>
+        <button type="button" class="dynamics-toggle-btn active" id="toggle-aurora" onclick="toggleDynamicEffect('aurora')" title="Toggle Ambient Aurora Glow">
+            <i class="bi bi-circle-fill fs-9 text-info"></i> Aurora Glow
+        </button>
+        <button type="button" class="dynamics-toggle-btn active" id="toggle-particles" onclick="toggleDynamicEffect('particles')" title="Toggle Connected Particle Canvas">
+            <i class="bi bi-diagram-3-fill fs-9 text-primary"></i> Tech Particles
+        </button>
+        <button type="button" class="dynamics-toggle-btn active" id="toggle-shimmer" onclick="toggleDynamicEffect('shimmer')" title="Toggle Background Grid & Card Shimmer">
+            <i class="bi bi-grid-3x3-gap-fill fs-9 text-success"></i> Shimmer Grid
+        </button>
+    </div>
 </body>
 <!--end::Body-->
 </html>

@@ -346,698 +346,131 @@
                     <!--begin::Container-->
                     <div class="container d-flex flex-column flex-lg-row" id="kt_docs_content_container">
                         <!--begin::Card-->
-                        <div class="card card-docs flex-row-fluid mb-2">
+                        <div class="card card-docs has-shimmer-grid flex-row-fluid mb-2" id="docs-main-card">
+                            <!-- Dynamic Visual Effect 1: Ambient Aurora Glow Orbs -->
+                            <div class="ambient-aurora-wrapper" id="ambient-aurora-layer">
+                                <div class="aurora-orb aurora-orb-1"></div>
+                                <div class="aurora-orb aurora-orb-2"></div>
+                                <div class="aurora-orb aurora-orb-3"></div>
+                            </div>
+
+                            <!-- Dynamic Visual Effect 2: Tech Particle Canvas -->
+                            <canvas id="tech-particles-canvas"></canvas>
+
                             <!--begin::Card Body-->
                             <div class="card-body fs-6 py-15 px-10 py-lg-15 px-lg-15 text-gray-700">
 
-                                <!--==================== TITLE & OPENING BANNER ====================-->
-                                <div class="mb-10" id="installation-hero">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <span class="badge badge-light-primary fw-bolder fs-7 px-3 py-2 me-3" data-i18n="inst_badge_quick">QUICK & EASY SETUP</span>
-                                        <span class="badge badge-light-success fw-bolder fs-7 px-3 py-2" data-i18n="inst_badge_time">⏱️ ESTIMATED TIME: 1–3 MINUTES</span>
+                                <!--begin::Hero Section-->
+                                <div class="text-center px-md-4 pt-md-2 pb-md-2 mb-8" id="installation-hero">
+                                    <div class="d-inline-flex align-items-center mb-3 flex-wrap justify-content-center gap-2">
+                                        <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-2" data-i18n="inst_badge_quick">QUICK &amp; EASY SETUP</span>
+                                        <span class="badge badge-light-success fw-bolder fs-8 px-3 py-2" data-i18n="inst_badge_time">⏱️ ESTIMATED TIME: 1–3 MINUTES</span>
+                                        <span class="badge badge-light-info fw-bolder fs-8 px-3 py-2" data-i18n="inst_badge_auto">AUTOMATED CONFIGURATION</span>
                                     </div>
-                                    <h1 class="fs-2tx fw-bolder mb-3 text-dark" data-i18n="inst_main_title">Install Trength<sup>&trade;</sup> Suite</h1>
-                                    <p class="fs-4 text-gray-600 mb-6" data-i18n="inst_main_subtitle">
-                                        Get your shop ready for billing in a few simple steps.
+                                    <h1 class="fs-2hx fw-bolder mb-3 text-dark" data-i18n="inst_main_title">
+                                        Install Trength<sup>&trade;</sup> Suite
+                                    </h1>
+                                    <p class="fs-4 fw-bold text-gray-700 max-w-850px mx-auto mb-4" data-i18n="inst_main_subtitle">
+                                        Get your shop ready for billing in a few simple steps with our automated one-click installer.
                                     </p>
 
-                                    <!-- Friendly Reassurance Box -->
-                                    <div class="notice d-flex bg-light-success rounded border-success border border-dashed p-6 mb-8">
-                                        <i class="bi bi-emoji-smile text-success fs-2x me-4"></i>
-                                        <div>
-                                            <h4 class="text-gray-900 fw-bolder fs-5 mb-1" data-i18n="inst_easy_heading">You don't need to be a computer expert!</h4>
-                                            <p class="text-gray-700 fs-6 mb-0" data-i18n="inst_easy_desc">
-                                                Simply follow the easy screens shown below. Trength automatically handles all technical configurations in the background so you can focus on running your store.
-                                            </p>
-                                        </div>
+                                    <!-- Installation Feature Badges with subtle shimmer -->
+                                    <div class="d-flex justify-content-center align-items-center gap-2 flex-wrap mb-2">
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-shield-check text-success me-1"></i> Self-Configuring</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-database text-primary me-1"></i> Local Offline DB</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-display text-info me-1"></i> Windows 10 / 11</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-lightning-charge text-warning me-1"></i> Lightweight</span>
+                                        <span class="badge badge-outline badge-secondary shimmer-badge text-gray-700 fs-7 px-3 py-2 fw-bold"><i class="bi bi-headset text-danger me-1"></i> Assisted Setup</span>
                                     </div>
                                 </div>
-                                <!--end::TITLE BANNER-->
+                                <!--end::Hero Section-->
 
-                                <!--==================== BEFORE YOU INSTALL ====================-->
-                                <div class="mb-14" id="before-you-install">
-                                    <div class="d-flex align-items-center mb-6">
-                                        <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">1</span>
-                                        <h2 class="fw-bolder mb-0 text-dark" data-i18n="inst_before_title">Before You Install Trength</h2>
-                                    </div>
-                                    <p class="fs-6 text-gray-700 mb-6" data-i18n="inst_before_sub">Make sure you have these 3 simple things ready before starting:</p>
-
-                                    <!-- 3 Friendly Cards -->
-                                    <div class="row g-6 mb-8">
-                                        <div class="col-md-4">
-                                            <div class="card card-bordered h-100 shadow-sm p-6 bg-light-primary border-primary">
-                                                <div class="fs-2 mb-3">🖥️</div>
-                                                <h4 class="fw-bolder text-dark fs-5 mb-2" data-i18n="inst_req_pc_title">Windows PC</h4>
-                                                <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_req_pc_desc">Windows 10 or Windows 11 (64-bit edition).</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-bordered h-100 shadow-sm p-6 bg-light-success border-success">
-                                                <div class="fs-2 mb-3">🌐</div>
-                                                <h4 class="fw-bolder text-dark fs-5 mb-2" data-i18n="inst_req_net_title">Internet Connection</h4>
-                                                <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_req_net_desc">Required for initial activation and software updates.</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-bordered h-100 shadow-sm p-6 bg-light-warning border-warning">
-                                                <div class="fs-2 mb-3">👤</div>
-                                                <h4 class="fw-bolder text-dark fs-5 mb-2" data-i18n="inst_req_admin_title">Administrator Access</h4>
-                                                <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_req_admin_desc">Windows may ask for permission during installation.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Technical Hardware Specifications Showcase -->
-                                    <div class="card card-bordered rounded-3 shadow-sm overflow-hidden border-gray-300" style="background: linear-gradient(145deg, #F8FAFC 0%, #EFF6FF 100%);">
-                                        <!-- Section Header -->
-                                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 px-6 py-4 border-bottom bg-white bg-opacity-75">
-                                            <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-40px bg-light-primary text-primary me-3 rounded-circle d-flex align-items-center justify-content-center shadow-xs">
-                                                    <i class="bi bi-cpu-fill fs-3 text-primary"></i>
-                                                </div>
-                                                <div>
-                                                    <h4 class="fw-bolder text-gray-900 mb-0 fs-5" data-i18n="inst_tech_specs_title">Technical Hardware Specifications (Reference)</h4>
-                                                    <span class="text-muted fs-7">Recommended minimum PC benchmarks for responsive billing &amp; offline services</span>
-                                                </div>
-                                            </div>
-                                            <span class="badge badge-light-primary fw-bolder fs-8 px-3 py-2 border border-primary border-opacity-25 shadow-2xs">
-                                                <i class="bi bi-lightning-charge-fill me-1 text-primary"></i>LIGHTWEIGHT BENCHMARK
+                                <!--==================== INSTALLATION VIDEO SHOWCASE ====================-->
+                                <div class="mb-12" id="installation-video-section">
+                                    <!-- Video Header & Language Switcher Bar -->
+                                    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3 mb-4">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="badge badge-light-primary fw-bolder fs-7 px-3 py-2">
+                                                <i class="bi bi-play-circle-fill me-1 text-primary"></i> Step-by-Step Video Walkthrough
                                             </span>
+                                            <span class="text-muted fs-8 d-none d-md-inline">&bull; 1080p Full HD</span>
                                         </div>
 
-                                        <!-- Hardware Spec Grid -->
-                                        <div class="p-6">
-                                            <div class="row g-4">
-                                                <!-- Spec 1: RAM -->
-                                                <div class="col-md-4">
-                                                    <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-info">
-                                                        <div class="d-flex align-items-center justify-content-between mb-3">
-                                                            <span class="text-muted fw-bold fs-8 text-uppercase">System Memory</span>
-                                                            <div class="symbol symbol-30px bg-light-info rounded d-flex align-items-center justify-content-center">
-                                                                <i class="bi bi-memory fs-5 text-info"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="fw-bolder text-dark fs-6 mb-1">4 GB RAM Minimum</div>
-                                                        <div class="text-muted fs-8">
-                                                            <span class="badge badge-light-success fs-9 fw-bolder px-2 py-1">8 GB for Multi-Counter</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Spec 2: Storage -->
-                                                <div class="col-md-4">
-                                                    <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-success">
-                                                        <div class="d-flex align-items-center justify-content-between mb-3">
-                                                            <span class="text-muted fw-bold fs-8 text-uppercase">Disk Storage</span>
-                                                            <div class="symbol symbol-30px bg-light-success rounded d-flex align-items-center justify-content-center">
-                                                                <i class="bi bi-hdd-network fs-5 text-success"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="fw-bolder text-dark fs-6 mb-1">500 MB Free Space</div>
-                                                        <div class="text-muted fs-8">SSD drive recommended for instant launch</div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Spec 3: OS & Display -->
-                                                <div class="col-md-4">
-                                                    <div class="card card-bordered h-100 bg-white p-5 rounded-3 shadow-xs hover-elevate-up border-top border-top-3 border-top-warning">
-                                                        <div class="d-flex align-items-center justify-content-between mb-3">
-                                                            <span class="text-muted fw-bold fs-8 text-uppercase">OS &amp; Screen</span>
-                                                            <div class="symbol symbol-30px bg-light-warning rounded d-flex align-items-center justify-content-center">
-                                                                <i class="bi bi-display fs-5 text-warning"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="fw-bolder text-dark fs-6 mb-1">Windows 10 / 11 (64-bit)</div>
-                                                        <div class="text-muted fs-8">1366 &times; 768 or standard HD display</div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <!-- Language Toggle Switcher -->
+                                        <div class="lang-selector-container">
+                                            <button type="button" id="btn-lang-en" class="btn lang-selector-btn active" onclick="switchInstallVideo('en', false)">
+                                                <span class="fs-6 me-2">🇬🇧</span>
+                                                <span>English Walkthrough</span>
+                                            </button>
+                                            <button type="button" id="btn-lang-hi" class="btn lang-selector-btn" onclick="switchInstallVideo('hi', false)">
+                                                <span class="fs-6 me-2">🇮🇳</span>
+                                                <span>हिंदी में देखें (Hindi)</span>
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                                <!--end::BEFORE YOU INSTALL-->
 
-                                <!--==================== DOES TRENGTH REQUIRE INTERNET? ====================-->
-                                <div class="mb-14" id="offline-explained">
-                                    <div class="card card-bordered bg-light-warning border-warning shadow-sm p-8">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <span class="badge badge-warning fs-6 fw-bolder px-4 py-2 me-3">IMPORTANT CONCEPT</span>
-                                            <h3 class="fw-bolder text-dark mb-0" data-i18n="inst_offline_question">Does Trength Require Internet?</h3>
-                                        </div>
-                                        <div class="fs-5 text-gray-800 fw-bold mb-5" data-i18n="inst_offline_answer">
-                                            No &mdash; Trength runs 100% offline. You can bill customers, print receipts, and manage stock with zero internet required.
-                                        </div>
-                                        <div class="row g-6 text-gray-700 fs-6">
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border border-gray-300 h-100">
-                                                    <div class="fw-bolder text-primary fs-6 mb-2">🌐 Internet Connection</div>
-                                                    <span data-i18n="inst_offline_internet_desc">Used for license activation and software updates.</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border border-gray-300 h-100">
-                                                    <div class="fw-bolder text-success fs-6 mb-2">📶 Local Showroom Wi-Fi / LAN</div>
-                                                    <span data-i18n="inst_offline_lan_desc">Allows billing counters, back-office PCs, and mobile tablets to talk to each other.</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border border-gray-300 h-100">
-                                                    <div class="fw-bolder text-dark fs-6 mb-2">💻 Single Standalone PC</div>
-                                                    <span data-i18n="inst_offline_single_desc">A single PC can operate 100% locally with zero internet or local network needed.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end::OFFLINE EXPLAINED-->
-
-                                <!--==================== INTERACTIVE STEP-BY-STEP WIZARD ====================-->
-                                <div class="mb-14" id="installation-steps">
-                                    <div class="d-flex align-items-center mb-6">
-                                        <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">2</span>
-                                        <h2 class="fw-bolder mb-0 text-dark" data-i18n="inst_guide_title">Follow These Simple Screens</h2>
-                                    </div>
-
-                                    <!-- Modern Interactive Stepper Navigation -->
-                                    <div class="install-stepper-wrap mb-8">
-                                        <div class="install-stepper-header d-flex flex-wrap align-items-center justify-content-between gap-2">
-                                            <div class="d-flex align-items-center">
-                                                <span class="badge badge-light-primary fw-bolder fs-8 me-2 text-uppercase">INSTALLATION FLOW</span>
-                                                <span class="fs-7 text-gray-800 fw-bolder" id="stepper-active-title">Step 1: Welcome to Trength Suite</span>
-                                            </div>
+                                    <!-- Video Theater Card with Shimmer Border -->
+                                    <div class="overview-theater-card has-border-shimmer mb-8" id="install-theater-card">
+                                        <div class="overview-theater-header d-flex flex-wrap align-items-center justify-content-between gap-3">
                                             <div class="d-flex align-items-center gap-2">
-                                                <span class="badge badge-light-info fs-8 fw-bolder" id="stepper-step-indicator">Step 1 of 8</span>
-                                                <span class="badge badge-light-success fs-8 fw-bolder" id="stepper-progress-text">12% Completed</span>
+                                                <span class="badge badge-primary px-3 py-1 fs-8 fw-bold" id="theater-lang-badge">ENGLISH</span>
+                                                <span class="text-white fw-bold fs-6" id="theater-video-title">Trength™ Retail Suite — Installation Walkthrough</span>
                                             </div>
-                                        </div>
-                                        <div class="install-stepper-nav" id="wizard-step-tabs">
-                                            <div class="install-step-btn active" id="install-tab-1" onclick="showInstallStep(1)" role="button" tabindex="0">
-                                                <span class="step-num">1</span>
-                                                <span class="step-label">Welcome</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-2" onclick="showInstallStep(2)" role="button" tabindex="0">
-                                                <span class="step-num">2</span>
-                                                <span class="step-label">License</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-3" onclick="showInstallStep(3)" role="button" tabindex="0">
-                                                <span class="step-num">3</span>
-                                                <span class="step-label">Destination</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-4" onclick="showInstallStep(4)" role="button" tabindex="0">
-                                                <span class="step-num">4</span>
-                                                <span class="step-label">Network</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-5" onclick="showInstallStep(5)" role="button" tabindex="0">
-                                                <span class="step-num">5</span>
-                                                <span class="step-label">Ready</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-6" onclick="showInstallStep(6)" role="button" tabindex="0">
-                                                <span class="step-num">6</span>
-                                                <span class="step-label">UAC / Admin</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-7" onclick="showInstallStep(7)" role="button" tabindex="0">
-                                                <span class="step-num">7</span>
-                                                <span class="step-label">Installing</span>
-                                            </div>
-                                            <div class="install-step-btn" id="install-tab-8" onclick="showInstallStep(8)" role="button" tabindex="0">
-                                                <span class="step-num">8</span>
-                                                <span class="step-label">Summary</span>
-                                            </div>
-                                        </div>
-                                        <div class="install-progress-track mt-4">
-                                            <div class="install-progress-bar" id="install-progress-bar" style="width: 12.5%;"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Wizard Step Cards Container (Non-Scrollable Single Active Step View) -->
-                                    <div id="install-wizard-body" class="mb-6">
-                                        <!-- Step 1 Card: Introduction -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-1" style="display: block;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 1 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step1_title">Welcome to Trength Suite Setup</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step1_desc">
-                                                    Double-click <code>TrengthSetup.exe</code> on your computer. When the Setup Wizard opens with the Introduction screen, click <strong>Next &gt;</strong> to continue.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Introduction</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step1-welcome.png" alt="Step 1 - Welcome Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <div class="d-flex align-items-center text-muted fs-8">
+                                                <i class="bi bi-badge-hd text-primary fs-5 me-2"></i> High Definition
                                             </div>
                                         </div>
 
-                                        <!-- Step 2 Card: License Agreement -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-2" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 2 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step2_title">End-User License Agreement (EULA)</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step2_desc">
-                                                    Read through the license agreement, check the box <strong>"I accept the terms in the License Agreement"</strong>, and click <strong>Next &gt;</strong>.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — License Agreement</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step2-license.png" alt="Step 2 - License Agreement Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <!-- English Video Panel -->
+                                        <div id="install-video-en">
+                                            <video id="videoPlayerEn" class="overview-theater-video" controls preload="metadata" poster="assets/media/installation/Trength_Installation_Guide_English_Poster.jpg">
+                                                <source src="VideoTutorials/Installation_English.mp4" type="video/mp4">
+                                                Your browser does not support HTML5 video.
+                                            </video>
                                         </div>
 
-                                        <!-- Step 3 Card: Destination Select -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-3" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 3 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step3_title">Destination Folder Selection</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-2" data-i18n="inst_step3_desc">
-                                                    Trength automatically selects the recommended installation path on your computer:
-                                                </p>
-                                                <div class="notice bg-light-primary border-primary border border-dashed rounded p-4 mb-4">
-                                                    <code>C:\Program Files (x86)\Trength Suite\</code>
-                                                </div>
-                                                <p class="fs-6 text-dark fw-bold mb-4" data-i18n="inst_step3_tip">
-                                                    👉 For most users, leave the default folder and click <strong>Next &gt;</strong>.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Destination Folder</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step3-destination.png" alt="Step 3 - Destination Folder Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 4 Card: Network Type -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-4" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 4 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step4_title">Choose Network Connection Type</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step4_desc">
-                                                    Select how this computer connects to your local network: choose <strong>Wi-Fi (Wireless Connection)</strong> if using Wi-Fi, or <strong>Ethernet (Wired LAN Connection)</strong> if connected with a network cable. Then click <strong>Next &gt;</strong>.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Network Connection Type</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step4-network.png" alt="Step 4 - Network Connection Type Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 5 Card: Ready to Install -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-5" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 5 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step5_title">Ready to Install Trength Suite</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step5_desc">
-                                                    Review your setup options and click the <strong>Install</strong> button (with shield icon) to begin copying files and configuring Trength services.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Ready to Install</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step5-ready.png" alt="Step 5 - Ready to Install Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 6 Card: Admin Permission (UAC) -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-6" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 6 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step6_title">Windows Administrator Permission (UAC)</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step6_desc">
-                                                    When Windows displays a User Account Control (UAC) dialog asking <em>"Do you want to allow this app to make changes to your device?"</em>, click <strong>Yes</strong> to grant administrator privileges and finalize the setup.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Windows Security — UAC Prompt</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step6-uac.png" alt="Step 6 - Windows UAC Permission Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 7 Card: Installing -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-7" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 7 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step7_title">Installing Trength Suite</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step7_desc">
-                                                    Please wait while the Setup Wizard installs Trength Suite. The progress bar shows real-time progress while files and background services are configured.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Installing</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step7-installing.png" alt="Step 7 - Installing Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Step 8 Card: Summary -->
-                                        <div class="card card-bordered shadow-sm overflow-hidden" id="install-step-8" style="display: none;">
-                                            <div class="card-header bg-light d-flex align-items-center py-4">
-                                                <span class="badge badge-primary fw-bolder me-3 fs-7">STEP 8 OF 8</span>
-                                                <h3 class="card-title fw-bolder text-dark fs-5 mb-0" data-i18n="inst_step8_title">Completed Trength Suite Setup</h3>
-                                            </div>
-                                            <div class="card-body p-6">
-                                                <p class="fs-6 text-gray-700 mb-4" data-i18n="inst_step8_desc">
-                                                    Installation is complete! Ensure <strong>"Launch Trength Suite Tray"</strong> is selected, then click the <strong>Finish</strong> button to exit the wizard and start the application.
-                                                </p>
-                                                <div class="text-center mx-auto" style="max-width: 580px;">
-                                                    <div class="border rounded-3 shadow-sm overflow-hidden bg-white">
-                                                        <div class="d-flex align-items-center justify-content-between bg-light px-4 py-2 border-bottom">
-                                                            <div class="d-flex align-items-center gap-1 ms-1">
-                                                                <span class="rounded-circle bg-danger opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-warning opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                                <span class="rounded-circle bg-success opacity-75" style="width: 9px; height: 9px; display: inline-block;"></span>
-                                                            </div>
-                                                            <span class="fs-8 text-muted fw-bold">Trength Suite Setup — Summary</span>
-                                                            <span style="width: 30px;"></span>
-                                                        </div>
-                                                        <div class="p-3 bg-light-subtle">
-                                                            <img src="assets/media/installation/step8-complete.png" alt="Step 8 - Completed Setup Screen" class="img-fluid rounded border shadow-xs" style="max-height: 360px; object-fit: contain;" />
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Next & Previous Navigation Bar -->
-                                    <div class="card card-bordered shadow-sm p-4 bg-white d-flex flex-row align-items-center justify-content-between">
-                                        <button type="button" class="btn btn-secondary fw-bolder" id="install-prev-btn" disabled onclick="navigateInstallStep(-1)">
-                                            <i class="bi bi-arrow-left me-1"></i> Previous Screen
-                                        </button>
-                                        <span class="badge badge-light-primary fs-7 fw-bolder px-4 py-2" id="install-step-counter">Step 1 of 8</span>
-                                        <button type="button" class="btn btn-primary fw-bolder" id="install-next-btn" onclick="navigateInstallStep(1)">
-                                            Next Screen <i class="bi bi-arrow-right ms-1"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!--end::INTERACTIVE STEP WIZARD-->
-
-                                <!--==================== RESTART YOUR COMPUTER ====================-->
-                                <div class="mb-14" id="step-restart">
-                                    <div class="card card-bordered bg-light-primary border-primary border-2 shadow-sm p-8 text-center">
-                                        <div class="fs-1 mb-3">🔄</div>
-                                        <h2 class="fw-bolder text-dark fs-2x mb-3" data-i18n="inst_restart_title">Restart Your Computer</h2>
-                                        <p class="fs-5 text-gray-800 fw-bold mb-4" data-i18n="inst_restart_desc">
-                                            Please restart your computer before opening Trength for the first time.
-                                        </p>
-                                        <p class="fs-6 text-gray-600 mb-6" data-i18n="inst_restart_reason">
-                                            This allows Trength's background services to start correctly.
-                                        </p>
-                                        <div class="badge badge-light-success fs-6 fw-bolder p-4 d-inline-block" data-i18n="inst_restart_reassurance">
-                                            👍 Don't worry — your installation is complete!
+                                        <!-- Hindi Video Panel (Hidden by default) -->
+                                        <div id="install-video-hi" class="d-none">
+                                            <video id="videoPlayerHi" class="overview-theater-video" controls preload="metadata" poster="assets/media/installation/Trength_Installation_Guide_Hindi_Poster.jpg">
+                                                <source src="VideoTutorials/Installation_Hindi.mp4" type="video/mp4">
+                                                Your browser does not support HTML5 video.
+                                            </video>
                                         </div>
                                     </div>
                                 </div>
-                                <!--end::RESTART-->
+                                <!--end::INSTALLATION VIDEO SHOWCASE-->
 
-                                <!--==================== TRAY ICON STATUS GUIDE ====================-->
-                                <div class="mb-14" id="tray-icon-guide">
-                                    <div class="d-flex align-items-center mb-6">
-                                        <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">3</span>
-                                        <h2 class="fw-bolder mb-0 text-dark" data-i18n="inst_tray_title">Checking Trength Status (System Tray Icon)</h2>
-                                    </div>
-
-                                    <p class="fs-6 text-gray-700 mb-6" data-i18n="inst_tray_desc">
-                                        After restarting, look at the bottom-right corner of your screen near the clock. Click the small upward caret (<strong>^</strong>) to find the golden <strong>Trength "त्र" icon</strong>.
-                                    </p>
-
-                                    <!-- Status States Grid -->
-                                    <div class="row g-6 mb-8">
-                                        <div class="col-md-4">
-                                            <div class="card card-bordered h-100 shadow-sm p-6 bg-light-success border-success">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <span class="badge badge-success fs-6 me-2">🟢</span>
-                                                    <h4 class="fw-bolder text-dark fs-5 mb-0">Green Icon</h4>
-                                                </div>
-                                                <p class="text-gray-700 fs-6 mb-0" data-i18n="inst_tray_green">
-                                                    <strong>Running Normally:</strong> All POS database and network services are active.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="card card-bordered h-100 shadow-sm p-6 bg-light-warning border-warning">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <span class="badge badge-warning fs-6 me-2">🟠</span>
-                                                    <h4 class="fw-bolder text-dark fs-5 mb-0">Orange Icon</h4>
-                                                </div>
-                                                <p class="text-gray-700 fs-6 mb-0" data-i18n="inst_tray_orange">
-                                                    <strong>Attention Required:</strong> POS is working locally, but local network or internet update is reconnecting.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="card card-bordered h-100 shadow-sm p-6 bg-light-danger border-danger">
-                                                <div class="d-flex align-items-center mb-3">
-                                                    <span class="badge badge-danger fs-6 me-2">🔴</span>
-                                                    <h4 class="fw-bolder text-dark fs-5 mb-0">Red Icon</h4>
-                                                </div>
-                                                <p class="text-gray-700 fs-6 mb-0" data-i18n="inst_tray_red">
-                                                    <strong>Service Stopped:</strong> Background POS service needs to be restarted.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <!--end::TRAY ICON GUIDE-->
-
-                                <!--==================== TWO-TIER TROUBLESHOOTING ====================-->
-                                <div class="mb-14" id="troubleshooting-guide">
-                                    <div class="d-flex align-items-center mb-6">
-                                        <span class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle fw-bolder fs-4 w-40px h-40px me-3">4</span>
-                                        <h2 class="fw-bolder mb-0 text-dark" data-i18n="inst_trouble_title">Troubleshooting & Support</h2>
-                                    </div>
-
-                                    <!-- Tier 1: Try These 3 Things First -->
-                                    <div class="card card-bordered bg-light-primary border-primary mb-8 p-6 shadow-sm">
-                                        <h3 class="fw-bolder text-dark fs-4 mb-4" data-i18n="inst_t1_heading">Trength isn't opening? Try these 3 things first:</h3>
-
-                                        <div class="row g-4 mb-4">
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border border-primary text-center h-100">
-                                                    <span class="badge badge-primary rounded-circle fs-6 mb-2">1</span>
-                                                    <h5 class="fw-bolder text-dark fs-6" data-i18n="inst_t1_s1_title">Restart Your PC</h5>
-                                                    <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_t1_s1_desc">Solves 90% of temporary connection glitches.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border border-primary text-center h-100">
-                                                    <span class="badge badge-primary rounded-circle fs-6 mb-2">2</span>
-                                                    <h5 class="fw-bolder text-dark fs-6" data-i18n="inst_t1_s2_title">Check Tray Icon</h5>
-                                                    <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_t1_s2_desc">Ensure the golden "त्र" icon near clock is Green.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border border-primary text-center h-100">
-                                                    <span class="badge badge-primary rounded-circle fs-6 mb-2">3</span>
-                                                    <h5 class="fw-bolder text-dark fs-6" data-i18n="inst_t1_s3_title">Command Centre</h5>
-                                                    <p class="text-gray-600 fs-7 mb-0" data-i18n="inst_t1_s3_desc">Right-click tray icon &rarr; select "Command Centre".</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Tier 2: Automated Diagnostic & Auto-Fix in Command Centre -->
-                                    <div class="card card-bordered border-primary border-opacity-20 shadow-xs mb-5 rounded-3 bg-light-primary bg-opacity-25 p-6">
-                                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                                <!--==================== TROUBLESHOOTING & SUPPORT ====================-->
+                                <div class="mb-4" id="troubleshooting-guide">
+                                    <div class="card card-bordered shadow-sm rounded-3 p-6 bg-white border-gray-300">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-4 mb-4">
                                             <div class="d-flex align-items-center">
-                                                <div class="symbol symbol-40px bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3 shadow-xs">
-                                                    <i class="bi bi-wrench-adjustable fs-3 text-white"></i>
+                                                <div class="symbol symbol-40px bg-light-primary text-primary me-3 rounded-circle d-flex align-items-center justify-content-center">
+                                                    <i class="bi bi-tools fs-4 text-primary"></i>
                                                 </div>
                                                 <div>
-                                                    <h4 class="fw-bolder text-gray-900 mb-0 fs-5" data-i18n="inst_t2_title">Built-in Automated Diagnostics &amp; One-Click Fix</h4>
-                                                    <span class="text-muted fs-7">No complex manual Windows configuration needed</span>
+                                                    <h3 class="fw-bolder mb-0 text-dark fs-5" data-i18n="inst_trouble_title">Quick Troubleshooting &amp; Support</h3>
+                                                    <span class="text-muted fs-8">Automated self-healing diagnostics in Command Centre</span>
                                                 </div>
                                             </div>
-                                            <a href="Troubleshoot.html" class="btn btn-sm btn-primary fw-bolder">
-                                                <i class="bi bi-box-arrow-up-right me-1"></i>View Full Troubleshoot Guide
+                                            <a href="Troubleshoot.html" class="btn btn-outline btn-outline-primary btn-sm fw-bolder">
+                                                <i class="bi bi-wrench-adjustable me-1"></i> Full Troubleshoot Guide &rarr;
                                             </a>
                                         </div>
 
-                                        <p class="text-gray-700 fs-6 mb-4">
-                                            If the service is stopped or a connection issue occurs, use the automated diagnostic engine inside <strong>Trength Command Centre</strong>:
-                                        </p>
 
-                                        <div class="row g-3 text-gray-800 fs-6">
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border shadow-2xs h-100">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <span class="badge badge-light-primary fw-bolder rounded-circle me-2">1</span>
-                                                        <strong class="text-dark">Open Troubleshoot Tab</strong>
-                                                    </div>
-                                                    <span class="text-muted fs-7">Right-click the golden tray icon, select <strong>Command Centre</strong>, and switch to the <strong>Troubleshoot</strong> tab.</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border shadow-2xs h-100">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <span class="badge badge-light-warning fw-bolder rounded-circle me-2">2</span>
-                                                        <strong class="text-dark">Automated Diagnostics</strong>
-                                                    </div>
-                                                    <span class="text-muted fs-7">The app automatically runs diagnostic checks across all services, firewall rules, and ports, prompting you with the exact reason for any failure.</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="p-4 bg-white rounded border shadow-2xs h-100">
-                                                    <div class="d-flex align-items-center mb-2">
-                                                        <span class="badge badge-light-success fw-bolder rounded-circle me-2">3</span>
-                                                        <strong class="text-dark">One-Click "Fix" / "Fix All"</strong>
-                                                    </div>
-                                                    <span class="text-muted fs-7">Click the individual <span class="badge badge-light-primary fs-8 fw-bold">Fix</span> button next to any issue, or click <span class="badge badge-success fs-8 fw-bold">Fix All</span> to automatically resolve all failures in one click.</span>
-                                                </div>
+                                        <!-- Enterprise Support Strip -->
+                                        <div class="d-flex align-items-center bg-light-primary rounded border border-primary border-dashed p-4">
+                                            <i class="bi bi-headset text-primary fs-2x me-3"></i>
+                                            <div class="flex-grow-1">
+                                                <strong class="text-gray-900 fs-7 d-block mb-1">Need Onboarding Assistance?</strong>
+                                                <span class="fs-8 text-gray-600">Our support engineers are available at <a href="mailto:support@trength.in" class="fw-bold">support@trength.in</a> or visit our portal at <a href="http://trength.runasp.net/" target="_blank" class="fw-bold">http://trength.runasp.net/</a>.</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!--end::TROUBLESHOOTING-->
 
-                                <!--==================== WHAT HAPPENS AFTER INSTALLATION ====================-->
-                                <div class="mb-10" id="post-installation">
-                                    <div class="card card-bordered bg-light-success border-success p-8 shadow-sm">
-                                        <div class="d-flex align-items-center mb-4">
-                                            <span class="fs-2x me-3">🎉</span>
-                                            <h2 class="fw-bolder text-dark mb-0" data-i18n="inst_post_title">Installation Complete! What's Next?</h2>
-                                        </div>
-                                        <p class="fs-5 text-gray-800 mb-6" data-i18n="inst_post_sub">
-                                            Your computer is now ready. Here is your quick journey to issuing your first bill:
-                                        </p>
-
-                                        <!-- 6 Step Horizontal Flow -->
-                                        <div class="row g-4">
-                                            <div class="col-6 col-md-4 col-lg-2">
-                                                <div class="p-4 bg-white rounded border text-center h-100">
-                                                    <div class="badge badge-success rounded-circle mb-2">1</div>
-                                                    <div class="fw-bolder text-dark fs-7" data-i18n="inst_post_s1">Open Trength</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-md-4 col-lg-2">
-                                                <div class="p-4 bg-white rounded border text-center h-100">
-                                                    <div class="badge badge-success rounded-circle mb-2">2</div>
-                                                    <div class="fw-bolder text-dark fs-7" data-i18n="inst_post_s2">Sign In</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-md-4 col-lg-2">
-                                                <div class="p-4 bg-white rounded border text-center h-100">
-                                                    <div class="badge badge-success rounded-circle mb-2">3</div>
-                                                    <div class="fw-bolder text-dark fs-7" data-i18n="inst_post_s3">Select Store</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-md-4 col-lg-2">
-                                                <div class="p-4 bg-white rounded border text-center h-100">
-                                                    <div class="badge badge-success rounded-circle mb-2">4</div>
-                                                    <div class="fw-bolder text-dark fs-7" data-i18n="inst_post_s4">Set Up Counter</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-md-4 col-lg-2">
-                                                <div class="p-4 bg-white rounded border text-center h-100">
-                                                    <div class="badge badge-success rounded-circle mb-2">5</div>
-                                                    <div class="fw-bolder text-dark fs-7" data-i18n="inst_post_s5">Add Products</div>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 col-md-4 col-lg-2">
-                                                <div class="p-4 bg-primary text-white rounded border text-center h-100">
-                                                    <div class="badge badge-white text-primary rounded-circle mb-2">6</div>
-                                                    <div class="fw-bolder fs-7" data-i18n="inst_post_s6">Start Billing!</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--end::POST INSTALLATION-->
 
                             </div>
                             <!--end::Card Body-->
@@ -1091,98 +524,245 @@
     <script src="assets/js/custom/documentation/documentation.js"></script>
     <script src="assets/js/custom/documentation/search.js"></script>
     
-    <!--begin::Wizard Step Controller Javascript-->
     <script>
-        var currentInstallStep = 1;
-        var stepTitles = [
-            "",
-            "Step 1: Welcome to Trength Suite",
-            "Step 2: License Agreement",
-            "Step 3: Destination Select",
-            "Step 4: Network Type Selection",
-            "Step 5: Ready to Install",
-            "Step 6: Administrator Permission (UAC)",
-            "Step 7: Installing Components",
-            "Step 8: Installation Complete & Summary"
-        ];
+        // ==========================================================================
+        // Installation Walkthrough Video Switcher (English / Hindi)
+        // ==========================================================================
+        function switchInstallVideo(lang, shouldPlay) {
+            var enPanel = document.getElementById('install-video-en');
+            var hiPanel = document.getElementById('install-video-hi');
+            var btnEn = document.getElementById('btn-lang-en');
+            var btnHi = document.getElementById('btn-lang-hi');
+            var videoEn = document.getElementById('videoPlayerEn');
+            var videoHi = document.getElementById('videoPlayerHi');
+            var titleEl = document.getElementById('theater-video-title');
+            var badgeEl = document.getElementById('theater-lang-badge');
 
-        function showInstallStep(stepNum) {
-            currentInstallStep = stepNum;
-            for (var i = 1; i <= 8; i++) {
-                var stepEl = document.getElementById('install-step-' + i);
-                var tabEl = document.getElementById('install-tab-' + i);
-                if (stepEl) {
-                    stepEl.style.display = (i === stepNum) ? 'block' : 'none';
+            if (lang === 'en') {
+                if (enPanel) enPanel.classList.remove('d-none');
+                if (hiPanel) hiPanel.classList.add('d-none');
+                if (btnEn) btnEn.classList.add('active');
+                if (btnHi) btnHi.classList.remove('active');
+                if (titleEl) titleEl.innerText = "Trength™ Retail Suite — Installation Walkthrough";
+                if (badgeEl) {
+                    badgeEl.innerText = "ENGLISH";
+                    badgeEl.className = "badge badge-primary px-3 py-1 fs-8 fw-bold";
                 }
-                if (tabEl) {
-                    var numEl = tabEl.querySelector('.step-num');
-                    if (i === stepNum) {
-                        tabEl.className = 'install-step-btn active';
-                        if (numEl) numEl.innerHTML = i;
-                    } else if (i < stepNum) {
-                        tabEl.className = 'install-step-btn completed';
-                        if (numEl) numEl.innerHTML = '<i class="bi bi-check-lg fs-7 text-white"></i>';
-                    } else {
-                        tabEl.className = 'install-step-btn';
-                        if (numEl) numEl.innerHTML = i;
+                if (videoHi && !videoHi.paused) videoHi.pause();
+                if (shouldPlay && videoEn) videoEn.play();
+            } else {
+                if (enPanel) enPanel.classList.add('d-none');
+                if (hiPanel) hiPanel.classList.remove('d-none');
+                if (btnHi) btnHi.classList.add('active');
+                if (btnEn) btnEn.classList.remove('active');
+                if (titleEl) titleEl.innerText = "ट्रेन्थ रिटेल सुइट — इंस्टॉलेशन संपूर्ण गाइड";
+                if (badgeEl) {
+                    badgeEl.innerText = "हिंदी (HINDI)";
+                    badgeEl.className = "badge badge-success px-3 py-1 fs-8 fw-bold";
+                }
+                if (videoEn && !videoEn.paused) videoEn.pause();
+                if (shouldPlay && videoHi) videoHi.play();
+            }
+        }
+
+        // ==========================================================================
+        // Dynamic Visual Effects Manager (Aurora, Tech Particles, Shimmer Grid)
+        // ==========================================================================
+        var dynamicsState = {
+            aurora: true,
+            particles: true,
+            shimmer: true
+        };
+
+        function toggleDynamicEffect(type) {
+            dynamicsState[type] = !dynamicsState[type];
+            var btn = document.getElementById('toggle-' + type);
+            if (btn) {
+                if (dynamicsState[type]) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            }
+
+            if (type === 'aurora') {
+                var layer = document.getElementById('ambient-aurora-layer');
+                if (layer) {
+                    if (dynamicsState.aurora) layer.classList.remove('effect-disabled');
+                    else layer.classList.add('effect-disabled');
+                }
+            } else if (type === 'particles') {
+                var canvas = document.getElementById('tech-particles-canvas');
+                if (canvas) {
+                    if (dynamicsState.particles) canvas.classList.remove('effect-disabled');
+                    else canvas.classList.add('effect-disabled');
+                }
+            } else if (type === 'shimmer') {
+                var card = document.getElementById('docs-main-card');
+                var stepper = document.getElementById('install-stepper-wrap');
+                var theater = document.getElementById('install-theater-card');
+                if (card) {
+                    if (dynamicsState.shimmer) card.classList.add('has-shimmer-grid');
+                    else card.classList.remove('has-shimmer-grid');
+                }
+                if (stepper) {
+                    if (dynamicsState.shimmer) stepper.classList.add('has-border-shimmer');
+                    else stepper.classList.remove('has-border-shimmer');
+                }
+                if (theater) {
+                    if (dynamicsState.shimmer) theater.classList.add('has-border-shimmer');
+                    else theater.classList.remove('has-border-shimmer');
+                }
+            }
+        }
+
+        // Lightweight Tech Particle Network
+        (function initTechParticles() {
+            var canvas = document.getElementById('tech-particles-canvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            var card = document.getElementById('docs-main-card');
+            if (!card) return;
+
+            var width = 0;
+            var height = 0;
+            var particles = [];
+            var particleCount = 42;
+            var mouse = { x: null, y: null, maxDist: 140 };
+
+            function resize() {
+                if (!card) return;
+                var rect = card.getBoundingClientRect();
+                width = canvas.width = rect.width;
+                height = canvas.height = rect.height;
+            }
+
+            function Particle() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.65;
+                this.vy = (Math.random() - 0.5) * 0.65;
+                this.radius = Math.random() * 2 + 1.2;
+                this.alpha = Math.random() * 0.35 + 0.25;
+            }
+
+            Particle.prototype.update = function() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0) this.x = width;
+                else if (this.x > width) this.x = 0;
+
+                if (this.y < 0) this.y = height;
+                else if (this.y > height) this.y = 0;
+            };
+
+            Particle.prototype.draw = function() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 158, 247, ' + this.alpha + ')';
+                ctx.fill();
+            };
+
+            function createParticles() {
+                particles = [];
+                var count = Math.min(particleCount, Math.floor(width / 26));
+                if (count < 22) count = 22;
+                for (var i = 0; i < count; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function connectParticles() {
+                var maxDistance = 115;
+                for (var i = 0; i < particles.length; i++) {
+                    for (var j = i + 1; j < particles.length; j++) {
+                        var dx = particles[i].x - particles[j].x;
+                        var dy = particles[i].y - particles[j].y;
+                        var dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < maxDistance) {
+                            var opacity = (1 - dist / maxDistance) * 0.16;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = 'rgba(0, 158, 247, ' + opacity + ')';
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+
+                    // Mouse interaction
+                    if (mouse.x !== null && mouse.y !== null) {
+                        var mdx = particles[i].x - mouse.x;
+                        var mdy = particles[i].y - mouse.y;
+                        var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+                        if (mdist < mouse.maxDist) {
+                            var mOpacity = (1 - mdist / mouse.maxDist) * 0.35;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(mouse.x, mouse.y);
+                            ctx.strokeStyle = 'rgba(114, 57, 234, ' + mOpacity + ')';
+                            ctx.lineWidth = 1.2;
+                            ctx.stroke();
+                        }
                     }
                 }
             }
 
-            var activeTitleEl = document.getElementById('stepper-active-title');
-            if (activeTitleEl && stepTitles[stepNum]) {
-                activeTitleEl.innerText = stepTitles[stepNum];
-            }
-
-            var stepIndicatorEl = document.getElementById('stepper-step-indicator');
-            if (stepIndicatorEl) {
-                stepIndicatorEl.innerText = 'Step ' + stepNum + ' of 8';
-            }
-
-            var progressTextEl = document.getElementById('stepper-progress-text');
-            var progressBarEl = document.getElementById('install-progress-bar');
-            var pct = Math.round((stepNum / 8) * 100);
-            if (progressTextEl) {
-                if (stepNum === 8) {
-                    progressTextEl.innerText = '100% Completed';
-                } else {
-                    progressTextEl.innerText = pct + '% Completed';
+            function animate() {
+                if (dynamicsState.particles) {
+                    ctx.clearRect(0, 0, width, height);
+                    for (var i = 0; i < particles.length; i++) {
+                        particles[i].update();
+                        particles[i].draw();
+                    }
+                    connectParticles();
                 }
-            }
-            if (progressBarEl) {
-                progressBarEl.style.width = pct + '%';
+                requestAnimationFrame(animate);
             }
 
-            var prevBtn = document.getElementById('install-prev-btn');
-            var nextBtn = document.getElementById('install-next-btn');
-            var counterEl = document.getElementById('install-step-counter');
+            window.addEventListener('resize', function() {
+                resize();
+            });
 
-            if (prevBtn) prevBtn.disabled = (stepNum === 1);
-            if (counterEl) counterEl.innerText = 'Step ' + stepNum + ' of 8';
+            card.addEventListener('mousemove', function(e) {
+                var rect = card.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
 
-            if (nextBtn) {
-                if (stepNum === 8) {
-                    nextBtn.innerHTML = 'Complete & Restart 🔄';
-                    nextBtn.className = 'btn btn-success fw-bolder';
-                } else {
-                    nextBtn.innerHTML = 'Next Screen <i class="bi bi-arrow-right ms-1"></i>';
-                    nextBtn.className = 'btn btn-primary fw-bolder';
-                }
-            }
-        }
+            card.addEventListener('mouseleave', function() {
+                mouse.x = null;
+                mouse.y = null;
+            });
 
-        function navigateInstallStep(delta) {
-            var newStep = currentInstallStep + delta;
-            if (newStep >= 1 && newStep <= 8) {
-                showInstallStep(newStep);
-            } else if (newStep > 8) {
-                var restartEl = document.getElementById('step-restart');
-                if (restartEl) restartEl.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+            // Initial setup once DOM ready
+            setTimeout(function() {
+                resize();
+                createParticles();
+                requestAnimationFrame(animate);
+            }, 100);
+        })();
     </script>
     <!--end::Wizard Step Controller Javascript-->
     <!--end::Javascript-->
+
+    <!-- Dynamic Effects Showcase Controller Widget -->
+    <div class="dynamics-control-pill" id="dynamics-control-pill" title="Toggle dynamic animations">
+        <span class="dynamics-control-title">
+            <i class="bi bi-magic text-primary fs-6"></i> Dynamics:
+        </span>
+        <button type="button" class="dynamics-toggle-btn active" id="toggle-aurora" onclick="toggleDynamicEffect('aurora')" title="Toggle Ambient Aurora Glow">
+            <i class="bi bi-circle-fill fs-9 text-info"></i> Aurora Glow
+        </button>
+        <button type="button" class="dynamics-toggle-btn active" id="toggle-particles" onclick="toggleDynamicEffect('particles')" title="Toggle Connected Particle Canvas">
+            <i class="bi bi-diagram-3-fill fs-9 text-primary"></i> Tech Particles
+        </button>
+        <button type="button" class="dynamics-toggle-btn active" id="toggle-shimmer" onclick="toggleDynamicEffect('shimmer')" title="Toggle Background Grid & Card Shimmer">
+            <i class="bi bi-grid-3x3-gap-fill fs-9 text-success"></i> Shimmer Grid
+        </button>
+    </div>
 </body>
 <!--end::Body-->
 
